@@ -1,0 +1,11 @@
+prefix=/root/csi-hostpath-cpp/vendor/grpc
+exec_prefix=/root/csi-hostpath-cpp/vendor/grpc
+libdir=/root/csi-hostpath-cpp/vendor/grpc/lib64
+includedir=/root/csi-hostpath-cpp/vendor/grpc/include
+
+Name: Protocol Buffers
+Description: Google's Data Interchange Format
+Version: 3.12.2.0
+Libs: -L${libdir} -lprotobuf-lite -lpthread
+Cflags: -I${includedir} -lpthread
+Conflicts: protobuf
