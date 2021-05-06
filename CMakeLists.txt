@@ -14,5 +14,14 @@ find_package(Threads REQUIRED)
 find_package(protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
 
-add_executable(hostpath main.cpp)
+add_executable(hostpath
+		main.cpp
+		proto/csi.pb.cc
+		proto/csi.grpc.pb.cc
+		src/csi_services.cpp)
+
+target_include_directories(hostpath PRIVATE
+				"${CMAKE_SOURCE_DIR}"
+				"${CMAKE_SOURCE_DIR}/src"
+				"${CMAKE_SOURCE_DIR}/proto")
 target_link_libraries(hostpath gRPC::grpc++)

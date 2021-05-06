@@ -4,3 +4,4 @@ cmake_install.cmake
 hostpath
 CMakeCache.txt
 build
+*.swp
