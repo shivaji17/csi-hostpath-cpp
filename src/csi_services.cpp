@@ -1,302 +1,52 @@
 #include <csi_services.h>
+#include <functional>
+#include <sstream>
+#include <grpc/grpc.h>
+#include <grpcpp/security/server_credentials.h>
+#include <grpcpp/server.h>
+#include <grpcpp/server_builder.h>
+#include <grpcpp/server_context.h>
 #include <csi.pb.h>
 #include <csi.grpc.pb.h>
+#include <controller_services.h>
+#include <identity_services.h>
+#include <node_services.h>
 
 using namespace std;
 using namespace grpc;
-using namespace csi::services;
 using namespace csi::v1;
+using namespace csi::services;
+using namespace csi::services::node;
+using namespace csi::services::identity;
+using namespace csi::services::controller;
 
-
-////////////////////////////////////////////////////////////////////////////////
-// Identity Service
-////////////////////////////////////////////////////////////////////////////////
-class IdentityImpl final: public Identity::Service
-{
-public:
-	IdentityImpl() = default;
-	IdentityImpl( IdentityImpl const& ) = delete;
-	IdentityImpl& operator=( IdentityImpl const& ) = delete;
-	~IdentityImpl() = default;
-
-	////////////////////////////////////////////////////////////////////////
-	// GetPluginInfo
-	////////////////////////////////////////////////////////////////////////
-	Status GetPluginInfo( ServerContext* context,
-			GetPluginInfoRequest const* req,
-			GetPluginInfoResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// GetPluginCapabilities
-	////////////////////////////////////////////////////////////////////////
-	Status GetPluginCapabilities( ServerContext* context,
-				GetPluginCapabilitiesRequest const* req,
-				GetPluginCapabilitiesResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// Probe
-	////////////////////////////////////////////////////////////////////////
-	Status Probe( ServerContext* context,
-		ProbeRequest const* req,
-		ProbeResponse* rsp )
-	{
-		return Status::OK;
-	}
-};
-
-////////////////////////////////////////////////////////////////////////////////
-// Controller Service
-////////////////////////////////////////////////////////////////////////////////
-class ControllerImpl final: public Controller::Service
-{
-public:
-	ControllerImpl() = default;
-	ControllerImpl( ControllerImpl const& ) = delete;
-	ControllerImpl& operator=( ControllerImpl const& ) = delete;
-	~ControllerImpl() = default;
-
-	////////////////////////////////////////////////////////////////////////
-	// CreateVolume
-	////////////////////////////////////////////////////////////////////////
-	Status CreateVolume( ServerContext* context,
-			CreateVolumeRequest const* req,
-			CreateVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// DeleteVolume
-	////////////////////////////////////////////////////////////////////////
-	Status DeleteVolume( ServerContext* context,
-			DeleteVolumeRequest const* req,
-			DeleteVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ControllerPublishVolume
-	////////////////////////////////////////////////////////////////////////
-	Status ControllerPublishVolume( ServerContext* context,
-			ControllerPublishVolumeRequest const* req,
-			ControllerPublishVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ControllerUnpublishVolume
-	////////////////////////////////////////////////////////////////////////
-	Status ControllerUnpublishVolume( ServerContext* context,
-			ControllerUnpublishVolumeRequest const* req,
-			ControllerUnpublishVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ValidateVolumeCapabilities
-	////////////////////////////////////////////////////////////////////////
-	Status ValidateVolumeCapabilities( ServerContext* context,
-			ValidateVolumeCapabilitiesRequest const* req,
-			ValidateVolumeCapabilitiesResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ListVolumes
-	////////////////////////////////////////////////////////////////////////
-	Status ListVolumes( ServerContext* context,
-			ListVolumesRequest const* req,
-			ListVolumesResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// GetCapacity
-	////////////////////////////////////////////////////////////////////////
-	Status GetCapacity( ServerContext* context,
-			GetCapacityRequest const* req,
-			GetCapacityResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ControllerGetCapabilities
-	////////////////////////////////////////////////////////////////////////
-	Status ControllerGetCapabilities( ServerContext* context,
-			ControllerGetCapabilitiesRequest const* req,
-			ControllerGetCapabilitiesResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// CreateSnapshot
-	////////////////////////////////////////////////////////////////////////
-	Status CreateSnapshot( ServerContext* context,
-			CreateSnapshotRequest const* req,
-			CreateSnapshotResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// DeleteSnapshot
-	////////////////////////////////////////////////////////////////////////
-	Status DeleteSnapshot( ServerContext* context,
-			DeleteSnapshotRequest const* req,
-			DeleteSnapshotResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ListSnapshots
-	////////////////////////////////////////////////////////////////////////
-	Status ListSnapshots( ServerContext* context,
-			ListSnapshotsRequest const* req,
-			ListSnapshotsResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ControllerExpandVolume
-	////////////////////////////////////////////////////////////////////////
-	Status ControllerExpandVolume( ServerContext* context,
-			ControllerExpandVolumeRequest const* req,
-			ControllerExpandVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// ControllerGetVolume
-	////////////////////////////////////////////////////////////////////////
-	Status ControllerGetVolume( ServerContext* context,
-			ControllerGetVolumeRequest const* req,
-			ControllerGetVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-};
-
-////////////////////////////////////////////////////////////////////////////////
-// Node Service
-////////////////////////////////////////////////////////////////////////////////
-class NodeImpl final: public Node::Service
-{
-public:
-	NodeImpl() = default;
-	NodeImpl( NodeImpl const& ) = delete;
-	NodeImpl& operator=( NodeImpl const& ) = delete;
-	~NodeImpl() = default;
-
-	////////////////////////////////////////////////////////////////////////
-	// NodeStageVolume
-	////////////////////////////////////////////////////////////////////////
-	Status NodeStageVolume( ServerContext* context,
-			NodeStageVolumeRequest const* req,
-			NodeStageVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// NodeUnstageVolume
-	////////////////////////////////////////////////////////////////////////
-	Status NodeUnstageVolume( ServerContext* context,
-			NodeUnstageVolumeRequest const* req,
-			NodeUnstageVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// NodePublishVolume
-	////////////////////////////////////////////////////////////////////////
-	Status NodePublishVolume( ServerContext* context,
-			NodePublishVolumeRequest const* req,
-			NodePublishVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// NodeUnpublishVolume
-	////////////////////////////////////////////////////////////////////////
-	Status NodeUnpublishVolume( ServerContext* context,
-			NodeUnpublishVolumeRequest const* req,
-			NodeUnpublishVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// NodeGetVolumeStats
-	////////////////////////////////////////////////////////////////////////
-	Status NodeGetVolumeStats( ServerContext* context,
-			NodeGetVolumeStatsRequest const* req,
-			NodeGetVolumeStatsResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// NodeExpandVolume
-	////////////////////////////////////////////////////////////////////////
-	Status NodeExpandVolume( ServerContext* context,
-			NodeExpandVolumeRequest const* req,
-			NodeExpandVolumeResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// NodeGetCapabilities
-	////////////////////////////////////////////////////////////////////////
-	Status NodeGetCapabilities( ServerContext* context,
-			NodeGetCapabilitiesRequest const* req,
-			NodeGetCapabilitiesResponse* rsp )
-	{
-		return Status::OK;
-	}
-
-	////////////////////////////////////////////////////////////////////////
-	// NodeGetInfo
-	////////////////////////////////////////////////////////////////////////
-	Status NodeGetInfo( ServerContext* context,
-			NodeGetInfoRequest const* req,
-			NodeGetInfoResponse* rsp )
-	{
-		return Status::OK;
-	}
-};
-
-CSIServices::CSIServices()
+CSIServices::CSIServices( Config config ):
+		m_config( config )
 {
 
 }
 
 CSIServices::~CSIServices()
-{}
+{
 
-
+}
 
 bool CSIServices::Run()
 {
+	IdentityImpl   identitySvc;
+	NodeImpl       nodeSvc;
+	ControllerImpl controllerSvc;
+
+	ServerBuilder builder;
+
+	builder.AddListeningPort( m_config.endpoint, InsecureServerCredentials() );
+	builder.RegisterService( &identitySvc );
+	builder.RegisterService( &nodeSvc );
+	builder.RegisterService( &controllerSvc );
+
+	unique_ptr<Server> server( builder.BuildAndStart() );
+	cout << "Server listening on " << m_config.endpoint << std::endl;
+	server->Wait();
 	return true;
 }
 
