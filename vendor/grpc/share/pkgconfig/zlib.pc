@@ -1,8 +1,8 @@
-prefix=/root/csi-hostpath-cpp/vendor/grpc
-exec_prefix=/root/csi-hostpath-cpp/vendor/grpc
-libdir=/root/csi-hostpath-cpp/vendor/grpc/lib
-sharedlibdir=/root/csi-hostpath-cpp/vendor/grpc/lib
-includedir=/root/csi-hostpath-cpp/vendor/grpc/include
+prefix=/workspaces/devContainer/grpc_build2
+exec_prefix=/workspaces/devContainer/grpc_build2
+libdir=/workspaces/devContainer/grpc_build2/lib
+sharedlibdir=/workspaces/devContainer/grpc_build2/lib
+includedir=/workspaces/devContainer/grpc_build2/include
 
 Name: zlib
 Description: zlib compression library

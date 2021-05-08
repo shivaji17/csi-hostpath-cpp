@@ -14,1959 +14,1286 @@
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
 #include <google/protobuf/port_def.inc>
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CapacityRange_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ControllerServiceCapability_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerServiceCapability_RPC_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateSnapshotRequest_ParametersEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateVolumeRequest_ParametersEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetCapacityRequest_ParametersEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetPluginInfoResponse_ManifestEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ListSnapshotsRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ListSnapshotsResponse_Entry_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ListVolumesResponse_Entry_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ListVolumesResponse_VolumeStatus_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodePublishVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodePublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_NodeServiceCapability_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeServiceCapability_RPC_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeStageVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeStageVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PluginCapability_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PluginCapability_Service_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PluginCapability_VolumeExpansion_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Snapshot_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Topology_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Topology_SegmentsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TopologyRequirement_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_Volume_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Volume_VolumeContextEntry_DoNotUse_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_VolumeCapability_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCapability_AccessMode_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCapability_BlockVolume_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCapability_MountVolume_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCondition_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VolumeContentSource_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeContentSource_SnapshotSource_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeContentSource_VolumeSource_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_csi_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeUsage_csi_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Int64Value_google_2fprotobuf_2fwrappers_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2ftimestamp_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto;
+
+PROTOBUF_PRAGMA_INIT_SEG
 namespace csi {
 namespace v1 {
-class GetPluginInfoRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetPluginInfoRequest> _instance;
-} _GetPluginInfoRequest_default_instance_;
-class GetPluginInfoResponse_ManifestEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetPluginInfoResponse_ManifestEntry_DoNotUse> _instance;
-} _GetPluginInfoResponse_ManifestEntry_DoNotUse_default_instance_;
-class GetPluginInfoResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetPluginInfoResponse> _instance;
-} _GetPluginInfoResponse_default_instance_;
-class GetPluginCapabilitiesRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetPluginCapabilitiesRequest> _instance;
-} _GetPluginCapabilitiesRequest_default_instance_;
-class GetPluginCapabilitiesResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetPluginCapabilitiesResponse> _instance;
-} _GetPluginCapabilitiesResponse_default_instance_;
-class PluginCapability_ServiceDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PluginCapability_Service> _instance;
-} _PluginCapability_Service_default_instance_;
-class PluginCapability_VolumeExpansionDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PluginCapability_VolumeExpansion> _instance;
-} _PluginCapability_VolumeExpansion_default_instance_;
-class PluginCapabilityDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PluginCapability> _instance;
-  const ::csi::v1::PluginCapability_Service* service_;
-  const ::csi::v1::PluginCapability_VolumeExpansion* volume_expansion_;
-} _PluginCapability_default_instance_;
-class ProbeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ProbeRequest> _instance;
-} _ProbeRequest_default_instance_;
-class ProbeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ProbeResponse> _instance;
-} _ProbeResponse_default_instance_;
-class CreateVolumeRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateVolumeRequest_ParametersEntry_DoNotUse> _instance;
-} _CreateVolumeRequest_ParametersEntry_DoNotUse_default_instance_;
-class CreateVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _CreateVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class CreateVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateVolumeRequest> _instance;
-} _CreateVolumeRequest_default_instance_;
-class VolumeContentSource_SnapshotSourceDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeContentSource_SnapshotSource> _instance;
-} _VolumeContentSource_SnapshotSource_default_instance_;
-class VolumeContentSource_VolumeSourceDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeContentSource_VolumeSource> _instance;
-} _VolumeContentSource_VolumeSource_default_instance_;
-class VolumeContentSourceDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeContentSource> _instance;
-  const ::csi::v1::VolumeContentSource_SnapshotSource* snapshot_;
-  const ::csi::v1::VolumeContentSource_VolumeSource* volume_;
-} _VolumeContentSource_default_instance_;
-class CreateVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateVolumeResponse> _instance;
-} _CreateVolumeResponse_default_instance_;
-class VolumeCapability_BlockVolumeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeCapability_BlockVolume> _instance;
-} _VolumeCapability_BlockVolume_default_instance_;
-class VolumeCapability_MountVolumeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeCapability_MountVolume> _instance;
-} _VolumeCapability_MountVolume_default_instance_;
-class VolumeCapability_AccessModeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeCapability_AccessMode> _instance;
-} _VolumeCapability_AccessMode_default_instance_;
-class VolumeCapabilityDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeCapability> _instance;
-  const ::csi::v1::VolumeCapability_BlockVolume* block_;
-  const ::csi::v1::VolumeCapability_MountVolume* mount_;
-} _VolumeCapability_default_instance_;
-class CapacityRangeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CapacityRange> _instance;
-} _CapacityRange_default_instance_;
-class Volume_VolumeContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Volume_VolumeContextEntry_DoNotUse> _instance;
-} _Volume_VolumeContextEntry_DoNotUse_default_instance_;
-class VolumeDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Volume> _instance;
-} _Volume_default_instance_;
-class TopologyRequirementDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<TopologyRequirement> _instance;
-} _TopologyRequirement_default_instance_;
-class Topology_SegmentsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Topology_SegmentsEntry_DoNotUse> _instance;
-} _Topology_SegmentsEntry_DoNotUse_default_instance_;
-class TopologyDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Topology> _instance;
-} _Topology_default_instance_;
-class DeleteVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeleteVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _DeleteVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class DeleteVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeleteVolumeRequest> _instance;
-} _DeleteVolumeRequest_default_instance_;
-class DeleteVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeleteVolumeResponse> _instance;
-} _DeleteVolumeResponse_default_instance_;
-class ControllerPublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerPublishVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse> _instance;
-} _ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
-class ControllerPublishVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerPublishVolumeRequest> _instance;
-} _ControllerPublishVolumeRequest_default_instance_;
-class ControllerPublishVolumeResponse_PublishContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse> _instance;
-} _ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_default_instance_;
-class ControllerPublishVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerPublishVolumeResponse> _instance;
-} _ControllerPublishVolumeResponse_default_instance_;
-class ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class ControllerUnpublishVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerUnpublishVolumeRequest> _instance;
-} _ControllerUnpublishVolumeRequest_default_instance_;
-class ControllerUnpublishVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerUnpublishVolumeResponse> _instance;
-} _ControllerUnpublishVolumeResponse_default_instance_;
-class ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse> _instance;
-} _ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_default_instance_;
-class ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse> _instance;
-} _ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_default_instance_;
-class ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse> _instance;
-} _ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_default_instance_;
-class ValidateVolumeCapabilitiesRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesRequest> _instance;
-} _ValidateVolumeCapabilitiesRequest_default_instance_;
-class ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse> _instance;
-} _ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_default_instance_;
-class ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse> _instance;
-} _ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_default_instance_;
-class ValidateVolumeCapabilitiesResponse_ConfirmedDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesResponse_Confirmed> _instance;
-} _ValidateVolumeCapabilitiesResponse_Confirmed_default_instance_;
-class ValidateVolumeCapabilitiesResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ValidateVolumeCapabilitiesResponse> _instance;
-} _ValidateVolumeCapabilitiesResponse_default_instance_;
-class ListVolumesRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListVolumesRequest> _instance;
-} _ListVolumesRequest_default_instance_;
-class ListVolumesResponse_VolumeStatusDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListVolumesResponse_VolumeStatus> _instance;
-} _ListVolumesResponse_VolumeStatus_default_instance_;
-class ListVolumesResponse_EntryDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListVolumesResponse_Entry> _instance;
-} _ListVolumesResponse_Entry_default_instance_;
-class ListVolumesResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListVolumesResponse> _instance;
-} _ListVolumesResponse_default_instance_;
-class ControllerGetVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerGetVolumeRequest> _instance;
-} _ControllerGetVolumeRequest_default_instance_;
-class ControllerGetVolumeResponse_VolumeStatusDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerGetVolumeResponse_VolumeStatus> _instance;
-} _ControllerGetVolumeResponse_VolumeStatus_default_instance_;
-class ControllerGetVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerGetVolumeResponse> _instance;
-} _ControllerGetVolumeResponse_default_instance_;
-class GetCapacityRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetCapacityRequest_ParametersEntry_DoNotUse> _instance;
-} _GetCapacityRequest_ParametersEntry_DoNotUse_default_instance_;
-class GetCapacityRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetCapacityRequest> _instance;
-} _GetCapacityRequest_default_instance_;
-class GetCapacityResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<GetCapacityResponse> _instance;
-} _GetCapacityResponse_default_instance_;
-class ControllerGetCapabilitiesRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerGetCapabilitiesRequest> _instance;
-} _ControllerGetCapabilitiesRequest_default_instance_;
-class ControllerGetCapabilitiesResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerGetCapabilitiesResponse> _instance;
-} _ControllerGetCapabilitiesResponse_default_instance_;
-class ControllerServiceCapability_RPCDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerServiceCapability_RPC> _instance;
-} _ControllerServiceCapability_RPC_default_instance_;
-class ControllerServiceCapabilityDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerServiceCapability> _instance;
-  const ::csi::v1::ControllerServiceCapability_RPC* rpc_;
-} _ControllerServiceCapability_default_instance_;
-class CreateSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateSnapshotRequest_SecretsEntry_DoNotUse> _instance;
-} _CreateSnapshotRequest_SecretsEntry_DoNotUse_default_instance_;
-class CreateSnapshotRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateSnapshotRequest_ParametersEntry_DoNotUse> _instance;
-} _CreateSnapshotRequest_ParametersEntry_DoNotUse_default_instance_;
-class CreateSnapshotRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateSnapshotRequest> _instance;
-} _CreateSnapshotRequest_default_instance_;
-class CreateSnapshotResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CreateSnapshotResponse> _instance;
-} _CreateSnapshotResponse_default_instance_;
-class SnapshotDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<Snapshot> _instance;
-} _Snapshot_default_instance_;
-class DeleteSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeleteSnapshotRequest_SecretsEntry_DoNotUse> _instance;
-} _DeleteSnapshotRequest_SecretsEntry_DoNotUse_default_instance_;
-class DeleteSnapshotRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeleteSnapshotRequest> _instance;
-} _DeleteSnapshotRequest_default_instance_;
-class DeleteSnapshotResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<DeleteSnapshotResponse> _instance;
-} _DeleteSnapshotResponse_default_instance_;
-class ListSnapshotsRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListSnapshotsRequest_SecretsEntry_DoNotUse> _instance;
-} _ListSnapshotsRequest_SecretsEntry_DoNotUse_default_instance_;
-class ListSnapshotsRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListSnapshotsRequest> _instance;
-} _ListSnapshotsRequest_default_instance_;
-class ListSnapshotsResponse_EntryDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListSnapshotsResponse_Entry> _instance;
-} _ListSnapshotsResponse_Entry_default_instance_;
-class ListSnapshotsResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ListSnapshotsResponse> _instance;
-} _ListSnapshotsResponse_default_instance_;
-class ControllerExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerExpandVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class ControllerExpandVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerExpandVolumeRequest> _instance;
-} _ControllerExpandVolumeRequest_default_instance_;
-class ControllerExpandVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ControllerExpandVolumeResponse> _instance;
-} _ControllerExpandVolumeResponse_default_instance_;
-class NodeStageVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeStageVolumeRequest_PublishContextEntry_DoNotUse> _instance;
-} _NodeStageVolumeRequest_PublishContextEntry_DoNotUse_default_instance_;
-class NodeStageVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeStageVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _NodeStageVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class NodeStageVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeStageVolumeRequest_VolumeContextEntry_DoNotUse> _instance;
-} _NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
-class NodeStageVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeStageVolumeRequest> _instance;
-} _NodeStageVolumeRequest_default_instance_;
-class NodeStageVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeStageVolumeResponse> _instance;
-} _NodeStageVolumeResponse_default_instance_;
-class NodeUnstageVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeUnstageVolumeRequest> _instance;
-} _NodeUnstageVolumeRequest_default_instance_;
-class NodeUnstageVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeUnstageVolumeResponse> _instance;
-} _NodeUnstageVolumeResponse_default_instance_;
-class NodePublishVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodePublishVolumeRequest_PublishContextEntry_DoNotUse> _instance;
-} _NodePublishVolumeRequest_PublishContextEntry_DoNotUse_default_instance_;
-class NodePublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodePublishVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _NodePublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class NodePublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodePublishVolumeRequest_VolumeContextEntry_DoNotUse> _instance;
-} _NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
-class NodePublishVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodePublishVolumeRequest> _instance;
-} _NodePublishVolumeRequest_default_instance_;
-class NodePublishVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodePublishVolumeResponse> _instance;
-} _NodePublishVolumeResponse_default_instance_;
-class NodeUnpublishVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeUnpublishVolumeRequest> _instance;
-} _NodeUnpublishVolumeRequest_default_instance_;
-class NodeUnpublishVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeUnpublishVolumeResponse> _instance;
-} _NodeUnpublishVolumeResponse_default_instance_;
-class NodeGetVolumeStatsRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeGetVolumeStatsRequest> _instance;
-} _NodeGetVolumeStatsRequest_default_instance_;
-class NodeGetVolumeStatsResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeGetVolumeStatsResponse> _instance;
-} _NodeGetVolumeStatsResponse_default_instance_;
-class VolumeUsageDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeUsage> _instance;
-} _VolumeUsage_default_instance_;
-class VolumeConditionDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<VolumeCondition> _instance;
-} _VolumeCondition_default_instance_;
-class NodeGetCapabilitiesRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeGetCapabilitiesRequest> _instance;
-} _NodeGetCapabilitiesRequest_default_instance_;
-class NodeGetCapabilitiesResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeGetCapabilitiesResponse> _instance;
-} _NodeGetCapabilitiesResponse_default_instance_;
-class NodeServiceCapability_RPCDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeServiceCapability_RPC> _instance;
-} _NodeServiceCapability_RPC_default_instance_;
-class NodeServiceCapabilityDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeServiceCapability> _instance;
-  const ::csi::v1::NodeServiceCapability_RPC* rpc_;
-} _NodeServiceCapability_default_instance_;
-class NodeGetInfoRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeGetInfoRequest> _instance;
-} _NodeGetInfoRequest_default_instance_;
-class NodeGetInfoResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeGetInfoResponse> _instance;
-} _NodeGetInfoResponse_default_instance_;
-class NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeExpandVolumeRequest_SecretsEntry_DoNotUse> _instance;
-} _NodeExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-class NodeExpandVolumeRequestDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeExpandVolumeRequest> _instance;
-} _NodeExpandVolumeRequest_default_instance_;
-class NodeExpandVolumeResponseDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<NodeExpandVolumeResponse> _instance;
-} _NodeExpandVolumeResponse_default_instance_;
+constexpr GetPluginInfoRequest::GetPluginInfoRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct GetPluginInfoRequestDefaultTypeInternal {
+  constexpr GetPluginInfoRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetPluginInfoRequestDefaultTypeInternal() {}
+  union {
+    GetPluginInfoRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetPluginInfoRequestDefaultTypeInternal _GetPluginInfoRequest_default_instance_;
+constexpr GetPluginInfoResponse_ManifestEntry_DoNotUse::GetPluginInfoResponse_ManifestEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct GetPluginInfoResponse_ManifestEntry_DoNotUseDefaultTypeInternal {
+  constexpr GetPluginInfoResponse_ManifestEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetPluginInfoResponse_ManifestEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    GetPluginInfoResponse_ManifestEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetPluginInfoResponse_ManifestEntry_DoNotUseDefaultTypeInternal _GetPluginInfoResponse_ManifestEntry_DoNotUse_default_instance_;
+constexpr GetPluginInfoResponse::GetPluginInfoResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : manifest_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , vendor_version_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct GetPluginInfoResponseDefaultTypeInternal {
+  constexpr GetPluginInfoResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetPluginInfoResponseDefaultTypeInternal() {}
+  union {
+    GetPluginInfoResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetPluginInfoResponseDefaultTypeInternal _GetPluginInfoResponse_default_instance_;
+constexpr GetPluginCapabilitiesRequest::GetPluginCapabilitiesRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct GetPluginCapabilitiesRequestDefaultTypeInternal {
+  constexpr GetPluginCapabilitiesRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetPluginCapabilitiesRequestDefaultTypeInternal() {}
+  union {
+    GetPluginCapabilitiesRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetPluginCapabilitiesRequestDefaultTypeInternal _GetPluginCapabilitiesRequest_default_instance_;
+constexpr GetPluginCapabilitiesResponse::GetPluginCapabilitiesResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : capabilities_(){}
+struct GetPluginCapabilitiesResponseDefaultTypeInternal {
+  constexpr GetPluginCapabilitiesResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetPluginCapabilitiesResponseDefaultTypeInternal() {}
+  union {
+    GetPluginCapabilitiesResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetPluginCapabilitiesResponseDefaultTypeInternal _GetPluginCapabilitiesResponse_default_instance_;
+constexpr PluginCapability_Service::PluginCapability_Service(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : type_(0)
+{}
+struct PluginCapability_ServiceDefaultTypeInternal {
+  constexpr PluginCapability_ServiceDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PluginCapability_ServiceDefaultTypeInternal() {}
+  union {
+    PluginCapability_Service _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PluginCapability_ServiceDefaultTypeInternal _PluginCapability_Service_default_instance_;
+constexpr PluginCapability_VolumeExpansion::PluginCapability_VolumeExpansion(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : type_(0)
+{}
+struct PluginCapability_VolumeExpansionDefaultTypeInternal {
+  constexpr PluginCapability_VolumeExpansionDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PluginCapability_VolumeExpansionDefaultTypeInternal() {}
+  union {
+    PluginCapability_VolumeExpansion _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PluginCapability_VolumeExpansionDefaultTypeInternal _PluginCapability_VolumeExpansion_default_instance_;
+constexpr PluginCapability::PluginCapability(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : _oneof_case_{}{}
+struct PluginCapabilityDefaultTypeInternal {
+  constexpr PluginCapabilityDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~PluginCapabilityDefaultTypeInternal() {}
+  union {
+    PluginCapability _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT PluginCapabilityDefaultTypeInternal _PluginCapability_default_instance_;
+constexpr ProbeRequest::ProbeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ProbeRequestDefaultTypeInternal {
+  constexpr ProbeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ProbeRequestDefaultTypeInternal() {}
+  union {
+    ProbeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ProbeRequestDefaultTypeInternal _ProbeRequest_default_instance_;
+constexpr ProbeResponse::ProbeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : ready_(nullptr){}
+struct ProbeResponseDefaultTypeInternal {
+  constexpr ProbeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ProbeResponseDefaultTypeInternal() {}
+  union {
+    ProbeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ProbeResponseDefaultTypeInternal _ProbeResponse_default_instance_;
+constexpr CreateVolumeRequest_ParametersEntry_DoNotUse::CreateVolumeRequest_ParametersEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct CreateVolumeRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
+  constexpr CreateVolumeRequest_ParametersEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateVolumeRequest_ParametersEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    CreateVolumeRequest_ParametersEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateVolumeRequest_ParametersEntry_DoNotUseDefaultTypeInternal _CreateVolumeRequest_ParametersEntry_DoNotUse_default_instance_;
+constexpr CreateVolumeRequest_SecretsEntry_DoNotUse::CreateVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct CreateVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr CreateVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    CreateVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _CreateVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr CreateVolumeRequest::CreateVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_capabilities_()
+  , parameters_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , capacity_range_(nullptr)
+  , volume_content_source_(nullptr)
+  , accessibility_requirements_(nullptr){}
+struct CreateVolumeRequestDefaultTypeInternal {
+  constexpr CreateVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateVolumeRequestDefaultTypeInternal() {}
+  union {
+    CreateVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateVolumeRequestDefaultTypeInternal _CreateVolumeRequest_default_instance_;
+constexpr VolumeContentSource_SnapshotSource::VolumeContentSource_SnapshotSource(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : snapshot_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct VolumeContentSource_SnapshotSourceDefaultTypeInternal {
+  constexpr VolumeContentSource_SnapshotSourceDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeContentSource_SnapshotSourceDefaultTypeInternal() {}
+  union {
+    VolumeContentSource_SnapshotSource _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeContentSource_SnapshotSourceDefaultTypeInternal _VolumeContentSource_SnapshotSource_default_instance_;
+constexpr VolumeContentSource_VolumeSource::VolumeContentSource_VolumeSource(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct VolumeContentSource_VolumeSourceDefaultTypeInternal {
+  constexpr VolumeContentSource_VolumeSourceDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeContentSource_VolumeSourceDefaultTypeInternal() {}
+  union {
+    VolumeContentSource_VolumeSource _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeContentSource_VolumeSourceDefaultTypeInternal _VolumeContentSource_VolumeSource_default_instance_;
+constexpr VolumeContentSource::VolumeContentSource(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : _oneof_case_{}{}
+struct VolumeContentSourceDefaultTypeInternal {
+  constexpr VolumeContentSourceDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeContentSourceDefaultTypeInternal() {}
+  union {
+    VolumeContentSource _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeContentSourceDefaultTypeInternal _VolumeContentSource_default_instance_;
+constexpr CreateVolumeResponse::CreateVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_(nullptr){}
+struct CreateVolumeResponseDefaultTypeInternal {
+  constexpr CreateVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateVolumeResponseDefaultTypeInternal() {}
+  union {
+    CreateVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateVolumeResponseDefaultTypeInternal _CreateVolumeResponse_default_instance_;
+constexpr VolumeCapability_BlockVolume::VolumeCapability_BlockVolume(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct VolumeCapability_BlockVolumeDefaultTypeInternal {
+  constexpr VolumeCapability_BlockVolumeDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeCapability_BlockVolumeDefaultTypeInternal() {}
+  union {
+    VolumeCapability_BlockVolume _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeCapability_BlockVolumeDefaultTypeInternal _VolumeCapability_BlockVolume_default_instance_;
+constexpr VolumeCapability_MountVolume::VolumeCapability_MountVolume(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : mount_flags_()
+  , fs_type_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct VolumeCapability_MountVolumeDefaultTypeInternal {
+  constexpr VolumeCapability_MountVolumeDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeCapability_MountVolumeDefaultTypeInternal() {}
+  union {
+    VolumeCapability_MountVolume _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeCapability_MountVolumeDefaultTypeInternal _VolumeCapability_MountVolume_default_instance_;
+constexpr VolumeCapability_AccessMode::VolumeCapability_AccessMode(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : mode_(0)
+{}
+struct VolumeCapability_AccessModeDefaultTypeInternal {
+  constexpr VolumeCapability_AccessModeDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeCapability_AccessModeDefaultTypeInternal() {}
+  union {
+    VolumeCapability_AccessMode _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeCapability_AccessModeDefaultTypeInternal _VolumeCapability_AccessMode_default_instance_;
+constexpr VolumeCapability::VolumeCapability(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : access_mode_(nullptr)
+  , _oneof_case_{}{}
+struct VolumeCapabilityDefaultTypeInternal {
+  constexpr VolumeCapabilityDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeCapabilityDefaultTypeInternal() {}
+  union {
+    VolumeCapability _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeCapabilityDefaultTypeInternal _VolumeCapability_default_instance_;
+constexpr CapacityRange::CapacityRange(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : required_bytes_(PROTOBUF_LONGLONG(0))
+  , limit_bytes_(PROTOBUF_LONGLONG(0)){}
+struct CapacityRangeDefaultTypeInternal {
+  constexpr CapacityRangeDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CapacityRangeDefaultTypeInternal() {}
+  union {
+    CapacityRange _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CapacityRangeDefaultTypeInternal _CapacityRange_default_instance_;
+constexpr Volume_VolumeContextEntry_DoNotUse::Volume_VolumeContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct Volume_VolumeContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr Volume_VolumeContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~Volume_VolumeContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    Volume_VolumeContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT Volume_VolumeContextEntry_DoNotUseDefaultTypeInternal _Volume_VolumeContextEntry_DoNotUse_default_instance_;
+constexpr Volume::Volume(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , accessible_topology_()
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , content_source_(nullptr)
+  , capacity_bytes_(PROTOBUF_LONGLONG(0)){}
+struct VolumeDefaultTypeInternal {
+  constexpr VolumeDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeDefaultTypeInternal() {}
+  union {
+    Volume _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeDefaultTypeInternal _Volume_default_instance_;
+constexpr TopologyRequirement::TopologyRequirement(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : requisite_()
+  , preferred_(){}
+struct TopologyRequirementDefaultTypeInternal {
+  constexpr TopologyRequirementDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TopologyRequirementDefaultTypeInternal() {}
+  union {
+    TopologyRequirement _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TopologyRequirementDefaultTypeInternal _TopologyRequirement_default_instance_;
+constexpr Topology_SegmentsEntry_DoNotUse::Topology_SegmentsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct Topology_SegmentsEntry_DoNotUseDefaultTypeInternal {
+  constexpr Topology_SegmentsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~Topology_SegmentsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    Topology_SegmentsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT Topology_SegmentsEntry_DoNotUseDefaultTypeInternal _Topology_SegmentsEntry_DoNotUse_default_instance_;
+constexpr Topology::Topology(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : segments_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}){}
+struct TopologyDefaultTypeInternal {
+  constexpr TopologyDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~TopologyDefaultTypeInternal() {}
+  union {
+    Topology _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT TopologyDefaultTypeInternal _Topology_default_instance_;
+constexpr DeleteVolumeRequest_SecretsEntry_DoNotUse::DeleteVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct DeleteVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr DeleteVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DeleteVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    DeleteVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DeleteVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _DeleteVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr DeleteVolumeRequest::DeleteVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct DeleteVolumeRequestDefaultTypeInternal {
+  constexpr DeleteVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DeleteVolumeRequestDefaultTypeInternal() {}
+  union {
+    DeleteVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DeleteVolumeRequestDefaultTypeInternal _DeleteVolumeRequest_default_instance_;
+constexpr DeleteVolumeResponse::DeleteVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct DeleteVolumeResponseDefaultTypeInternal {
+  constexpr DeleteVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DeleteVolumeResponseDefaultTypeInternal() {}
+  union {
+    DeleteVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DeleteVolumeResponseDefaultTypeInternal _DeleteVolumeResponse_default_instance_;
+constexpr ControllerPublishVolumeRequest_SecretsEntry_DoNotUse::ControllerPublishVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ControllerPublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr ControllerPublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerPublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ControllerPublishVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerPublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse::ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal _ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
+constexpr ControllerPublishVolumeRequest::ControllerPublishVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , node_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , volume_capability_(nullptr)
+  , readonly_(false){}
+struct ControllerPublishVolumeRequestDefaultTypeInternal {
+  constexpr ControllerPublishVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerPublishVolumeRequestDefaultTypeInternal() {}
+  union {
+    ControllerPublishVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerPublishVolumeRequestDefaultTypeInternal _ControllerPublishVolumeRequest_default_instance_;
+constexpr ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse::ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ControllerPublishVolumeResponse_PublishContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr ControllerPublishVolumeResponse_PublishContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerPublishVolumeResponse_PublishContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerPublishVolumeResponse_PublishContextEntry_DoNotUseDefaultTypeInternal _ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_default_instance_;
+constexpr ControllerPublishVolumeResponse::ControllerPublishVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : publish_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}){}
+struct ControllerPublishVolumeResponseDefaultTypeInternal {
+  constexpr ControllerPublishVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerPublishVolumeResponseDefaultTypeInternal() {}
+  union {
+    ControllerPublishVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerPublishVolumeResponseDefaultTypeInternal _ControllerPublishVolumeResponse_default_instance_;
+constexpr ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse::ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr ControllerUnpublishVolumeRequest::ControllerUnpublishVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , node_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ControllerUnpublishVolumeRequestDefaultTypeInternal {
+  constexpr ControllerUnpublishVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerUnpublishVolumeRequestDefaultTypeInternal() {}
+  union {
+    ControllerUnpublishVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerUnpublishVolumeRequestDefaultTypeInternal _ControllerUnpublishVolumeRequest_default_instance_;
+constexpr ControllerUnpublishVolumeResponse::ControllerUnpublishVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ControllerUnpublishVolumeResponseDefaultTypeInternal {
+  constexpr ControllerUnpublishVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerUnpublishVolumeResponseDefaultTypeInternal() {}
+  union {
+    ControllerUnpublishVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerUnpublishVolumeResponseDefaultTypeInternal _ControllerUnpublishVolumeResponse_default_instance_;
+constexpr ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse::ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal _ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_default_instance_;
+constexpr ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse::ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUseDefaultTypeInternal _ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_default_instance_;
+constexpr ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse::ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUseDefaultTypeInternal _ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr ValidateVolumeCapabilitiesRequest::ValidateVolumeCapabilitiesRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_capabilities_()
+  , parameters_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ValidateVolumeCapabilitiesRequestDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesRequestDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesRequestDefaultTypeInternal _ValidateVolumeCapabilitiesRequest_default_instance_;
+constexpr ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse::ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUseDefaultTypeInternal _ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_default_instance_;
+constexpr ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse::ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUseDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUseDefaultTypeInternal _ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_default_instance_;
+constexpr ValidateVolumeCapabilitiesResponse_Confirmed::ValidateVolumeCapabilitiesResponse_Confirmed(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_capabilities_()
+  , parameters_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}){}
+struct ValidateVolumeCapabilitiesResponse_ConfirmedDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesResponse_ConfirmedDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesResponse_ConfirmedDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesResponse_Confirmed _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesResponse_ConfirmedDefaultTypeInternal _ValidateVolumeCapabilitiesResponse_Confirmed_default_instance_;
+constexpr ValidateVolumeCapabilitiesResponse::ValidateVolumeCapabilitiesResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , confirmed_(nullptr){}
+struct ValidateVolumeCapabilitiesResponseDefaultTypeInternal {
+  constexpr ValidateVolumeCapabilitiesResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ValidateVolumeCapabilitiesResponseDefaultTypeInternal() {}
+  union {
+    ValidateVolumeCapabilitiesResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ValidateVolumeCapabilitiesResponseDefaultTypeInternal _ValidateVolumeCapabilitiesResponse_default_instance_;
+constexpr ListVolumesRequest::ListVolumesRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : starting_token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , max_entries_(0){}
+struct ListVolumesRequestDefaultTypeInternal {
+  constexpr ListVolumesRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListVolumesRequestDefaultTypeInternal() {}
+  union {
+    ListVolumesRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListVolumesRequestDefaultTypeInternal _ListVolumesRequest_default_instance_;
+constexpr ListVolumesResponse_VolumeStatus::ListVolumesResponse_VolumeStatus(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : published_node_ids_()
+  , volume_condition_(nullptr){}
+struct ListVolumesResponse_VolumeStatusDefaultTypeInternal {
+  constexpr ListVolumesResponse_VolumeStatusDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListVolumesResponse_VolumeStatusDefaultTypeInternal() {}
+  union {
+    ListVolumesResponse_VolumeStatus _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListVolumesResponse_VolumeStatusDefaultTypeInternal _ListVolumesResponse_VolumeStatus_default_instance_;
+constexpr ListVolumesResponse_Entry::ListVolumesResponse_Entry(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_(nullptr)
+  , status_(nullptr){}
+struct ListVolumesResponse_EntryDefaultTypeInternal {
+  constexpr ListVolumesResponse_EntryDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListVolumesResponse_EntryDefaultTypeInternal() {}
+  union {
+    ListVolumesResponse_Entry _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListVolumesResponse_EntryDefaultTypeInternal _ListVolumesResponse_Entry_default_instance_;
+constexpr ListVolumesResponse::ListVolumesResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : entries_()
+  , next_token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ListVolumesResponseDefaultTypeInternal {
+  constexpr ListVolumesResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListVolumesResponseDefaultTypeInternal() {}
+  union {
+    ListVolumesResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListVolumesResponseDefaultTypeInternal _ListVolumesResponse_default_instance_;
+constexpr ControllerGetVolumeRequest::ControllerGetVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ControllerGetVolumeRequestDefaultTypeInternal {
+  constexpr ControllerGetVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerGetVolumeRequestDefaultTypeInternal() {}
+  union {
+    ControllerGetVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerGetVolumeRequestDefaultTypeInternal _ControllerGetVolumeRequest_default_instance_;
+constexpr ControllerGetVolumeResponse_VolumeStatus::ControllerGetVolumeResponse_VolumeStatus(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : published_node_ids_()
+  , volume_condition_(nullptr){}
+struct ControllerGetVolumeResponse_VolumeStatusDefaultTypeInternal {
+  constexpr ControllerGetVolumeResponse_VolumeStatusDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerGetVolumeResponse_VolumeStatusDefaultTypeInternal() {}
+  union {
+    ControllerGetVolumeResponse_VolumeStatus _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerGetVolumeResponse_VolumeStatusDefaultTypeInternal _ControllerGetVolumeResponse_VolumeStatus_default_instance_;
+constexpr ControllerGetVolumeResponse::ControllerGetVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_(nullptr)
+  , status_(nullptr){}
+struct ControllerGetVolumeResponseDefaultTypeInternal {
+  constexpr ControllerGetVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerGetVolumeResponseDefaultTypeInternal() {}
+  union {
+    ControllerGetVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerGetVolumeResponseDefaultTypeInternal _ControllerGetVolumeResponse_default_instance_;
+constexpr GetCapacityRequest_ParametersEntry_DoNotUse::GetCapacityRequest_ParametersEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct GetCapacityRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
+  constexpr GetCapacityRequest_ParametersEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetCapacityRequest_ParametersEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    GetCapacityRequest_ParametersEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetCapacityRequest_ParametersEntry_DoNotUseDefaultTypeInternal _GetCapacityRequest_ParametersEntry_DoNotUse_default_instance_;
+constexpr GetCapacityRequest::GetCapacityRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_capabilities_()
+  , parameters_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , accessible_topology_(nullptr){}
+struct GetCapacityRequestDefaultTypeInternal {
+  constexpr GetCapacityRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetCapacityRequestDefaultTypeInternal() {}
+  union {
+    GetCapacityRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetCapacityRequestDefaultTypeInternal _GetCapacityRequest_default_instance_;
+constexpr GetCapacityResponse::GetCapacityResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : maximum_volume_size_(nullptr)
+  , minimum_volume_size_(nullptr)
+  , available_capacity_(PROTOBUF_LONGLONG(0)){}
+struct GetCapacityResponseDefaultTypeInternal {
+  constexpr GetCapacityResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~GetCapacityResponseDefaultTypeInternal() {}
+  union {
+    GetCapacityResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT GetCapacityResponseDefaultTypeInternal _GetCapacityResponse_default_instance_;
+constexpr ControllerGetCapabilitiesRequest::ControllerGetCapabilitiesRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ControllerGetCapabilitiesRequestDefaultTypeInternal {
+  constexpr ControllerGetCapabilitiesRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerGetCapabilitiesRequestDefaultTypeInternal() {}
+  union {
+    ControllerGetCapabilitiesRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerGetCapabilitiesRequestDefaultTypeInternal _ControllerGetCapabilitiesRequest_default_instance_;
+constexpr ControllerGetCapabilitiesResponse::ControllerGetCapabilitiesResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : capabilities_(){}
+struct ControllerGetCapabilitiesResponseDefaultTypeInternal {
+  constexpr ControllerGetCapabilitiesResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerGetCapabilitiesResponseDefaultTypeInternal() {}
+  union {
+    ControllerGetCapabilitiesResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerGetCapabilitiesResponseDefaultTypeInternal _ControllerGetCapabilitiesResponse_default_instance_;
+constexpr ControllerServiceCapability_RPC::ControllerServiceCapability_RPC(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : type_(0)
+{}
+struct ControllerServiceCapability_RPCDefaultTypeInternal {
+  constexpr ControllerServiceCapability_RPCDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerServiceCapability_RPCDefaultTypeInternal() {}
+  union {
+    ControllerServiceCapability_RPC _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerServiceCapability_RPCDefaultTypeInternal _ControllerServiceCapability_RPC_default_instance_;
+constexpr ControllerServiceCapability::ControllerServiceCapability(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : _oneof_case_{}{}
+struct ControllerServiceCapabilityDefaultTypeInternal {
+  constexpr ControllerServiceCapabilityDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerServiceCapabilityDefaultTypeInternal() {}
+  union {
+    ControllerServiceCapability _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerServiceCapabilityDefaultTypeInternal _ControllerServiceCapability_default_instance_;
+constexpr CreateSnapshotRequest_SecretsEntry_DoNotUse::CreateSnapshotRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct CreateSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr CreateSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    CreateSnapshotRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal _CreateSnapshotRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr CreateSnapshotRequest_ParametersEntry_DoNotUse::CreateSnapshotRequest_ParametersEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct CreateSnapshotRequest_ParametersEntry_DoNotUseDefaultTypeInternal {
+  constexpr CreateSnapshotRequest_ParametersEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateSnapshotRequest_ParametersEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    CreateSnapshotRequest_ParametersEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateSnapshotRequest_ParametersEntry_DoNotUseDefaultTypeInternal _CreateSnapshotRequest_ParametersEntry_DoNotUse_default_instance_;
+constexpr CreateSnapshotRequest::CreateSnapshotRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , parameters_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , source_volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct CreateSnapshotRequestDefaultTypeInternal {
+  constexpr CreateSnapshotRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateSnapshotRequestDefaultTypeInternal() {}
+  union {
+    CreateSnapshotRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateSnapshotRequestDefaultTypeInternal _CreateSnapshotRequest_default_instance_;
+constexpr CreateSnapshotResponse::CreateSnapshotResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : snapshot_(nullptr){}
+struct CreateSnapshotResponseDefaultTypeInternal {
+  constexpr CreateSnapshotResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~CreateSnapshotResponseDefaultTypeInternal() {}
+  union {
+    CreateSnapshotResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT CreateSnapshotResponseDefaultTypeInternal _CreateSnapshotResponse_default_instance_;
+constexpr Snapshot::Snapshot(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : snapshot_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , source_volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , creation_time_(nullptr)
+  , size_bytes_(PROTOBUF_LONGLONG(0))
+  , ready_to_use_(false){}
+struct SnapshotDefaultTypeInternal {
+  constexpr SnapshotDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~SnapshotDefaultTypeInternal() {}
+  union {
+    Snapshot _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT SnapshotDefaultTypeInternal _Snapshot_default_instance_;
+constexpr DeleteSnapshotRequest_SecretsEntry_DoNotUse::DeleteSnapshotRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct DeleteSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr DeleteSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DeleteSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    DeleteSnapshotRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DeleteSnapshotRequest_SecretsEntry_DoNotUseDefaultTypeInternal _DeleteSnapshotRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr DeleteSnapshotRequest::DeleteSnapshotRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , snapshot_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct DeleteSnapshotRequestDefaultTypeInternal {
+  constexpr DeleteSnapshotRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DeleteSnapshotRequestDefaultTypeInternal() {}
+  union {
+    DeleteSnapshotRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DeleteSnapshotRequestDefaultTypeInternal _DeleteSnapshotRequest_default_instance_;
+constexpr DeleteSnapshotResponse::DeleteSnapshotResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct DeleteSnapshotResponseDefaultTypeInternal {
+  constexpr DeleteSnapshotResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~DeleteSnapshotResponseDefaultTypeInternal() {}
+  union {
+    DeleteSnapshotResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT DeleteSnapshotResponseDefaultTypeInternal _DeleteSnapshotResponse_default_instance_;
+constexpr ListSnapshotsRequest_SecretsEntry_DoNotUse::ListSnapshotsRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ListSnapshotsRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr ListSnapshotsRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListSnapshotsRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ListSnapshotsRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListSnapshotsRequest_SecretsEntry_DoNotUseDefaultTypeInternal _ListSnapshotsRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr ListSnapshotsRequest::ListSnapshotsRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , starting_token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , source_volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , snapshot_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , max_entries_(0){}
+struct ListSnapshotsRequestDefaultTypeInternal {
+  constexpr ListSnapshotsRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListSnapshotsRequestDefaultTypeInternal() {}
+  union {
+    ListSnapshotsRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListSnapshotsRequestDefaultTypeInternal _ListSnapshotsRequest_default_instance_;
+constexpr ListSnapshotsResponse_Entry::ListSnapshotsResponse_Entry(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : snapshot_(nullptr){}
+struct ListSnapshotsResponse_EntryDefaultTypeInternal {
+  constexpr ListSnapshotsResponse_EntryDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListSnapshotsResponse_EntryDefaultTypeInternal() {}
+  union {
+    ListSnapshotsResponse_Entry _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListSnapshotsResponse_EntryDefaultTypeInternal _ListSnapshotsResponse_Entry_default_instance_;
+constexpr ListSnapshotsResponse::ListSnapshotsResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : entries_()
+  , next_token_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct ListSnapshotsResponseDefaultTypeInternal {
+  constexpr ListSnapshotsResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ListSnapshotsResponseDefaultTypeInternal() {}
+  union {
+    ListSnapshotsResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ListSnapshotsResponseDefaultTypeInternal _ListSnapshotsResponse_default_instance_;
+constexpr ControllerExpandVolumeRequest_SecretsEntry_DoNotUse::ControllerExpandVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct ControllerExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr ControllerExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    ControllerExpandVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr ControllerExpandVolumeRequest::ControllerExpandVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , capacity_range_(nullptr)
+  , volume_capability_(nullptr){}
+struct ControllerExpandVolumeRequestDefaultTypeInternal {
+  constexpr ControllerExpandVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerExpandVolumeRequestDefaultTypeInternal() {}
+  union {
+    ControllerExpandVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerExpandVolumeRequestDefaultTypeInternal _ControllerExpandVolumeRequest_default_instance_;
+constexpr ControllerExpandVolumeResponse::ControllerExpandVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : capacity_bytes_(PROTOBUF_LONGLONG(0))
+  , node_expansion_required_(false){}
+struct ControllerExpandVolumeResponseDefaultTypeInternal {
+  constexpr ControllerExpandVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~ControllerExpandVolumeResponseDefaultTypeInternal() {}
+  union {
+    ControllerExpandVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT ControllerExpandVolumeResponseDefaultTypeInternal _ControllerExpandVolumeResponse_default_instance_;
+constexpr NodeStageVolumeRequest_PublishContextEntry_DoNotUse::NodeStageVolumeRequest_PublishContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeStageVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr NodeStageVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeStageVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    NodeStageVolumeRequest_PublishContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeStageVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal _NodeStageVolumeRequest_PublishContextEntry_DoNotUse_default_instance_;
+constexpr NodeStageVolumeRequest_SecretsEntry_DoNotUse::NodeStageVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeStageVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr NodeStageVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeStageVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    NodeStageVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeStageVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _NodeStageVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr NodeStageVolumeRequest_VolumeContextEntry_DoNotUse::NodeStageVolumeRequest_VolumeContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeStageVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr NodeStageVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeStageVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    NodeStageVolumeRequest_VolumeContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeStageVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal _NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
+constexpr NodeStageVolumeRequest::NodeStageVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : publish_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , staging_target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , volume_capability_(nullptr){}
+struct NodeStageVolumeRequestDefaultTypeInternal {
+  constexpr NodeStageVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeStageVolumeRequestDefaultTypeInternal() {}
+  union {
+    NodeStageVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeStageVolumeRequestDefaultTypeInternal _NodeStageVolumeRequest_default_instance_;
+constexpr NodeStageVolumeResponse::NodeStageVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeStageVolumeResponseDefaultTypeInternal {
+  constexpr NodeStageVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeStageVolumeResponseDefaultTypeInternal() {}
+  union {
+    NodeStageVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeStageVolumeResponseDefaultTypeInternal _NodeStageVolumeResponse_default_instance_;
+constexpr NodeUnstageVolumeRequest::NodeUnstageVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , staging_target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct NodeUnstageVolumeRequestDefaultTypeInternal {
+  constexpr NodeUnstageVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeUnstageVolumeRequestDefaultTypeInternal() {}
+  union {
+    NodeUnstageVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeUnstageVolumeRequestDefaultTypeInternal _NodeUnstageVolumeRequest_default_instance_;
+constexpr NodeUnstageVolumeResponse::NodeUnstageVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeUnstageVolumeResponseDefaultTypeInternal {
+  constexpr NodeUnstageVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeUnstageVolumeResponseDefaultTypeInternal() {}
+  union {
+    NodeUnstageVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeUnstageVolumeResponseDefaultTypeInternal _NodeUnstageVolumeResponse_default_instance_;
+constexpr NodePublishVolumeRequest_PublishContextEntry_DoNotUse::NodePublishVolumeRequest_PublishContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodePublishVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr NodePublishVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodePublishVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    NodePublishVolumeRequest_PublishContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodePublishVolumeRequest_PublishContextEntry_DoNotUseDefaultTypeInternal _NodePublishVolumeRequest_PublishContextEntry_DoNotUse_default_instance_;
+constexpr NodePublishVolumeRequest_SecretsEntry_DoNotUse::NodePublishVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodePublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr NodePublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodePublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    NodePublishVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodePublishVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _NodePublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr NodePublishVolumeRequest_VolumeContextEntry_DoNotUse::NodePublishVolumeRequest_VolumeContextEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodePublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal {
+  constexpr NodePublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodePublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    NodePublishVolumeRequest_VolumeContextEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodePublishVolumeRequest_VolumeContextEntry_DoNotUseDefaultTypeInternal _NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
+constexpr NodePublishVolumeRequest::NodePublishVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : publish_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_context_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , staging_target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , volume_capability_(nullptr)
+  , readonly_(false){}
+struct NodePublishVolumeRequestDefaultTypeInternal {
+  constexpr NodePublishVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodePublishVolumeRequestDefaultTypeInternal() {}
+  union {
+    NodePublishVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodePublishVolumeRequestDefaultTypeInternal _NodePublishVolumeRequest_default_instance_;
+constexpr NodePublishVolumeResponse::NodePublishVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodePublishVolumeResponseDefaultTypeInternal {
+  constexpr NodePublishVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodePublishVolumeResponseDefaultTypeInternal() {}
+  union {
+    NodePublishVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodePublishVolumeResponseDefaultTypeInternal _NodePublishVolumeResponse_default_instance_;
+constexpr NodeUnpublishVolumeRequest::NodeUnpublishVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct NodeUnpublishVolumeRequestDefaultTypeInternal {
+  constexpr NodeUnpublishVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeUnpublishVolumeRequestDefaultTypeInternal() {}
+  union {
+    NodeUnpublishVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeUnpublishVolumeRequestDefaultTypeInternal _NodeUnpublishVolumeRequest_default_instance_;
+constexpr NodeUnpublishVolumeResponse::NodeUnpublishVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeUnpublishVolumeResponseDefaultTypeInternal {
+  constexpr NodeUnpublishVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeUnpublishVolumeResponseDefaultTypeInternal() {}
+  union {
+    NodeUnpublishVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeUnpublishVolumeResponseDefaultTypeInternal _NodeUnpublishVolumeResponse_default_instance_;
+constexpr NodeGetVolumeStatsRequest::NodeGetVolumeStatsRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , volume_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , staging_target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+struct NodeGetVolumeStatsRequestDefaultTypeInternal {
+  constexpr NodeGetVolumeStatsRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeGetVolumeStatsRequestDefaultTypeInternal() {}
+  union {
+    NodeGetVolumeStatsRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeGetVolumeStatsRequestDefaultTypeInternal _NodeGetVolumeStatsRequest_default_instance_;
+constexpr NodeGetVolumeStatsResponse::NodeGetVolumeStatsResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : usage_()
+  , volume_condition_(nullptr){}
+struct NodeGetVolumeStatsResponseDefaultTypeInternal {
+  constexpr NodeGetVolumeStatsResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeGetVolumeStatsResponseDefaultTypeInternal() {}
+  union {
+    NodeGetVolumeStatsResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeGetVolumeStatsResponseDefaultTypeInternal _NodeGetVolumeStatsResponse_default_instance_;
+constexpr VolumeUsage::VolumeUsage(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : available_(PROTOBUF_LONGLONG(0))
+  , total_(PROTOBUF_LONGLONG(0))
+  , used_(PROTOBUF_LONGLONG(0))
+  , unit_(0)
+{}
+struct VolumeUsageDefaultTypeInternal {
+  constexpr VolumeUsageDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeUsageDefaultTypeInternal() {}
+  union {
+    VolumeUsage _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeUsageDefaultTypeInternal _VolumeUsage_default_instance_;
+constexpr VolumeCondition::VolumeCondition(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : message_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , abnormal_(false){}
+struct VolumeConditionDefaultTypeInternal {
+  constexpr VolumeConditionDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~VolumeConditionDefaultTypeInternal() {}
+  union {
+    VolumeCondition _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT VolumeConditionDefaultTypeInternal _VolumeCondition_default_instance_;
+constexpr NodeGetCapabilitiesRequest::NodeGetCapabilitiesRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeGetCapabilitiesRequestDefaultTypeInternal {
+  constexpr NodeGetCapabilitiesRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeGetCapabilitiesRequestDefaultTypeInternal() {}
+  union {
+    NodeGetCapabilitiesRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeGetCapabilitiesRequestDefaultTypeInternal _NodeGetCapabilitiesRequest_default_instance_;
+constexpr NodeGetCapabilitiesResponse::NodeGetCapabilitiesResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : capabilities_(){}
+struct NodeGetCapabilitiesResponseDefaultTypeInternal {
+  constexpr NodeGetCapabilitiesResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeGetCapabilitiesResponseDefaultTypeInternal() {}
+  union {
+    NodeGetCapabilitiesResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeGetCapabilitiesResponseDefaultTypeInternal _NodeGetCapabilitiesResponse_default_instance_;
+constexpr NodeServiceCapability_RPC::NodeServiceCapability_RPC(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : type_(0)
+{}
+struct NodeServiceCapability_RPCDefaultTypeInternal {
+  constexpr NodeServiceCapability_RPCDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeServiceCapability_RPCDefaultTypeInternal() {}
+  union {
+    NodeServiceCapability_RPC _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeServiceCapability_RPCDefaultTypeInternal _NodeServiceCapability_RPC_default_instance_;
+constexpr NodeServiceCapability::NodeServiceCapability(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : _oneof_case_{}{}
+struct NodeServiceCapabilityDefaultTypeInternal {
+  constexpr NodeServiceCapabilityDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeServiceCapabilityDefaultTypeInternal() {}
+  union {
+    NodeServiceCapability _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeServiceCapabilityDefaultTypeInternal _NodeServiceCapability_default_instance_;
+constexpr NodeGetInfoRequest::NodeGetInfoRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeGetInfoRequestDefaultTypeInternal {
+  constexpr NodeGetInfoRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeGetInfoRequestDefaultTypeInternal() {}
+  union {
+    NodeGetInfoRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeGetInfoRequestDefaultTypeInternal _NodeGetInfoRequest_default_instance_;
+constexpr NodeGetInfoResponse::NodeGetInfoResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : node_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , accessible_topology_(nullptr)
+  , max_volumes_per_node_(PROTOBUF_LONGLONG(0)){}
+struct NodeGetInfoResponseDefaultTypeInternal {
+  constexpr NodeGetInfoResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeGetInfoResponseDefaultTypeInternal() {}
+  union {
+    NodeGetInfoResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeGetInfoResponseDefaultTypeInternal _NodeGetInfoResponse_default_instance_;
+constexpr NodeExpandVolumeRequest_SecretsEntry_DoNotUse::NodeExpandVolumeRequest_SecretsEntry_DoNotUse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
+struct NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
+  constexpr NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
+  union {
+    NodeExpandVolumeRequest_SecretsEntry_DoNotUse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _NodeExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
+constexpr NodeExpandVolumeRequest::NodeExpandVolumeRequest(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
+  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , volume_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , staging_target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , capacity_range_(nullptr)
+  , volume_capability_(nullptr){}
+struct NodeExpandVolumeRequestDefaultTypeInternal {
+  constexpr NodeExpandVolumeRequestDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeExpandVolumeRequestDefaultTypeInternal() {}
+  union {
+    NodeExpandVolumeRequest _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeExpandVolumeRequestDefaultTypeInternal _NodeExpandVolumeRequest_default_instance_;
+constexpr NodeExpandVolumeResponse::NodeExpandVolumeResponse(
+  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
+  : capacity_bytes_(PROTOBUF_LONGLONG(0)){}
+struct NodeExpandVolumeResponseDefaultTypeInternal {
+  constexpr NodeExpandVolumeResponseDefaultTypeInternal()
+    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
+  ~NodeExpandVolumeResponseDefaultTypeInternal() {}
+  union {
+    NodeExpandVolumeResponse _instance;
+  };
+};
+PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeExpandVolumeResponseDefaultTypeInternal _NodeExpandVolumeResponse_default_instance_;
 }  // namespace v1
 }  // namespace csi
-static void InitDefaultsscc_info_CapacityRange_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CapacityRange_default_instance_;
-    new (ptr) ::csi::v1::CapacityRange();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::CapacityRange::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CapacityRange_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CapacityRange_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerExpandVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerExpandVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::ControllerExpandVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerExpandVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ControllerExpandVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_ControllerExpandVolumeRequest_csi_2eproto}, {
-      &scc_info_CapacityRange_csi_2eproto.base,
-      &scc_info_ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_VolumeCapability_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ControllerExpandVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::ControllerExpandVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerExpandVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerExpandVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::ControllerExpandVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerExpandVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerExpandVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerExpandVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerGetCapabilitiesRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerGetCapabilitiesRequest_default_instance_;
-    new (ptr) ::csi::v1::ControllerGetCapabilitiesRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerGetCapabilitiesRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerGetCapabilitiesRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerGetCapabilitiesRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerGetCapabilitiesResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerGetCapabilitiesResponse_default_instance_;
-    new (ptr) ::csi::v1::ControllerGetCapabilitiesResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerGetCapabilitiesResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ControllerGetCapabilitiesResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ControllerGetCapabilitiesResponse_csi_2eproto}, {
-      &scc_info_ControllerServiceCapability_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerGetVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerGetVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::ControllerGetVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerGetVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerGetVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerGetVolumeRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerGetVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerGetVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::ControllerGetVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerGetVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ControllerGetVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_ControllerGetVolumeResponse_csi_2eproto}, {
-      &scc_info_Volume_csi_2eproto.base,
-      &scc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerGetVolumeResponse_VolumeStatus_default_instance_;
-    new (ptr) ::csi::v1::ControllerGetVolumeResponse_VolumeStatus();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerGetVolumeResponse_VolumeStatus::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto}, {
-      &scc_info_VolumeCondition_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerPublishVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerPublishVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::ControllerPublishVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerPublishVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ControllerPublishVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_ControllerPublishVolumeRequest_csi_2eproto}, {
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ControllerPublishVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::ControllerPublishVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse();
-  }
-  ::csi::v1::ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerPublishVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerPublishVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::ControllerPublishVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerPublishVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ControllerPublishVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ControllerPublishVolumeResponse_csi_2eproto}, {
-      &scc_info_ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse();
-  }
-  ::csi::v1::ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerServiceCapability_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerServiceCapability_default_instance_;
-    new (ptr) ::csi::v1::ControllerServiceCapability();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerServiceCapability::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ControllerServiceCapability_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ControllerServiceCapability_csi_2eproto}, {
-      &scc_info_ControllerServiceCapability_RPC_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerServiceCapability_RPC_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerServiceCapability_RPC_default_instance_;
-    new (ptr) ::csi::v1::ControllerServiceCapability_RPC();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerServiceCapability_RPC::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerServiceCapability_RPC_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerServiceCapability_RPC_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerUnpublishVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerUnpublishVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::ControllerUnpublishVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerUnpublishVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ControllerUnpublishVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ControllerUnpublishVolumeRequest_csi_2eproto}, {
-      &scc_info_ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ControllerUnpublishVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ControllerUnpublishVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::ControllerUnpublishVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ControllerUnpublishVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ControllerUnpublishVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ControllerUnpublishVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_CreateSnapshotRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateSnapshotRequest_default_instance_;
-    new (ptr) ::csi::v1::CreateSnapshotRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::CreateSnapshotRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_CreateSnapshotRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_CreateSnapshotRequest_csi_2eproto}, {
-      &scc_info_CreateSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_CreateSnapshotRequest_ParametersEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_CreateSnapshotRequest_ParametersEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateSnapshotRequest_ParametersEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::CreateSnapshotRequest_ParametersEntry_DoNotUse();
-  }
-  ::csi::v1::CreateSnapshotRequest_ParametersEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateSnapshotRequest_ParametersEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CreateSnapshotRequest_ParametersEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_CreateSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateSnapshotRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::CreateSnapshotRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::CreateSnapshotRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CreateSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_CreateSnapshotResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateSnapshotResponse_default_instance_;
-    new (ptr) ::csi::v1::CreateSnapshotResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::CreateSnapshotResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CreateSnapshotResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CreateSnapshotResponse_csi_2eproto}, {
-      &scc_info_Snapshot_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_CreateVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::CreateVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::CreateVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_CreateVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 6, 0, InitDefaultsscc_info_CreateVolumeRequest_csi_2eproto}, {
-      &scc_info_CapacityRange_csi_2eproto.base,
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_CreateVolumeRequest_ParametersEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_CreateVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_VolumeContentSource_csi_2eproto.base,
-      &scc_info_TopologyRequirement_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_CreateVolumeRequest_ParametersEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateVolumeRequest_ParametersEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::CreateVolumeRequest_ParametersEntry_DoNotUse();
-  }
-  ::csi::v1::CreateVolumeRequest_ParametersEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateVolumeRequest_ParametersEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CreateVolumeRequest_ParametersEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_CreateVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::CreateVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::CreateVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_CreateVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_CreateVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_CreateVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_CreateVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::CreateVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::CreateVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_CreateVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_CreateVolumeResponse_csi_2eproto}, {
-      &scc_info_Volume_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_DeleteSnapshotRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_DeleteSnapshotRequest_default_instance_;
-    new (ptr) ::csi::v1::DeleteSnapshotRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::DeleteSnapshotRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_DeleteSnapshotRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_DeleteSnapshotRequest_csi_2eproto}, {
-      &scc_info_DeleteSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_DeleteSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_DeleteSnapshotRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::DeleteSnapshotRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::DeleteSnapshotRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_DeleteSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_DeleteSnapshotResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_DeleteSnapshotResponse_default_instance_;
-    new (ptr) ::csi::v1::DeleteSnapshotResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::DeleteSnapshotResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteSnapshotResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_DeleteSnapshotResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_DeleteVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_DeleteVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::DeleteVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::DeleteVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_DeleteVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_DeleteVolumeRequest_csi_2eproto}, {
-      &scc_info_DeleteVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_DeleteVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_DeleteVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::DeleteVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::DeleteVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_DeleteVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_DeleteVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_DeleteVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::DeleteVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::DeleteVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_DeleteVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_DeleteVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_GetCapacityRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetCapacityRequest_default_instance_;
-    new (ptr) ::csi::v1::GetCapacityRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::GetCapacityRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_GetCapacityRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_GetCapacityRequest_csi_2eproto}, {
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_GetCapacityRequest_ParametersEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_Topology_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_GetCapacityRequest_ParametersEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetCapacityRequest_ParametersEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::GetCapacityRequest_ParametersEntry_DoNotUse();
-  }
-  ::csi::v1::GetCapacityRequest_ParametersEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetCapacityRequest_ParametersEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetCapacityRequest_ParametersEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_GetCapacityResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetCapacityResponse_default_instance_;
-    new (ptr) ::csi::v1::GetCapacityResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::GetCapacityResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetCapacityResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_GetCapacityResponse_csi_2eproto}, {
-      &scc_info_Int64Value_google_2fprotobuf_2fwrappers_2eproto.base,}};
-
-static void InitDefaultsscc_info_GetPluginCapabilitiesRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetPluginCapabilitiesRequest_default_instance_;
-    new (ptr) ::csi::v1::GetPluginCapabilitiesRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::GetPluginCapabilitiesRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetPluginCapabilitiesRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetPluginCapabilitiesRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_GetPluginCapabilitiesResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetPluginCapabilitiesResponse_default_instance_;
-    new (ptr) ::csi::v1::GetPluginCapabilitiesResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::GetPluginCapabilitiesResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetPluginCapabilitiesResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_GetPluginCapabilitiesResponse_csi_2eproto}, {
-      &scc_info_PluginCapability_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_GetPluginInfoRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetPluginInfoRequest_default_instance_;
-    new (ptr) ::csi::v1::GetPluginInfoRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::GetPluginInfoRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetPluginInfoRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetPluginInfoRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_GetPluginInfoResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetPluginInfoResponse_default_instance_;
-    new (ptr) ::csi::v1::GetPluginInfoResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::GetPluginInfoResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_GetPluginInfoResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_GetPluginInfoResponse_csi_2eproto}, {
-      &scc_info_GetPluginInfoResponse_ManifestEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_GetPluginInfoResponse_ManifestEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_GetPluginInfoResponse_ManifestEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::GetPluginInfoResponse_ManifestEntry_DoNotUse();
-  }
-  ::csi::v1::GetPluginInfoResponse_ManifestEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_GetPluginInfoResponse_ManifestEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_GetPluginInfoResponse_ManifestEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ListSnapshotsRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListSnapshotsRequest_default_instance_;
-    new (ptr) ::csi::v1::ListSnapshotsRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ListSnapshotsRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ListSnapshotsRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ListSnapshotsRequest_csi_2eproto}, {
-      &scc_info_ListSnapshotsRequest_SecretsEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ListSnapshotsRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListSnapshotsRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ListSnapshotsRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::ListSnapshotsRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ListSnapshotsRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ListSnapshotsRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ListSnapshotsResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListSnapshotsResponse_default_instance_;
-    new (ptr) ::csi::v1::ListSnapshotsResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ListSnapshotsResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ListSnapshotsResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ListSnapshotsResponse_csi_2eproto}, {
-      &scc_info_ListSnapshotsResponse_Entry_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ListSnapshotsResponse_Entry_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListSnapshotsResponse_Entry_default_instance_;
-    new (ptr) ::csi::v1::ListSnapshotsResponse_Entry();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ListSnapshotsResponse_Entry::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ListSnapshotsResponse_Entry_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ListSnapshotsResponse_Entry_csi_2eproto}, {
-      &scc_info_Snapshot_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ListVolumesRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListVolumesRequest_default_instance_;
-    new (ptr) ::csi::v1::ListVolumesRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ListVolumesRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ListVolumesRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ListVolumesRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ListVolumesResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListVolumesResponse_default_instance_;
-    new (ptr) ::csi::v1::ListVolumesResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ListVolumesResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ListVolumesResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ListVolumesResponse_csi_2eproto}, {
-      &scc_info_ListVolumesResponse_Entry_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ListVolumesResponse_Entry_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListVolumesResponse_Entry_default_instance_;
-    new (ptr) ::csi::v1::ListVolumesResponse_Entry();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ListVolumesResponse_Entry::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ListVolumesResponse_Entry_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_ListVolumesResponse_Entry_csi_2eproto}, {
-      &scc_info_Volume_csi_2eproto.base,
-      &scc_info_ListVolumesResponse_VolumeStatus_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ListVolumesResponse_VolumeStatus_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ListVolumesResponse_VolumeStatus_default_instance_;
-    new (ptr) ::csi::v1::ListVolumesResponse_VolumeStatus();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ListVolumesResponse_VolumeStatus::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ListVolumesResponse_VolumeStatus_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ListVolumesResponse_VolumeStatus_csi_2eproto}, {
-      &scc_info_VolumeCondition_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodeExpandVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeExpandVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::NodeExpandVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeExpandVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_NodeExpandVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_NodeExpandVolumeRequest_csi_2eproto}, {
-      &scc_info_CapacityRange_csi_2eproto.base,
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeExpandVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeExpandVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::NodeExpandVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeExpandVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeExpandVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeExpandVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeGetCapabilitiesRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeGetCapabilitiesRequest_default_instance_;
-    new (ptr) ::csi::v1::NodeGetCapabilitiesRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeGetCapabilitiesRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeGetCapabilitiesRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeGetCapabilitiesRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeGetCapabilitiesResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeGetCapabilitiesResponse_default_instance_;
-    new (ptr) ::csi::v1::NodeGetCapabilitiesResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeGetCapabilitiesResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_NodeGetCapabilitiesResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_NodeGetCapabilitiesResponse_csi_2eproto}, {
-      &scc_info_NodeServiceCapability_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodeGetInfoRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeGetInfoRequest_default_instance_;
-    new (ptr) ::csi::v1::NodeGetInfoRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeGetInfoRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeGetInfoRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeGetInfoRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeGetInfoResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeGetInfoResponse_default_instance_;
-    new (ptr) ::csi::v1::NodeGetInfoResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeGetInfoResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_NodeGetInfoResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_NodeGetInfoResponse_csi_2eproto}, {
-      &scc_info_Topology_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodeGetVolumeStatsRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeGetVolumeStatsRequest_default_instance_;
-    new (ptr) ::csi::v1::NodeGetVolumeStatsRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeGetVolumeStatsRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeGetVolumeStatsRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeGetVolumeStatsRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeGetVolumeStatsResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeGetVolumeStatsResponse_default_instance_;
-    new (ptr) ::csi::v1::NodeGetVolumeStatsResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeGetVolumeStatsResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_NodeGetVolumeStatsResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_NodeGetVolumeStatsResponse_csi_2eproto}, {
-      &scc_info_VolumeUsage_csi_2eproto.base,
-      &scc_info_VolumeCondition_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodePublishVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodePublishVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::NodePublishVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodePublishVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_NodePublishVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_NodePublishVolumeRequest_csi_2eproto}, {
-      &scc_info_NodePublishVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_NodePublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodePublishVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodePublishVolumeRequest_PublishContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::NodePublishVolumeRequest_PublishContextEntry_DoNotUse();
-  }
-  ::csi::v1::NodePublishVolumeRequest_PublishContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodePublishVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodePublishVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodePublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodePublishVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::NodePublishVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::NodePublishVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodePublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodePublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::NodePublishVolumeRequest_VolumeContextEntry_DoNotUse();
-  }
-  ::csi::v1::NodePublishVolumeRequest_VolumeContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodePublishVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodePublishVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::NodePublishVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodePublishVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodePublishVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodePublishVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeServiceCapability_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeServiceCapability_default_instance_;
-    new (ptr) ::csi::v1::NodeServiceCapability();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeServiceCapability::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_NodeServiceCapability_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_NodeServiceCapability_csi_2eproto}, {
-      &scc_info_NodeServiceCapability_RPC_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodeServiceCapability_RPC_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeServiceCapability_RPC_default_instance_;
-    new (ptr) ::csi::v1::NodeServiceCapability_RPC();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeServiceCapability_RPC::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeServiceCapability_RPC_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeServiceCapability_RPC_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeStageVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeStageVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::NodeStageVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeStageVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_NodeStageVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_NodeStageVolumeRequest_csi_2eproto}, {
-      &scc_info_NodeStageVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_NodeStageVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_NodeStageVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeStageVolumeRequest_PublishContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::NodeStageVolumeRequest_PublishContextEntry_DoNotUse();
-  }
-  ::csi::v1::NodeStageVolumeRequest_PublishContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeStageVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeStageVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeStageVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeStageVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::NodeStageVolumeRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::NodeStageVolumeRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeStageVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeStageVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::NodeStageVolumeRequest_VolumeContextEntry_DoNotUse();
-  }
-  ::csi::v1::NodeStageVolumeRequest_VolumeContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeStageVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeStageVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::NodeStageVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeStageVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeStageVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeStageVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeUnpublishVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeUnpublishVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::NodeUnpublishVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeUnpublishVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeUnpublishVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeUnpublishVolumeRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeUnpublishVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeUnpublishVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::NodeUnpublishVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeUnpublishVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeUnpublishVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeUnpublishVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeUnstageVolumeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeUnstageVolumeRequest_default_instance_;
-    new (ptr) ::csi::v1::NodeUnstageVolumeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeUnstageVolumeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeUnstageVolumeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeUnstageVolumeRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_NodeUnstageVolumeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_NodeUnstageVolumeResponse_default_instance_;
-    new (ptr) ::csi::v1::NodeUnstageVolumeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::NodeUnstageVolumeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_NodeUnstageVolumeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_NodeUnstageVolumeResponse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_PluginCapability_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_PluginCapability_default_instance_;
-    new (ptr) ::csi::v1::PluginCapability();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::PluginCapability::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_PluginCapability_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_PluginCapability_csi_2eproto}, {
-      &scc_info_PluginCapability_Service_csi_2eproto.base,
-      &scc_info_PluginCapability_VolumeExpansion_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_PluginCapability_Service_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_PluginCapability_Service_default_instance_;
-    new (ptr) ::csi::v1::PluginCapability_Service();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::PluginCapability_Service::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PluginCapability_Service_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PluginCapability_Service_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_PluginCapability_VolumeExpansion_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_PluginCapability_VolumeExpansion_default_instance_;
-    new (ptr) ::csi::v1::PluginCapability_VolumeExpansion();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::PluginCapability_VolumeExpansion::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PluginCapability_VolumeExpansion_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PluginCapability_VolumeExpansion_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ProbeRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ProbeRequest_default_instance_;
-    new (ptr) ::csi::v1::ProbeRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ProbeRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ProbeRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ProbeRequest_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ProbeResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ProbeResponse_default_instance_;
-    new (ptr) ::csi::v1::ProbeResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ProbeResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ProbeResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ProbeResponse_csi_2eproto}, {
-      &scc_info_BoolValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
-
-static void InitDefaultsscc_info_Snapshot_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_Snapshot_default_instance_;
-    new (ptr) ::csi::v1::Snapshot();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::Snapshot::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Snapshot_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Snapshot_csi_2eproto}, {
-      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,}};
-
-static void InitDefaultsscc_info_Topology_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_Topology_default_instance_;
-    new (ptr) ::csi::v1::Topology();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::Topology::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_Topology_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_Topology_csi_2eproto}, {
-      &scc_info_Topology_SegmentsEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_Topology_SegmentsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_Topology_SegmentsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::Topology_SegmentsEntry_DoNotUse();
-  }
-  ::csi::v1::Topology_SegmentsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Topology_SegmentsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Topology_SegmentsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_TopologyRequirement_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_TopologyRequirement_default_instance_;
-    new (ptr) ::csi::v1::TopologyRequirement();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::TopologyRequirement::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TopologyRequirement_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_TopologyRequirement_csi_2eproto}, {
-      &scc_info_Topology_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesRequest_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesRequest();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesRequest::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_ValidateVolumeCapabilitiesRequest_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_csi_2eproto}, {
-      &scc_info_ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse();
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse();
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse();
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesResponse_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesResponse();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesResponse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ValidateVolumeCapabilitiesResponse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_csi_2eproto}, {
-      &scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesResponse_Confirmed_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto}, {
-      &scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_VolumeCapability_csi_2eproto.base,
-      &scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse();
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse();
-  }
-  ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_Volume_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_Volume_default_instance_;
-    new (ptr) ::csi::v1::Volume();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::Volume::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_Volume_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_Volume_csi_2eproto}, {
-      &scc_info_Volume_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-      &scc_info_VolumeContentSource_csi_2eproto.base,
-      &scc_info_Topology_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_Volume_VolumeContextEntry_DoNotUse_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_Volume_VolumeContextEntry_DoNotUse_default_instance_;
-    new (ptr) ::csi::v1::Volume_VolumeContextEntry_DoNotUse();
-  }
-  ::csi::v1::Volume_VolumeContextEntry_DoNotUse::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Volume_VolumeContextEntry_DoNotUse_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_Volume_VolumeContextEntry_DoNotUse_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_VolumeCapability_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeCapability_default_instance_;
-    new (ptr) ::csi::v1::VolumeCapability();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeCapability::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_VolumeCapability_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_VolumeCapability_csi_2eproto}, {
-      &scc_info_VolumeCapability_BlockVolume_csi_2eproto.base,
-      &scc_info_VolumeCapability_MountVolume_csi_2eproto.base,
-      &scc_info_VolumeCapability_AccessMode_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_VolumeCapability_AccessMode_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeCapability_AccessMode_default_instance_;
-    new (ptr) ::csi::v1::VolumeCapability_AccessMode();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeCapability_AccessMode::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCapability_AccessMode_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VolumeCapability_AccessMode_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_VolumeCapability_BlockVolume_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeCapability_BlockVolume_default_instance_;
-    new (ptr) ::csi::v1::VolumeCapability_BlockVolume();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeCapability_BlockVolume::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCapability_BlockVolume_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VolumeCapability_BlockVolume_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_VolumeCapability_MountVolume_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeCapability_MountVolume_default_instance_;
-    new (ptr) ::csi::v1::VolumeCapability_MountVolume();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeCapability_MountVolume::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCapability_MountVolume_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VolumeCapability_MountVolume_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_VolumeCondition_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeCondition_default_instance_;
-    new (ptr) ::csi::v1::VolumeCondition();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeCondition::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeCondition_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VolumeCondition_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_VolumeContentSource_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeContentSource_default_instance_;
-    new (ptr) ::csi::v1::VolumeContentSource();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeContentSource::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_VolumeContentSource_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 2, 0, InitDefaultsscc_info_VolumeContentSource_csi_2eproto}, {
-      &scc_info_VolumeContentSource_SnapshotSource_csi_2eproto.base,
-      &scc_info_VolumeContentSource_VolumeSource_csi_2eproto.base,}};
-
-static void InitDefaultsscc_info_VolumeContentSource_SnapshotSource_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeContentSource_SnapshotSource_default_instance_;
-    new (ptr) ::csi::v1::VolumeContentSource_SnapshotSource();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeContentSource_SnapshotSource::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeContentSource_SnapshotSource_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VolumeContentSource_SnapshotSource_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_VolumeContentSource_VolumeSource_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeContentSource_VolumeSource_default_instance_;
-    new (ptr) ::csi::v1::VolumeContentSource_VolumeSource();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeContentSource_VolumeSource::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeContentSource_VolumeSource_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VolumeContentSource_VolumeSource_csi_2eproto}, {}};
-
-static void InitDefaultsscc_info_VolumeUsage_csi_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::csi::v1::_VolumeUsage_default_instance_;
-    new (ptr) ::csi::v1::VolumeUsage();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-  ::csi::v1::VolumeUsage::InitAsDefaultInstance();
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_VolumeUsage_csi_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_VolumeUsage_csi_2eproto}, {}};
-
 static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_csi_2eproto[102];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_csi_2eproto[6];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_csi_2eproto = nullptr;
@@ -2022,8 +1349,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_csi_2eproto::offsets[] PROTOBU
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::csi::v1::PluginCapability, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  offsetof(::csi::v1::PluginCapabilityDefaultTypeInternal, service_),
-  offsetof(::csi::v1::PluginCapabilityDefaultTypeInternal, volume_expansion_),
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   PROTOBUF_FIELD_OFFSET(::csi::v1::PluginCapability, type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::csi::v1::ProbeRequest, _internal_metadata_),
@@ -2083,8 +1410,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_csi_2eproto::offsets[] PROTOBU
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::csi::v1::VolumeContentSource, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  offsetof(::csi::v1::VolumeContentSourceDefaultTypeInternal, snapshot_),
-  offsetof(::csi::v1::VolumeContentSourceDefaultTypeInternal, volume_),
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   PROTOBUF_FIELD_OFFSET(::csi::v1::VolumeContentSource, type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::csi::v1::CreateVolumeResponse, _internal_metadata_),
@@ -2115,8 +1442,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_csi_2eproto::offsets[] PROTOBU
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::csi::v1::VolumeCapability, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  offsetof(::csi::v1::VolumeCapabilityDefaultTypeInternal, block_),
-  offsetof(::csi::v1::VolumeCapabilityDefaultTypeInternal, mount_),
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   PROTOBUF_FIELD_OFFSET(::csi::v1::VolumeCapability, access_mode_),
   PROTOBUF_FIELD_OFFSET(::csi::v1::VolumeCapability, access_type_),
   ~0u,  // no _has_bits_
@@ -2419,7 +1746,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_csi_2eproto::offsets[] PROTOBU
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::csi::v1::ControllerServiceCapability, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  offsetof(::csi::v1::ControllerServiceCapabilityDefaultTypeInternal, rpc_),
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   PROTOBUF_FIELD_OFFSET(::csi::v1::ControllerServiceCapability, type_),
   PROTOBUF_FIELD_OFFSET(::csi::v1::CreateSnapshotRequest_SecretsEntry_DoNotUse, _has_bits_),
   PROTOBUF_FIELD_OFFSET(::csi::v1::CreateSnapshotRequest_SecretsEntry_DoNotUse, _internal_metadata_),
@@ -2707,7 +2034,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_csi_2eproto::offsets[] PROTOBU
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeServiceCapability, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
-  offsetof(::csi::v1::NodeServiceCapabilityDefaultTypeInternal, rpc_),
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeServiceCapability, type_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeGetInfoRequest, _internal_metadata_),
@@ -3294,120 +2621,21 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_google_2fprotobuf_2ftimestamp_2eproto,
   &::descriptor_table_google_2fprotobuf_2fwrappers_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_csi_2eproto_sccs[102] = {
-  &scc_info_CapacityRange_csi_2eproto.base,
-  &scc_info_ControllerExpandVolumeRequest_csi_2eproto.base,
-  &scc_info_ControllerExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ControllerExpandVolumeResponse_csi_2eproto.base,
-  &scc_info_ControllerGetCapabilitiesRequest_csi_2eproto.base,
-  &scc_info_ControllerGetCapabilitiesResponse_csi_2eproto.base,
-  &scc_info_ControllerGetVolumeRequest_csi_2eproto.base,
-  &scc_info_ControllerGetVolumeResponse_csi_2eproto.base,
-  &scc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto.base,
-  &scc_info_ControllerPublishVolumeRequest_csi_2eproto.base,
-  &scc_info_ControllerPublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ControllerPublishVolumeResponse_csi_2eproto.base,
-  &scc_info_ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ControllerServiceCapability_csi_2eproto.base,
-  &scc_info_ControllerServiceCapability_RPC_csi_2eproto.base,
-  &scc_info_ControllerUnpublishVolumeRequest_csi_2eproto.base,
-  &scc_info_ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ControllerUnpublishVolumeResponse_csi_2eproto.base,
-  &scc_info_CreateSnapshotRequest_csi_2eproto.base,
-  &scc_info_CreateSnapshotRequest_ParametersEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_CreateSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_CreateSnapshotResponse_csi_2eproto.base,
-  &scc_info_CreateVolumeRequest_csi_2eproto.base,
-  &scc_info_CreateVolumeRequest_ParametersEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_CreateVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_CreateVolumeResponse_csi_2eproto.base,
-  &scc_info_DeleteSnapshotRequest_csi_2eproto.base,
-  &scc_info_DeleteSnapshotRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_DeleteSnapshotResponse_csi_2eproto.base,
-  &scc_info_DeleteVolumeRequest_csi_2eproto.base,
-  &scc_info_DeleteVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_DeleteVolumeResponse_csi_2eproto.base,
-  &scc_info_GetCapacityRequest_csi_2eproto.base,
-  &scc_info_GetCapacityRequest_ParametersEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_GetCapacityResponse_csi_2eproto.base,
-  &scc_info_GetPluginCapabilitiesRequest_csi_2eproto.base,
-  &scc_info_GetPluginCapabilitiesResponse_csi_2eproto.base,
-  &scc_info_GetPluginInfoRequest_csi_2eproto.base,
-  &scc_info_GetPluginInfoResponse_csi_2eproto.base,
-  &scc_info_GetPluginInfoResponse_ManifestEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ListSnapshotsRequest_csi_2eproto.base,
-  &scc_info_ListSnapshotsRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ListSnapshotsResponse_csi_2eproto.base,
-  &scc_info_ListSnapshotsResponse_Entry_csi_2eproto.base,
-  &scc_info_ListVolumesRequest_csi_2eproto.base,
-  &scc_info_ListVolumesResponse_csi_2eproto.base,
-  &scc_info_ListVolumesResponse_Entry_csi_2eproto.base,
-  &scc_info_ListVolumesResponse_VolumeStatus_csi_2eproto.base,
-  &scc_info_NodeExpandVolumeRequest_csi_2eproto.base,
-  &scc_info_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_NodeExpandVolumeResponse_csi_2eproto.base,
-  &scc_info_NodeGetCapabilitiesRequest_csi_2eproto.base,
-  &scc_info_NodeGetCapabilitiesResponse_csi_2eproto.base,
-  &scc_info_NodeGetInfoRequest_csi_2eproto.base,
-  &scc_info_NodeGetInfoResponse_csi_2eproto.base,
-  &scc_info_NodeGetVolumeStatsRequest_csi_2eproto.base,
-  &scc_info_NodeGetVolumeStatsResponse_csi_2eproto.base,
-  &scc_info_NodePublishVolumeRequest_csi_2eproto.base,
-  &scc_info_NodePublishVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_NodePublishVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_NodePublishVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_NodePublishVolumeResponse_csi_2eproto.base,
-  &scc_info_NodeServiceCapability_csi_2eproto.base,
-  &scc_info_NodeServiceCapability_RPC_csi_2eproto.base,
-  &scc_info_NodeStageVolumeRequest_csi_2eproto.base,
-  &scc_info_NodeStageVolumeRequest_PublishContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_NodeStageVolumeRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_NodeStageVolumeRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_NodeStageVolumeResponse_csi_2eproto.base,
-  &scc_info_NodeUnpublishVolumeRequest_csi_2eproto.base,
-  &scc_info_NodeUnpublishVolumeResponse_csi_2eproto.base,
-  &scc_info_NodeUnstageVolumeRequest_csi_2eproto.base,
-  &scc_info_NodeUnstageVolumeResponse_csi_2eproto.base,
-  &scc_info_PluginCapability_csi_2eproto.base,
-  &scc_info_PluginCapability_Service_csi_2eproto.base,
-  &scc_info_PluginCapability_VolumeExpansion_csi_2eproto.base,
-  &scc_info_ProbeRequest_csi_2eproto.base,
-  &scc_info_ProbeResponse_csi_2eproto.base,
-  &scc_info_Snapshot_csi_2eproto.base,
-  &scc_info_Topology_csi_2eproto.base,
-  &scc_info_Topology_SegmentsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_TopologyRequirement_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesRequest_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesRequest_ParametersEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesRequest_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesResponse_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_Volume_csi_2eproto.base,
-  &scc_info_Volume_VolumeContextEntry_DoNotUse_csi_2eproto.base,
-  &scc_info_VolumeCapability_csi_2eproto.base,
-  &scc_info_VolumeCapability_AccessMode_csi_2eproto.base,
-  &scc_info_VolumeCapability_BlockVolume_csi_2eproto.base,
-  &scc_info_VolumeCapability_MountVolume_csi_2eproto.base,
-  &scc_info_VolumeCondition_csi_2eproto.base,
-  &scc_info_VolumeContentSource_csi_2eproto.base,
-  &scc_info_VolumeContentSource_SnapshotSource_csi_2eproto.base,
-  &scc_info_VolumeContentSource_VolumeSource_csi_2eproto.base,
-  &scc_info_VolumeUsage_csi_2eproto.base,
-};
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_csi_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_csi_2eproto = {
-  false, false, descriptor_table_protodef_csi_2eproto, "csi.proto", 13095,
-  &descriptor_table_csi_2eproto_once, descriptor_table_csi_2eproto_sccs, descriptor_table_csi_2eproto_deps, 102, 3,
+  false, false, 13095, descriptor_table_protodef_csi_2eproto, "csi.proto", 
+  &descriptor_table_csi_2eproto_once, descriptor_table_csi_2eproto_deps, 3, 102,
   schemas, file_default_instances, TableStruct_csi_2eproto::offsets,
-  file_level_metadata_csi_2eproto, 102, file_level_enum_descriptors_csi_2eproto, file_level_service_descriptors_csi_2eproto,
+  file_level_metadata_csi_2eproto, file_level_enum_descriptors_csi_2eproto, file_level_service_descriptors_csi_2eproto,
 };
+PROTOBUF_ATTRIBUTE_WEAK ::PROTOBUF_NAMESPACE_ID::Metadata
+descriptor_table_csi_2eproto_metadata_getter(int index) {
+  ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&descriptor_table_csi_2eproto);
+  return descriptor_table_csi_2eproto.file_level_metadata[index];
+}
 
 // Force running AddDescriptors() at dynamic initialization time.
-static bool dynamic_init_dummy_csi_2eproto = (static_cast<void>(::PROTOBUF_NAMESPACE_ID::internal::AddDescriptors(&descriptor_table_csi_2eproto)), true);
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY static ::PROTOBUF_NAMESPACE_ID::internal::AddDescriptorsRunner dynamic_init_dummy_csi_2eproto(&descriptor_table_csi_2eproto);
 namespace csi {
 namespace v1 {
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* PluginCapability_Service_Type_descriptor() {
@@ -3581,8 +2809,6 @@ constexpr int NodeServiceCapability_RPC::Type_ARRAYSIZE;
 
 // ===================================================================
 
-void GetPluginInfoRequest::InitAsDefaultInstance() {
-}
 class GetPluginInfoRequest::_Internal {
  public:
 };
@@ -3621,11 +2847,6 @@ void GetPluginInfoRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetPluginInfoRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetPluginInfoRequest& GetPluginInfoRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetPluginInfoRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetPluginInfoRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.GetPluginInfoRequest)
@@ -3638,7 +2859,6 @@ void GetPluginInfoRequest::Clear() {
 
 const char* GetPluginInfoRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -3763,8 +2983,6 @@ void GetPluginInfoResponse_ManifestEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void GetPluginInfoResponse::InitAsDefaultInstance() {
-}
 class GetPluginInfoResponse::_Internal {
  public:
 };
@@ -3782,21 +3000,20 @@ GetPluginInfoResponse::GetPluginInfoResponse(const GetPluginInfoResponse& from)
   manifest_.MergeFrom(from.manifest_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
       GetArena());
   }
   vendor_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_vendor_version().empty()) {
-    vendor_version_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_vendor_version(),
+    vendor_version_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_vendor_version(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.GetPluginInfoResponse)
 }
 
 void GetPluginInfoResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetPluginInfoResponse_csi_2eproto.base);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  vendor_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+vendor_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 GetPluginInfoResponse::~GetPluginInfoResponse() {
@@ -3820,11 +3037,6 @@ void GetPluginInfoResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetPluginInfoResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetPluginInfoResponse& GetPluginInfoResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetPluginInfoResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetPluginInfoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.GetPluginInfoResponse)
@@ -3833,14 +3045,13 @@ void GetPluginInfoResponse::Clear() {
   (void) cached_has_bits;
 
   manifest_.Clear();
-  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  vendor_version_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.ClearToEmpty();
+  vendor_version_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* GetPluginInfoResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4081,8 +3292,6 @@ void GetPluginInfoResponse::InternalSwap(GetPluginInfoResponse* other) {
 
 // ===================================================================
 
-void GetPluginCapabilitiesRequest::InitAsDefaultInstance() {
-}
 class GetPluginCapabilitiesRequest::_Internal {
  public:
 };
@@ -4121,11 +3330,6 @@ void GetPluginCapabilitiesRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Ar
 void GetPluginCapabilitiesRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetPluginCapabilitiesRequest& GetPluginCapabilitiesRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetPluginCapabilitiesRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetPluginCapabilitiesRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.GetPluginCapabilitiesRequest)
@@ -4138,7 +3342,6 @@ void GetPluginCapabilitiesRequest::Clear() {
 
 const char* GetPluginCapabilitiesRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4246,8 +3449,6 @@ void GetPluginCapabilitiesRequest::InternalSwap(GetPluginCapabilitiesRequest* ot
 
 // ===================================================================
 
-void GetPluginCapabilitiesResponse::InitAsDefaultInstance() {
-}
 class GetPluginCapabilitiesResponse::_Internal {
  public:
 };
@@ -4267,7 +3468,6 @@ GetPluginCapabilitiesResponse::GetPluginCapabilitiesResponse(const GetPluginCapa
 }
 
 void GetPluginCapabilitiesResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetPluginCapabilitiesResponse_csi_2eproto.base);
 }
 
 GetPluginCapabilitiesResponse::~GetPluginCapabilitiesResponse() {
@@ -4289,11 +3489,6 @@ void GetPluginCapabilitiesResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::A
 void GetPluginCapabilitiesResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetPluginCapabilitiesResponse& GetPluginCapabilitiesResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetPluginCapabilitiesResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetPluginCapabilitiesResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.GetPluginCapabilitiesResponse)
@@ -4307,7 +3502,6 @@ void GetPluginCapabilitiesResponse::Clear() {
 
 const char* GetPluginCapabilitiesResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4449,8 +3643,6 @@ void GetPluginCapabilitiesResponse::InternalSwap(GetPluginCapabilitiesResponse* 
 
 // ===================================================================
 
-void PluginCapability_Service::InitAsDefaultInstance() {
-}
 class PluginCapability_Service::_Internal {
  public:
 };
@@ -4469,7 +3661,7 @@ PluginCapability_Service::PluginCapability_Service(const PluginCapability_Servic
 }
 
 void PluginCapability_Service::SharedCtor() {
-  type_ = 0;
+type_ = 0;
 }
 
 PluginCapability_Service::~PluginCapability_Service() {
@@ -4491,11 +3683,6 @@ void PluginCapability_Service::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*
 void PluginCapability_Service::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PluginCapability_Service& PluginCapability_Service::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PluginCapability_Service_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PluginCapability_Service::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.PluginCapability.Service)
@@ -4509,7 +3696,6 @@ void PluginCapability_Service::Clear() {
 
 const char* PluginCapability_Service::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4647,8 +3833,6 @@ void PluginCapability_Service::InternalSwap(PluginCapability_Service* other) {
 
 // ===================================================================
 
-void PluginCapability_VolumeExpansion::InitAsDefaultInstance() {
-}
 class PluginCapability_VolumeExpansion::_Internal {
  public:
 };
@@ -4667,7 +3851,7 @@ PluginCapability_VolumeExpansion::PluginCapability_VolumeExpansion(const PluginC
 }
 
 void PluginCapability_VolumeExpansion::SharedCtor() {
-  type_ = 0;
+type_ = 0;
 }
 
 PluginCapability_VolumeExpansion::~PluginCapability_VolumeExpansion() {
@@ -4689,11 +3873,6 @@ void PluginCapability_VolumeExpansion::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID
 void PluginCapability_VolumeExpansion::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PluginCapability_VolumeExpansion& PluginCapability_VolumeExpansion::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PluginCapability_VolumeExpansion_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PluginCapability_VolumeExpansion::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.PluginCapability.VolumeExpansion)
@@ -4707,7 +3886,6 @@ void PluginCapability_VolumeExpansion::Clear() {
 
 const char* PluginCapability_VolumeExpansion::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -4845,12 +4023,6 @@ void PluginCapability_VolumeExpansion::InternalSwap(PluginCapability_VolumeExpan
 
 // ===================================================================
 
-void PluginCapability::InitAsDefaultInstance() {
-  ::csi::v1::_PluginCapability_default_instance_.service_ = const_cast< ::csi::v1::PluginCapability_Service*>(
-      ::csi::v1::PluginCapability_Service::internal_default_instance());
-  ::csi::v1::_PluginCapability_default_instance_.volume_expansion_ = const_cast< ::csi::v1::PluginCapability_VolumeExpansion*>(
-      ::csi::v1::PluginCapability_VolumeExpansion::internal_default_instance());
-}
 class PluginCapability::_Internal {
  public:
   static const ::csi::v1::PluginCapability_Service& service(const PluginCapability* msg);
@@ -4922,8 +4094,7 @@ PluginCapability::PluginCapability(const PluginCapability& from)
 }
 
 void PluginCapability::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PluginCapability_csi_2eproto.base);
-  clear_has_type();
+clear_has_type();
 }
 
 PluginCapability::~PluginCapability() {
@@ -4948,11 +4119,6 @@ void PluginCapability::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void PluginCapability::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const PluginCapability& PluginCapability::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_PluginCapability_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void PluginCapability::clear_type() {
 // @@protoc_insertion_point(one_of_clear_start:csi.v1.PluginCapability)
@@ -4989,7 +4155,6 @@ void PluginCapability::Clear() {
 
 const char* PluginCapability::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5166,8 +4331,6 @@ void PluginCapability::InternalSwap(PluginCapability* other) {
 
 // ===================================================================
 
-void ProbeRequest::InitAsDefaultInstance() {
-}
 class ProbeRequest::_Internal {
  public:
 };
@@ -5206,11 +4369,6 @@ void ProbeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ProbeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ProbeRequest& ProbeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ProbeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ProbeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ProbeRequest)
@@ -5223,7 +4381,6 @@ void ProbeRequest::Clear() {
 
 const char* ProbeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5331,10 +4488,6 @@ void ProbeRequest::InternalSwap(ProbeRequest* other) {
 
 // ===================================================================
 
-void ProbeResponse::InitAsDefaultInstance() {
-  ::csi::v1::_ProbeResponse_default_instance_._instance.get_mutable()->ready_ = const_cast< PROTOBUF_NAMESPACE_ID::BoolValue*>(
-      PROTOBUF_NAMESPACE_ID::BoolValue::internal_default_instance());
-}
 class ProbeResponse::_Internal {
  public:
   static const PROTOBUF_NAMESPACE_ID::BoolValue& ready(const ProbeResponse* msg);
@@ -5368,8 +4521,7 @@ ProbeResponse::ProbeResponse(const ProbeResponse& from)
 }
 
 void ProbeResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ProbeResponse_csi_2eproto.base);
-  ready_ = nullptr;
+ready_ = nullptr;
 }
 
 ProbeResponse::~ProbeResponse() {
@@ -5392,11 +4544,6 @@ void ProbeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ProbeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ProbeResponse& ProbeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ProbeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ProbeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ProbeResponse)
@@ -5413,7 +4560,6 @@ void ProbeResponse::Clear() {
 
 const char* ProbeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -5586,14 +4732,6 @@ void CreateVolumeRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void CreateVolumeRequest::InitAsDefaultInstance() {
-  ::csi::v1::_CreateVolumeRequest_default_instance_._instance.get_mutable()->capacity_range_ = const_cast< ::csi::v1::CapacityRange*>(
-      ::csi::v1::CapacityRange::internal_default_instance());
-  ::csi::v1::_CreateVolumeRequest_default_instance_._instance.get_mutable()->volume_content_source_ = const_cast< ::csi::v1::VolumeContentSource*>(
-      ::csi::v1::VolumeContentSource::internal_default_instance());
-  ::csi::v1::_CreateVolumeRequest_default_instance_._instance.get_mutable()->accessibility_requirements_ = const_cast< ::csi::v1::TopologyRequirement*>(
-      ::csi::v1::TopologyRequirement::internal_default_instance());
-}
 class CreateVolumeRequest::_Internal {
  public:
   static const ::csi::v1::CapacityRange& capacity_range(const CreateVolumeRequest* msg);
@@ -5630,7 +4768,7 @@ CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest& from)
   secrets_.MergeFrom(from.secrets_);
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
       GetArena());
   }
   if (from._internal_has_capacity_range()) {
@@ -5652,11 +4790,11 @@ CreateVolumeRequest::CreateVolumeRequest(const CreateVolumeRequest& from)
 }
 
 void CreateVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreateVolumeRequest_csi_2eproto.base);
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&capacity_range_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&accessibility_requirements_) -
-      reinterpret_cast<char*>(&capacity_range_)) + sizeof(accessibility_requirements_));
+name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&capacity_range_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&accessibility_requirements_) -
+    reinterpret_cast<char*>(&capacity_range_)) + sizeof(accessibility_requirements_));
 }
 
 CreateVolumeRequest::~CreateVolumeRequest() {
@@ -5682,11 +4820,6 @@ void CreateVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void CreateVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CreateVolumeRequest& CreateVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreateVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CreateVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.CreateVolumeRequest)
@@ -5697,7 +4830,7 @@ void CreateVolumeRequest::Clear() {
   volume_capabilities_.Clear();
   parameters_.Clear();
   secrets_.Clear();
-  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  name_.ClearToEmpty();
   if (GetArena() == nullptr && capacity_range_ != nullptr) {
     delete capacity_range_;
   }
@@ -5715,7 +4848,6 @@ void CreateVolumeRequest::Clear() {
 
 const char* CreateVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6104,8 +5236,6 @@ void CreateVolumeRequest::InternalSwap(CreateVolumeRequest* other) {
 
 // ===================================================================
 
-void VolumeContentSource_SnapshotSource::InitAsDefaultInstance() {
-}
 class VolumeContentSource_SnapshotSource::_Internal {
  public:
 };
@@ -6121,15 +5251,14 @@ VolumeContentSource_SnapshotSource::VolumeContentSource_SnapshotSource(const Vol
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_snapshot_id().empty()) {
-    snapshot_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_snapshot_id(),
+    snapshot_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_snapshot_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.VolumeContentSource.SnapshotSource)
 }
 
 void VolumeContentSource_SnapshotSource::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VolumeContentSource_SnapshotSource_csi_2eproto.base);
-  snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 VolumeContentSource_SnapshotSource::~VolumeContentSource_SnapshotSource() {
@@ -6152,11 +5281,6 @@ void VolumeContentSource_SnapshotSource::RegisterArenaDtor(::PROTOBUF_NAMESPACE_
 void VolumeContentSource_SnapshotSource::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeContentSource_SnapshotSource& VolumeContentSource_SnapshotSource::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeContentSource_SnapshotSource_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeContentSource_SnapshotSource::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.VolumeContentSource.SnapshotSource)
@@ -6164,13 +5288,12 @@ void VolumeContentSource_SnapshotSource::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  snapshot_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  snapshot_id_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* VolumeContentSource_SnapshotSource::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6313,8 +5436,6 @@ void VolumeContentSource_SnapshotSource::InternalSwap(VolumeContentSource_Snapsh
 
 // ===================================================================
 
-void VolumeContentSource_VolumeSource::InitAsDefaultInstance() {
-}
 class VolumeContentSource_VolumeSource::_Internal {
  public:
 };
@@ -6330,15 +5451,14 @@ VolumeContentSource_VolumeSource::VolumeContentSource_VolumeSource(const VolumeC
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.VolumeContentSource.VolumeSource)
 }
 
 void VolumeContentSource_VolumeSource::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VolumeContentSource_VolumeSource_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 VolumeContentSource_VolumeSource::~VolumeContentSource_VolumeSource() {
@@ -6361,11 +5481,6 @@ void VolumeContentSource_VolumeSource::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID
 void VolumeContentSource_VolumeSource::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeContentSource_VolumeSource& VolumeContentSource_VolumeSource::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeContentSource_VolumeSource_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeContentSource_VolumeSource::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.VolumeContentSource.VolumeSource)
@@ -6373,13 +5488,12 @@ void VolumeContentSource_VolumeSource::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* VolumeContentSource_VolumeSource::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6522,12 +5636,6 @@ void VolumeContentSource_VolumeSource::InternalSwap(VolumeContentSource_VolumeSo
 
 // ===================================================================
 
-void VolumeContentSource::InitAsDefaultInstance() {
-  ::csi::v1::_VolumeContentSource_default_instance_.snapshot_ = const_cast< ::csi::v1::VolumeContentSource_SnapshotSource*>(
-      ::csi::v1::VolumeContentSource_SnapshotSource::internal_default_instance());
-  ::csi::v1::_VolumeContentSource_default_instance_.volume_ = const_cast< ::csi::v1::VolumeContentSource_VolumeSource*>(
-      ::csi::v1::VolumeContentSource_VolumeSource::internal_default_instance());
-}
 class VolumeContentSource::_Internal {
  public:
   static const ::csi::v1::VolumeContentSource_SnapshotSource& snapshot(const VolumeContentSource* msg);
@@ -6599,8 +5707,7 @@ VolumeContentSource::VolumeContentSource(const VolumeContentSource& from)
 }
 
 void VolumeContentSource::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VolumeContentSource_csi_2eproto.base);
-  clear_has_type();
+clear_has_type();
 }
 
 VolumeContentSource::~VolumeContentSource() {
@@ -6625,11 +5732,6 @@ void VolumeContentSource::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void VolumeContentSource::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeContentSource& VolumeContentSource::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeContentSource_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeContentSource::clear_type() {
 // @@protoc_insertion_point(one_of_clear_start:csi.v1.VolumeContentSource)
@@ -6666,7 +5768,6 @@ void VolumeContentSource::Clear() {
 
 const char* VolumeContentSource::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -6843,10 +5944,6 @@ void VolumeContentSource::InternalSwap(VolumeContentSource* other) {
 
 // ===================================================================
 
-void CreateVolumeResponse::InitAsDefaultInstance() {
-  ::csi::v1::_CreateVolumeResponse_default_instance_._instance.get_mutable()->volume_ = const_cast< ::csi::v1::Volume*>(
-      ::csi::v1::Volume::internal_default_instance());
-}
 class CreateVolumeResponse::_Internal {
  public:
   static const ::csi::v1::Volume& volume(const CreateVolumeResponse* msg);
@@ -6874,8 +5971,7 @@ CreateVolumeResponse::CreateVolumeResponse(const CreateVolumeResponse& from)
 }
 
 void CreateVolumeResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreateVolumeResponse_csi_2eproto.base);
-  volume_ = nullptr;
+volume_ = nullptr;
 }
 
 CreateVolumeResponse::~CreateVolumeResponse() {
@@ -6898,11 +5994,6 @@ void CreateVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void CreateVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CreateVolumeResponse& CreateVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreateVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CreateVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.CreateVolumeResponse)
@@ -6919,7 +6010,6 @@ void CreateVolumeResponse::Clear() {
 
 const char* CreateVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -7058,8 +6148,6 @@ void CreateVolumeResponse::InternalSwap(CreateVolumeResponse* other) {
 
 // ===================================================================
 
-void VolumeCapability_BlockVolume::InitAsDefaultInstance() {
-}
 class VolumeCapability_BlockVolume::_Internal {
  public:
 };
@@ -7098,11 +6186,6 @@ void VolumeCapability_BlockVolume::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Ar
 void VolumeCapability_BlockVolume::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeCapability_BlockVolume& VolumeCapability_BlockVolume::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeCapability_BlockVolume_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeCapability_BlockVolume::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.VolumeCapability.BlockVolume)
@@ -7115,7 +6198,6 @@ void VolumeCapability_BlockVolume::Clear() {
 
 const char* VolumeCapability_BlockVolume::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -7223,8 +6305,6 @@ void VolumeCapability_BlockVolume::InternalSwap(VolumeCapability_BlockVolume* ot
 
 // ===================================================================
 
-void VolumeCapability_MountVolume::InitAsDefaultInstance() {
-}
 class VolumeCapability_MountVolume::_Internal {
  public:
 };
@@ -7242,15 +6322,14 @@ VolumeCapability_MountVolume::VolumeCapability_MountVolume(const VolumeCapabilit
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   fs_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_fs_type().empty()) {
-    fs_type_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_fs_type(),
+    fs_type_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_fs_type(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.VolumeCapability.MountVolume)
 }
 
 void VolumeCapability_MountVolume::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VolumeCapability_MountVolume_csi_2eproto.base);
-  fs_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+fs_type_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 VolumeCapability_MountVolume::~VolumeCapability_MountVolume() {
@@ -7273,11 +6352,6 @@ void VolumeCapability_MountVolume::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Ar
 void VolumeCapability_MountVolume::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeCapability_MountVolume& VolumeCapability_MountVolume::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeCapability_MountVolume_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeCapability_MountVolume::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.VolumeCapability.MountVolume)
@@ -7286,13 +6360,12 @@ void VolumeCapability_MountVolume::Clear() {
   (void) cached_has_bits;
 
   mount_flags_.Clear();
-  fs_type_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  fs_type_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* VolumeCapability_MountVolume::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -7469,8 +6542,6 @@ void VolumeCapability_MountVolume::InternalSwap(VolumeCapability_MountVolume* ot
 
 // ===================================================================
 
-void VolumeCapability_AccessMode::InitAsDefaultInstance() {
-}
 class VolumeCapability_AccessMode::_Internal {
  public:
 };
@@ -7489,7 +6560,7 @@ VolumeCapability_AccessMode::VolumeCapability_AccessMode(const VolumeCapability_
 }
 
 void VolumeCapability_AccessMode::SharedCtor() {
-  mode_ = 0;
+mode_ = 0;
 }
 
 VolumeCapability_AccessMode::~VolumeCapability_AccessMode() {
@@ -7511,11 +6582,6 @@ void VolumeCapability_AccessMode::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void VolumeCapability_AccessMode::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeCapability_AccessMode& VolumeCapability_AccessMode::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeCapability_AccessMode_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeCapability_AccessMode::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.VolumeCapability.AccessMode)
@@ -7529,7 +6595,6 @@ void VolumeCapability_AccessMode::Clear() {
 
 const char* VolumeCapability_AccessMode::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -7667,14 +6732,6 @@ void VolumeCapability_AccessMode::InternalSwap(VolumeCapability_AccessMode* othe
 
 // ===================================================================
 
-void VolumeCapability::InitAsDefaultInstance() {
-  ::csi::v1::_VolumeCapability_default_instance_.block_ = const_cast< ::csi::v1::VolumeCapability_BlockVolume*>(
-      ::csi::v1::VolumeCapability_BlockVolume::internal_default_instance());
-  ::csi::v1::_VolumeCapability_default_instance_.mount_ = const_cast< ::csi::v1::VolumeCapability_MountVolume*>(
-      ::csi::v1::VolumeCapability_MountVolume::internal_default_instance());
-  ::csi::v1::_VolumeCapability_default_instance_._instance.get_mutable()->access_mode_ = const_cast< ::csi::v1::VolumeCapability_AccessMode*>(
-      ::csi::v1::VolumeCapability_AccessMode::internal_default_instance());
-}
 class VolumeCapability::_Internal {
  public:
   static const ::csi::v1::VolumeCapability_BlockVolume& block(const VolumeCapability* msg);
@@ -7756,9 +6813,8 @@ VolumeCapability::VolumeCapability(const VolumeCapability& from)
 }
 
 void VolumeCapability::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VolumeCapability_csi_2eproto.base);
-  access_mode_ = nullptr;
-  clear_has_access_type();
+access_mode_ = nullptr;
+clear_has_access_type();
 }
 
 VolumeCapability::~VolumeCapability() {
@@ -7784,11 +6840,6 @@ void VolumeCapability::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void VolumeCapability::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeCapability& VolumeCapability::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeCapability_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeCapability::clear_access_type() {
 // @@protoc_insertion_point(one_of_clear_start:csi.v1.VolumeCapability)
@@ -7829,7 +6880,6 @@ void VolumeCapability::Clear() {
 
 const char* VolumeCapability::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8032,8 +7082,6 @@ void VolumeCapability::InternalSwap(VolumeCapability* other) {
 
 // ===================================================================
 
-void CapacityRange::InitAsDefaultInstance() {
-}
 class CapacityRange::_Internal {
  public:
 };
@@ -8054,9 +7102,10 @@ CapacityRange::CapacityRange(const CapacityRange& from)
 }
 
 void CapacityRange::SharedCtor() {
-  ::memset(&required_bytes_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&limit_bytes_) -
-      reinterpret_cast<char*>(&required_bytes_)) + sizeof(limit_bytes_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&required_bytes_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&limit_bytes_) -
+    reinterpret_cast<char*>(&required_bytes_)) + sizeof(limit_bytes_));
 }
 
 CapacityRange::~CapacityRange() {
@@ -8078,11 +7127,6 @@ void CapacityRange::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void CapacityRange::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CapacityRange& CapacityRange::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CapacityRange_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CapacityRange::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.CapacityRange)
@@ -8098,7 +7142,6 @@ void CapacityRange::Clear() {
 
 const char* CapacityRange::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8280,10 +7323,6 @@ void Volume_VolumeContextEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void Volume::InitAsDefaultInstance() {
-  ::csi::v1::_Volume_default_instance_._instance.get_mutable()->content_source_ = const_cast< ::csi::v1::VolumeContentSource*>(
-      ::csi::v1::VolumeContentSource::internal_default_instance());
-}
 class Volume::_Internal {
  public:
   static const ::csi::v1::VolumeContentSource& content_source(const Volume* msg);
@@ -8308,7 +7347,7 @@ Volume::Volume(const Volume& from)
   volume_context_.MergeFrom(from.volume_context_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   if (from._internal_has_content_source()) {
@@ -8321,11 +7360,11 @@ Volume::Volume(const Volume& from)
 }
 
 void Volume::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Volume_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&content_source_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&capacity_bytes_) -
-      reinterpret_cast<char*>(&content_source_)) + sizeof(capacity_bytes_));
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&content_source_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&capacity_bytes_) -
+    reinterpret_cast<char*>(&content_source_)) + sizeof(capacity_bytes_));
 }
 
 Volume::~Volume() {
@@ -8349,11 +7388,6 @@ void Volume::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void Volume::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Volume& Volume::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Volume_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Volume::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.Volume)
@@ -8363,7 +7397,7 @@ void Volume::Clear() {
 
   volume_context_.Clear();
   accessible_topology_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
   if (GetArena() == nullptr && content_source_ != nullptr) {
     delete content_source_;
   }
@@ -8374,7 +7408,6 @@ void Volume::Clear() {
 
 const char* Volume::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8668,8 +7701,6 @@ void Volume::InternalSwap(Volume* other) {
 
 // ===================================================================
 
-void TopologyRequirement::InitAsDefaultInstance() {
-}
 class TopologyRequirement::_Internal {
  public:
 };
@@ -8691,7 +7722,6 @@ TopologyRequirement::TopologyRequirement(const TopologyRequirement& from)
 }
 
 void TopologyRequirement::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_TopologyRequirement_csi_2eproto.base);
 }
 
 TopologyRequirement::~TopologyRequirement() {
@@ -8713,11 +7743,6 @@ void TopologyRequirement::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void TopologyRequirement::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const TopologyRequirement& TopologyRequirement::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_TopologyRequirement_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void TopologyRequirement::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.TopologyRequirement)
@@ -8732,7 +7757,6 @@ void TopologyRequirement::Clear() {
 
 const char* TopologyRequirement::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -8920,8 +7944,6 @@ void Topology_SegmentsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void Topology::InitAsDefaultInstance() {
-}
 class Topology::_Internal {
  public:
 };
@@ -8941,7 +7963,6 @@ Topology::Topology(const Topology& from)
 }
 
 void Topology::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Topology_csi_2eproto.base);
 }
 
 Topology::~Topology() {
@@ -8963,11 +7984,6 @@ void Topology::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void Topology::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Topology& Topology::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Topology_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Topology::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.Topology)
@@ -8981,7 +7997,6 @@ void Topology::Clear() {
 
 const char* Topology::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -9179,8 +8194,6 @@ void DeleteVolumeRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void DeleteVolumeRequest::InitAsDefaultInstance() {
-}
 class DeleteVolumeRequest::_Internal {
  public:
 };
@@ -9198,15 +8211,14 @@ DeleteVolumeRequest::DeleteVolumeRequest(const DeleteVolumeRequest& from)
   secrets_.MergeFrom(from.secrets_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.DeleteVolumeRequest)
 }
 
 void DeleteVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_DeleteVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 DeleteVolumeRequest::~DeleteVolumeRequest() {
@@ -9229,11 +8241,6 @@ void DeleteVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void DeleteVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const DeleteVolumeRequest& DeleteVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DeleteVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void DeleteVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.DeleteVolumeRequest)
@@ -9242,13 +8249,12 @@ void DeleteVolumeRequest::Clear() {
   (void) cached_has_bits;
 
   secrets_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* DeleteVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -9459,8 +8465,6 @@ void DeleteVolumeRequest::InternalSwap(DeleteVolumeRequest* other) {
 
 // ===================================================================
 
-void DeleteVolumeResponse::InitAsDefaultInstance() {
-}
 class DeleteVolumeResponse::_Internal {
  public:
 };
@@ -9499,11 +8503,6 @@ void DeleteVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void DeleteVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const DeleteVolumeResponse& DeleteVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DeleteVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void DeleteVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.DeleteVolumeResponse)
@@ -9516,7 +8515,6 @@ void DeleteVolumeResponse::Clear() {
 
 const char* DeleteVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -9658,10 +8656,6 @@ void ControllerPublishVolumeRequest_VolumeContextEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void ControllerPublishVolumeRequest::InitAsDefaultInstance() {
-  ::csi::v1::_ControllerPublishVolumeRequest_default_instance_._instance.get_mutable()->volume_capability_ = const_cast< ::csi::v1::VolumeCapability*>(
-      ::csi::v1::VolumeCapability::internal_default_instance());
-}
 class ControllerPublishVolumeRequest::_Internal {
  public:
   static const ::csi::v1::VolumeCapability& volume_capability(const ControllerPublishVolumeRequest* msg);
@@ -9686,12 +8680,12 @@ ControllerPublishVolumeRequest::ControllerPublishVolumeRequest(const ControllerP
   volume_context_.MergeFrom(from.volume_context_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_node_id().empty()) {
-    node_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_node_id(),
+    node_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_node_id(), 
       GetArena());
   }
   if (from._internal_has_volume_capability()) {
@@ -9704,12 +8698,12 @@ ControllerPublishVolumeRequest::ControllerPublishVolumeRequest(const ControllerP
 }
 
 void ControllerPublishVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerPublishVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&volume_capability_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&readonly_) -
-      reinterpret_cast<char*>(&volume_capability_)) + sizeof(readonly_));
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&volume_capability_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&readonly_) -
+    reinterpret_cast<char*>(&volume_capability_)) + sizeof(readonly_));
 }
 
 ControllerPublishVolumeRequest::~ControllerPublishVolumeRequest() {
@@ -9734,11 +8728,6 @@ void ControllerPublishVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::
 void ControllerPublishVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerPublishVolumeRequest& ControllerPublishVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerPublishVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerPublishVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerPublishVolumeRequest)
@@ -9748,8 +8737,8 @@ void ControllerPublishVolumeRequest::Clear() {
 
   secrets_.Clear();
   volume_context_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  node_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  node_id_.ClearToEmpty();
   if (GetArena() == nullptr && volume_capability_ != nullptr) {
     delete volume_capability_;
   }
@@ -9760,7 +8749,6 @@ void ControllerPublishVolumeRequest::Clear() {
 
 const char* ControllerPublishVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -10138,8 +9126,6 @@ void ControllerPublishVolumeResponse_PublishContextEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void ControllerPublishVolumeResponse::InitAsDefaultInstance() {
-}
 class ControllerPublishVolumeResponse::_Internal {
  public:
 };
@@ -10159,7 +9145,6 @@ ControllerPublishVolumeResponse::ControllerPublishVolumeResponse(const Controlle
 }
 
 void ControllerPublishVolumeResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerPublishVolumeResponse_csi_2eproto.base);
 }
 
 ControllerPublishVolumeResponse::~ControllerPublishVolumeResponse() {
@@ -10181,11 +9166,6 @@ void ControllerPublishVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID:
 void ControllerPublishVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerPublishVolumeResponse& ControllerPublishVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerPublishVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerPublishVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerPublishVolumeResponse)
@@ -10199,7 +9179,6 @@ void ControllerPublishVolumeResponse::Clear() {
 
 const char* ControllerPublishVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -10397,8 +9376,6 @@ void ControllerUnpublishVolumeRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void ControllerUnpublishVolumeRequest::InitAsDefaultInstance() {
-}
 class ControllerUnpublishVolumeRequest::_Internal {
  public:
 };
@@ -10416,21 +9393,20 @@ ControllerUnpublishVolumeRequest::ControllerUnpublishVolumeRequest(const Control
   secrets_.MergeFrom(from.secrets_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_node_id().empty()) {
-    node_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_node_id(),
+    node_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_node_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.ControllerUnpublishVolumeRequest)
 }
 
 void ControllerUnpublishVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerUnpublishVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ControllerUnpublishVolumeRequest::~ControllerUnpublishVolumeRequest() {
@@ -10454,11 +9430,6 @@ void ControllerUnpublishVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID
 void ControllerUnpublishVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerUnpublishVolumeRequest& ControllerUnpublishVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerUnpublishVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerUnpublishVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerUnpublishVolumeRequest)
@@ -10467,14 +9438,13 @@ void ControllerUnpublishVolumeRequest::Clear() {
   (void) cached_has_bits;
 
   secrets_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  node_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  node_id_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ControllerUnpublishVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -10715,8 +9685,6 @@ void ControllerUnpublishVolumeRequest::InternalSwap(ControllerUnpublishVolumeReq
 
 // ===================================================================
 
-void ControllerUnpublishVolumeResponse::InitAsDefaultInstance() {
-}
 class ControllerUnpublishVolumeResponse::_Internal {
  public:
 };
@@ -10755,11 +9723,6 @@ void ControllerUnpublishVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_I
 void ControllerUnpublishVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerUnpublishVolumeResponse& ControllerUnpublishVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerUnpublishVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerUnpublishVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerUnpublishVolumeResponse)
@@ -10772,7 +9735,6 @@ void ControllerUnpublishVolumeResponse::Clear() {
 
 const char* ControllerUnpublishVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -10931,8 +9893,6 @@ void ValidateVolumeCapabilitiesRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void ValidateVolumeCapabilitiesRequest::InitAsDefaultInstance() {
-}
 class ValidateVolumeCapabilitiesRequest::_Internal {
  public:
 };
@@ -10956,15 +9916,14 @@ ValidateVolumeCapabilitiesRequest::ValidateVolumeCapabilitiesRequest(const Valid
   secrets_.MergeFrom(from.secrets_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.ValidateVolumeCapabilitiesRequest)
 }
 
 void ValidateVolumeCapabilitiesRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ValidateVolumeCapabilitiesRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ValidateVolumeCapabilitiesRequest::~ValidateVolumeCapabilitiesRequest() {
@@ -10987,11 +9946,6 @@ void ValidateVolumeCapabilitiesRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_I
 void ValidateVolumeCapabilitiesRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ValidateVolumeCapabilitiesRequest& ValidateVolumeCapabilitiesRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ValidateVolumeCapabilitiesRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ValidateVolumeCapabilitiesRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ValidateVolumeCapabilitiesRequest)
@@ -11003,13 +9957,12 @@ void ValidateVolumeCapabilitiesRequest::Clear() {
   volume_capabilities_.Clear();
   parameters_.Clear();
   secrets_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ValidateVolumeCapabilitiesRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -11419,8 +10372,6 @@ void ValidateVolumeCapabilitiesResponse_Confirmed_ParametersEntry_DoNotUse::Merg
 
 // ===================================================================
 
-void ValidateVolumeCapabilitiesResponse_Confirmed::InitAsDefaultInstance() {
-}
 class ValidateVolumeCapabilitiesResponse_Confirmed::_Internal {
  public:
 };
@@ -11444,7 +10395,6 @@ ValidateVolumeCapabilitiesResponse_Confirmed::ValidateVolumeCapabilitiesResponse
 }
 
 void ValidateVolumeCapabilitiesResponse_Confirmed::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto.base);
 }
 
 ValidateVolumeCapabilitiesResponse_Confirmed::~ValidateVolumeCapabilitiesResponse_Confirmed() {
@@ -11466,11 +10416,6 @@ void ValidateVolumeCapabilitiesResponse_Confirmed::RegisterArenaDtor(::PROTOBUF_
 void ValidateVolumeCapabilitiesResponse_Confirmed::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ValidateVolumeCapabilitiesResponse_Confirmed& ValidateVolumeCapabilitiesResponse_Confirmed::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ValidateVolumeCapabilitiesResponse_Confirmed_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ValidateVolumeCapabilitiesResponse_Confirmed::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ValidateVolumeCapabilitiesResponse.Confirmed)
@@ -11486,7 +10431,6 @@ void ValidateVolumeCapabilitiesResponse_Confirmed::Clear() {
 
 const char* ValidateVolumeCapabilitiesResponse_Confirmed::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -11764,10 +10708,6 @@ void ValidateVolumeCapabilitiesResponse_Confirmed::InternalSwap(ValidateVolumeCa
 
 // ===================================================================
 
-void ValidateVolumeCapabilitiesResponse::InitAsDefaultInstance() {
-  ::csi::v1::_ValidateVolumeCapabilitiesResponse_default_instance_._instance.get_mutable()->confirmed_ = const_cast< ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed*>(
-      ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed::internal_default_instance());
-}
 class ValidateVolumeCapabilitiesResponse::_Internal {
  public:
   static const ::csi::v1::ValidateVolumeCapabilitiesResponse_Confirmed& confirmed(const ValidateVolumeCapabilitiesResponse* msg);
@@ -11788,7 +10728,7 @@ ValidateVolumeCapabilitiesResponse::ValidateVolumeCapabilitiesResponse(const Val
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   if (from._internal_has_confirmed()) {
@@ -11800,9 +10740,8 @@ ValidateVolumeCapabilitiesResponse::ValidateVolumeCapabilitiesResponse(const Val
 }
 
 void ValidateVolumeCapabilitiesResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ValidateVolumeCapabilitiesResponse_csi_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  confirmed_ = nullptr;
+message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+confirmed_ = nullptr;
 }
 
 ValidateVolumeCapabilitiesResponse::~ValidateVolumeCapabilitiesResponse() {
@@ -11826,11 +10765,6 @@ void ValidateVolumeCapabilitiesResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_
 void ValidateVolumeCapabilitiesResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ValidateVolumeCapabilitiesResponse& ValidateVolumeCapabilitiesResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ValidateVolumeCapabilitiesResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ValidateVolumeCapabilitiesResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ValidateVolumeCapabilitiesResponse)
@@ -11838,7 +10772,7 @@ void ValidateVolumeCapabilitiesResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   if (GetArena() == nullptr && confirmed_ != nullptr) {
     delete confirmed_;
   }
@@ -11848,7 +10782,6 @@ void ValidateVolumeCapabilitiesResponse::Clear() {
 
 const char* ValidateVolumeCapabilitiesResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -12017,8 +10950,6 @@ void ValidateVolumeCapabilitiesResponse::InternalSwap(ValidateVolumeCapabilities
 
 // ===================================================================
 
-void ListVolumesRequest::InitAsDefaultInstance() {
-}
 class ListVolumesRequest::_Internal {
  public:
 };
@@ -12034,7 +10965,7 @@ ListVolumesRequest::ListVolumesRequest(const ListVolumesRequest& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   starting_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_starting_token().empty()) {
-    starting_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_starting_token(),
+    starting_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_starting_token(), 
       GetArena());
   }
   max_entries_ = from.max_entries_;
@@ -12042,9 +10973,8 @@ ListVolumesRequest::ListVolumesRequest(const ListVolumesRequest& from)
 }
 
 void ListVolumesRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ListVolumesRequest_csi_2eproto.base);
-  starting_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  max_entries_ = 0;
+starting_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+max_entries_ = 0;
 }
 
 ListVolumesRequest::~ListVolumesRequest() {
@@ -12067,11 +10997,6 @@ void ListVolumesRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ListVolumesRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ListVolumesRequest& ListVolumesRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ListVolumesRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ListVolumesRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ListVolumesRequest)
@@ -12079,14 +11004,13 @@ void ListVolumesRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  starting_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  starting_token_.ClearToEmpty();
   max_entries_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ListVolumesRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -12253,10 +11177,6 @@ void ListVolumesRequest::InternalSwap(ListVolumesRequest* other) {
 
 // ===================================================================
 
-void ListVolumesResponse_VolumeStatus::InitAsDefaultInstance() {
-  ::csi::v1::_ListVolumesResponse_VolumeStatus_default_instance_._instance.get_mutable()->volume_condition_ = const_cast< ::csi::v1::VolumeCondition*>(
-      ::csi::v1::VolumeCondition::internal_default_instance());
-}
 class ListVolumesResponse_VolumeStatus::_Internal {
  public:
   static const ::csi::v1::VolumeCondition& volume_condition(const ListVolumesResponse_VolumeStatus* msg);
@@ -12286,8 +11206,7 @@ ListVolumesResponse_VolumeStatus::ListVolumesResponse_VolumeStatus(const ListVol
 }
 
 void ListVolumesResponse_VolumeStatus::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ListVolumesResponse_VolumeStatus_csi_2eproto.base);
-  volume_condition_ = nullptr;
+volume_condition_ = nullptr;
 }
 
 ListVolumesResponse_VolumeStatus::~ListVolumesResponse_VolumeStatus() {
@@ -12310,11 +11229,6 @@ void ListVolumesResponse_VolumeStatus::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID
 void ListVolumesResponse_VolumeStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ListVolumesResponse_VolumeStatus& ListVolumesResponse_VolumeStatus::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ListVolumesResponse_VolumeStatus_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ListVolumesResponse_VolumeStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ListVolumesResponse.VolumeStatus)
@@ -12332,7 +11246,6 @@ void ListVolumesResponse_VolumeStatus::Clear() {
 
 const char* ListVolumesResponse_VolumeStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -12505,12 +11418,6 @@ void ListVolumesResponse_VolumeStatus::InternalSwap(ListVolumesResponse_VolumeSt
 
 // ===================================================================
 
-void ListVolumesResponse_Entry::InitAsDefaultInstance() {
-  ::csi::v1::_ListVolumesResponse_Entry_default_instance_._instance.get_mutable()->volume_ = const_cast< ::csi::v1::Volume*>(
-      ::csi::v1::Volume::internal_default_instance());
-  ::csi::v1::_ListVolumesResponse_Entry_default_instance_._instance.get_mutable()->status_ = const_cast< ::csi::v1::ListVolumesResponse_VolumeStatus*>(
-      ::csi::v1::ListVolumesResponse_VolumeStatus::internal_default_instance());
-}
 class ListVolumesResponse_Entry::_Internal {
  public:
   static const ::csi::v1::Volume& volume(const ListVolumesResponse_Entry* msg);
@@ -12548,10 +11455,10 @@ ListVolumesResponse_Entry::ListVolumesResponse_Entry(const ListVolumesResponse_E
 }
 
 void ListVolumesResponse_Entry::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ListVolumesResponse_Entry_csi_2eproto.base);
-  ::memset(&volume_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&status_) -
-      reinterpret_cast<char*>(&volume_)) + sizeof(status_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&volume_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+    reinterpret_cast<char*>(&volume_)) + sizeof(status_));
 }
 
 ListVolumesResponse_Entry::~ListVolumesResponse_Entry() {
@@ -12575,11 +11482,6 @@ void ListVolumesResponse_Entry::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void ListVolumesResponse_Entry::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ListVolumesResponse_Entry& ListVolumesResponse_Entry::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ListVolumesResponse_Entry_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ListVolumesResponse_Entry::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ListVolumesResponse.Entry)
@@ -12600,7 +11502,6 @@ void ListVolumesResponse_Entry::Clear() {
 
 const char* ListVolumesResponse_Entry::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -12769,8 +11670,6 @@ void ListVolumesResponse_Entry::InternalSwap(ListVolumesResponse_Entry* other) {
 
 // ===================================================================
 
-void ListVolumesResponse::InitAsDefaultInstance() {
-}
 class ListVolumesResponse::_Internal {
  public:
 };
@@ -12788,15 +11687,14 @@ ListVolumesResponse::ListVolumesResponse(const ListVolumesResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   next_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_next_token().empty()) {
-    next_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_next_token(),
+    next_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_next_token(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.ListVolumesResponse)
 }
 
 void ListVolumesResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ListVolumesResponse_csi_2eproto.base);
-  next_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+next_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ListVolumesResponse::~ListVolumesResponse() {
@@ -12819,11 +11717,6 @@ void ListVolumesResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ListVolumesResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ListVolumesResponse& ListVolumesResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ListVolumesResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ListVolumesResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ListVolumesResponse)
@@ -12832,13 +11725,12 @@ void ListVolumesResponse::Clear() {
   (void) cached_has_bits;
 
   entries_.Clear();
-  next_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  next_token_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ListVolumesResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -13010,8 +11902,6 @@ void ListVolumesResponse::InternalSwap(ListVolumesResponse* other) {
 
 // ===================================================================
 
-void ControllerGetVolumeRequest::InitAsDefaultInstance() {
-}
 class ControllerGetVolumeRequest::_Internal {
  public:
 };
@@ -13027,15 +11917,14 @@ ControllerGetVolumeRequest::ControllerGetVolumeRequest(const ControllerGetVolume
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.ControllerGetVolumeRequest)
 }
 
 void ControllerGetVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerGetVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ControllerGetVolumeRequest::~ControllerGetVolumeRequest() {
@@ -13058,11 +11947,6 @@ void ControllerGetVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void ControllerGetVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerGetVolumeRequest& ControllerGetVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerGetVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerGetVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerGetVolumeRequest)
@@ -13070,13 +11954,12 @@ void ControllerGetVolumeRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ControllerGetVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -13219,10 +12102,6 @@ void ControllerGetVolumeRequest::InternalSwap(ControllerGetVolumeRequest* other)
 
 // ===================================================================
 
-void ControllerGetVolumeResponse_VolumeStatus::InitAsDefaultInstance() {
-  ::csi::v1::_ControllerGetVolumeResponse_VolumeStatus_default_instance_._instance.get_mutable()->volume_condition_ = const_cast< ::csi::v1::VolumeCondition*>(
-      ::csi::v1::VolumeCondition::internal_default_instance());
-}
 class ControllerGetVolumeResponse_VolumeStatus::_Internal {
  public:
   static const ::csi::v1::VolumeCondition& volume_condition(const ControllerGetVolumeResponse_VolumeStatus* msg);
@@ -13252,8 +12131,7 @@ ControllerGetVolumeResponse_VolumeStatus::ControllerGetVolumeResponse_VolumeStat
 }
 
 void ControllerGetVolumeResponse_VolumeStatus::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto.base);
-  volume_condition_ = nullptr;
+volume_condition_ = nullptr;
 }
 
 ControllerGetVolumeResponse_VolumeStatus::~ControllerGetVolumeResponse_VolumeStatus() {
@@ -13276,11 +12154,6 @@ void ControllerGetVolumeResponse_VolumeStatus::RegisterArenaDtor(::PROTOBUF_NAME
 void ControllerGetVolumeResponse_VolumeStatus::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerGetVolumeResponse_VolumeStatus& ControllerGetVolumeResponse_VolumeStatus::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerGetVolumeResponse_VolumeStatus_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerGetVolumeResponse_VolumeStatus::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerGetVolumeResponse.VolumeStatus)
@@ -13298,7 +12171,6 @@ void ControllerGetVolumeResponse_VolumeStatus::Clear() {
 
 const char* ControllerGetVolumeResponse_VolumeStatus::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -13471,12 +12343,6 @@ void ControllerGetVolumeResponse_VolumeStatus::InternalSwap(ControllerGetVolumeR
 
 // ===================================================================
 
-void ControllerGetVolumeResponse::InitAsDefaultInstance() {
-  ::csi::v1::_ControllerGetVolumeResponse_default_instance_._instance.get_mutable()->volume_ = const_cast< ::csi::v1::Volume*>(
-      ::csi::v1::Volume::internal_default_instance());
-  ::csi::v1::_ControllerGetVolumeResponse_default_instance_._instance.get_mutable()->status_ = const_cast< ::csi::v1::ControllerGetVolumeResponse_VolumeStatus*>(
-      ::csi::v1::ControllerGetVolumeResponse_VolumeStatus::internal_default_instance());
-}
 class ControllerGetVolumeResponse::_Internal {
  public:
   static const ::csi::v1::Volume& volume(const ControllerGetVolumeResponse* msg);
@@ -13514,10 +12380,10 @@ ControllerGetVolumeResponse::ControllerGetVolumeResponse(const ControllerGetVolu
 }
 
 void ControllerGetVolumeResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerGetVolumeResponse_csi_2eproto.base);
-  ::memset(&volume_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&status_) -
-      reinterpret_cast<char*>(&volume_)) + sizeof(status_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&volume_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+    reinterpret_cast<char*>(&volume_)) + sizeof(status_));
 }
 
 ControllerGetVolumeResponse::~ControllerGetVolumeResponse() {
@@ -13541,11 +12407,6 @@ void ControllerGetVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void ControllerGetVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerGetVolumeResponse& ControllerGetVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerGetVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerGetVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerGetVolumeResponse)
@@ -13566,7 +12427,6 @@ void ControllerGetVolumeResponse::Clear() {
 
 const char* ControllerGetVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -13752,10 +12612,6 @@ void GetCapacityRequest_ParametersEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void GetCapacityRequest::InitAsDefaultInstance() {
-  ::csi::v1::_GetCapacityRequest_default_instance_._instance.get_mutable()->accessible_topology_ = const_cast< ::csi::v1::Topology*>(
-      ::csi::v1::Topology::internal_default_instance());
-}
 class GetCapacityRequest::_Internal {
  public:
   static const ::csi::v1::Topology& accessible_topology(const GetCapacityRequest* msg);
@@ -13787,8 +12643,7 @@ GetCapacityRequest::GetCapacityRequest(const GetCapacityRequest& from)
 }
 
 void GetCapacityRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetCapacityRequest_csi_2eproto.base);
-  accessible_topology_ = nullptr;
+accessible_topology_ = nullptr;
 }
 
 GetCapacityRequest::~GetCapacityRequest() {
@@ -13811,11 +12666,6 @@ void GetCapacityRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetCapacityRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetCapacityRequest& GetCapacityRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetCapacityRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetCapacityRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.GetCapacityRequest)
@@ -13834,7 +12684,6 @@ void GetCapacityRequest::Clear() {
 
 const char* GetCapacityRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -14070,12 +12919,6 @@ void GetCapacityRequest::InternalSwap(GetCapacityRequest* other) {
 
 // ===================================================================
 
-void GetCapacityResponse::InitAsDefaultInstance() {
-  ::csi::v1::_GetCapacityResponse_default_instance_._instance.get_mutable()->maximum_volume_size_ = const_cast< PROTOBUF_NAMESPACE_ID::Int64Value*>(
-      PROTOBUF_NAMESPACE_ID::Int64Value::internal_default_instance());
-  ::csi::v1::_GetCapacityResponse_default_instance_._instance.get_mutable()->minimum_volume_size_ = const_cast< PROTOBUF_NAMESPACE_ID::Int64Value*>(
-      PROTOBUF_NAMESPACE_ID::Int64Value::internal_default_instance());
-}
 class GetCapacityResponse::_Internal {
  public:
   static const PROTOBUF_NAMESPACE_ID::Int64Value& maximum_volume_size(const GetCapacityResponse* msg);
@@ -14126,10 +12969,10 @@ GetCapacityResponse::GetCapacityResponse(const GetCapacityResponse& from)
 }
 
 void GetCapacityResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_GetCapacityResponse_csi_2eproto.base);
-  ::memset(&maximum_volume_size_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&available_capacity_) -
-      reinterpret_cast<char*>(&maximum_volume_size_)) + sizeof(available_capacity_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&maximum_volume_size_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&available_capacity_) -
+    reinterpret_cast<char*>(&maximum_volume_size_)) + sizeof(available_capacity_));
 }
 
 GetCapacityResponse::~GetCapacityResponse() {
@@ -14153,11 +12996,6 @@ void GetCapacityResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void GetCapacityResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const GetCapacityResponse& GetCapacityResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_GetCapacityResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void GetCapacityResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.GetCapacityResponse)
@@ -14179,7 +13017,6 @@ void GetCapacityResponse::Clear() {
 
 const char* GetCapacityResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -14371,8 +13208,6 @@ void GetCapacityResponse::InternalSwap(GetCapacityResponse* other) {
 
 // ===================================================================
 
-void ControllerGetCapabilitiesRequest::InitAsDefaultInstance() {
-}
 class ControllerGetCapabilitiesRequest::_Internal {
  public:
 };
@@ -14411,11 +13246,6 @@ void ControllerGetCapabilitiesRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID
 void ControllerGetCapabilitiesRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerGetCapabilitiesRequest& ControllerGetCapabilitiesRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerGetCapabilitiesRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerGetCapabilitiesRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerGetCapabilitiesRequest)
@@ -14428,7 +13258,6 @@ void ControllerGetCapabilitiesRequest::Clear() {
 
 const char* ControllerGetCapabilitiesRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -14536,8 +13365,6 @@ void ControllerGetCapabilitiesRequest::InternalSwap(ControllerGetCapabilitiesReq
 
 // ===================================================================
 
-void ControllerGetCapabilitiesResponse::InitAsDefaultInstance() {
-}
 class ControllerGetCapabilitiesResponse::_Internal {
  public:
 };
@@ -14557,7 +13384,6 @@ ControllerGetCapabilitiesResponse::ControllerGetCapabilitiesResponse(const Contr
 }
 
 void ControllerGetCapabilitiesResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerGetCapabilitiesResponse_csi_2eproto.base);
 }
 
 ControllerGetCapabilitiesResponse::~ControllerGetCapabilitiesResponse() {
@@ -14579,11 +13405,6 @@ void ControllerGetCapabilitiesResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_I
 void ControllerGetCapabilitiesResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerGetCapabilitiesResponse& ControllerGetCapabilitiesResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerGetCapabilitiesResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerGetCapabilitiesResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerGetCapabilitiesResponse)
@@ -14597,7 +13418,6 @@ void ControllerGetCapabilitiesResponse::Clear() {
 
 const char* ControllerGetCapabilitiesResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -14739,8 +13559,6 @@ void ControllerGetCapabilitiesResponse::InternalSwap(ControllerGetCapabilitiesRe
 
 // ===================================================================
 
-void ControllerServiceCapability_RPC::InitAsDefaultInstance() {
-}
 class ControllerServiceCapability_RPC::_Internal {
  public:
 };
@@ -14759,7 +13577,7 @@ ControllerServiceCapability_RPC::ControllerServiceCapability_RPC(const Controlle
 }
 
 void ControllerServiceCapability_RPC::SharedCtor() {
-  type_ = 0;
+type_ = 0;
 }
 
 ControllerServiceCapability_RPC::~ControllerServiceCapability_RPC() {
@@ -14781,11 +13599,6 @@ void ControllerServiceCapability_RPC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID:
 void ControllerServiceCapability_RPC::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerServiceCapability_RPC& ControllerServiceCapability_RPC::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerServiceCapability_RPC_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerServiceCapability_RPC::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerServiceCapability.RPC)
@@ -14799,7 +13612,6 @@ void ControllerServiceCapability_RPC::Clear() {
 
 const char* ControllerServiceCapability_RPC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -14937,10 +13749,6 @@ void ControllerServiceCapability_RPC::InternalSwap(ControllerServiceCapability_R
 
 // ===================================================================
 
-void ControllerServiceCapability::InitAsDefaultInstance() {
-  ::csi::v1::_ControllerServiceCapability_default_instance_.rpc_ = const_cast< ::csi::v1::ControllerServiceCapability_RPC*>(
-      ::csi::v1::ControllerServiceCapability_RPC::internal_default_instance());
-}
 class ControllerServiceCapability::_Internal {
  public:
   static const ::csi::v1::ControllerServiceCapability_RPC& rpc(const ControllerServiceCapability* msg);
@@ -14988,8 +13796,7 @@ ControllerServiceCapability::ControllerServiceCapability(const ControllerService
 }
 
 void ControllerServiceCapability::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerServiceCapability_csi_2eproto.base);
-  clear_has_type();
+clear_has_type();
 }
 
 ControllerServiceCapability::~ControllerServiceCapability() {
@@ -15014,11 +13821,6 @@ void ControllerServiceCapability::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void ControllerServiceCapability::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerServiceCapability& ControllerServiceCapability::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerServiceCapability_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerServiceCapability::clear_type() {
 // @@protoc_insertion_point(one_of_clear_start:csi.v1.ControllerServiceCapability)
@@ -15049,7 +13851,6 @@ void ControllerServiceCapability::Clear() {
 
 const char* ControllerServiceCapability::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -15234,8 +14035,6 @@ void CreateSnapshotRequest_ParametersEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void CreateSnapshotRequest::InitAsDefaultInstance() {
-}
 class CreateSnapshotRequest::_Internal {
  public:
 };
@@ -15255,21 +14054,20 @@ CreateSnapshotRequest::CreateSnapshotRequest(const CreateSnapshotRequest& from)
   parameters_.MergeFrom(from.parameters_);
   source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_source_volume_id().empty()) {
-    source_volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_source_volume_id(),
+    source_volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_source_volume_id(), 
       GetArena());
   }
   name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_name().empty()) {
-    name_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_name(),
+    name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_name(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.CreateSnapshotRequest)
 }
 
 void CreateSnapshotRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreateSnapshotRequest_csi_2eproto.base);
-  source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 CreateSnapshotRequest::~CreateSnapshotRequest() {
@@ -15293,11 +14091,6 @@ void CreateSnapshotRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void CreateSnapshotRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CreateSnapshotRequest& CreateSnapshotRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreateSnapshotRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CreateSnapshotRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.CreateSnapshotRequest)
@@ -15307,14 +14100,13 @@ void CreateSnapshotRequest::Clear() {
 
   secrets_.Clear();
   parameters_.Clear();
-  source_volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  name_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  source_volume_id_.ClearToEmpty();
+  name_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* CreateSnapshotRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -15623,10 +14415,6 @@ void CreateSnapshotRequest::InternalSwap(CreateSnapshotRequest* other) {
 
 // ===================================================================
 
-void CreateSnapshotResponse::InitAsDefaultInstance() {
-  ::csi::v1::_CreateSnapshotResponse_default_instance_._instance.get_mutable()->snapshot_ = const_cast< ::csi::v1::Snapshot*>(
-      ::csi::v1::Snapshot::internal_default_instance());
-}
 class CreateSnapshotResponse::_Internal {
  public:
   static const ::csi::v1::Snapshot& snapshot(const CreateSnapshotResponse* msg);
@@ -15654,8 +14442,7 @@ CreateSnapshotResponse::CreateSnapshotResponse(const CreateSnapshotResponse& fro
 }
 
 void CreateSnapshotResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_CreateSnapshotResponse_csi_2eproto.base);
-  snapshot_ = nullptr;
+snapshot_ = nullptr;
 }
 
 CreateSnapshotResponse::~CreateSnapshotResponse() {
@@ -15678,11 +14465,6 @@ void CreateSnapshotResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) 
 void CreateSnapshotResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const CreateSnapshotResponse& CreateSnapshotResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_CreateSnapshotResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void CreateSnapshotResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.CreateSnapshotResponse)
@@ -15699,7 +14481,6 @@ void CreateSnapshotResponse::Clear() {
 
 const char* CreateSnapshotResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -15838,10 +14619,6 @@ void CreateSnapshotResponse::InternalSwap(CreateSnapshotResponse* other) {
 
 // ===================================================================
 
-void Snapshot::InitAsDefaultInstance() {
-  ::csi::v1::_Snapshot_default_instance_._instance.get_mutable()->creation_time_ = const_cast< PROTOBUF_NAMESPACE_ID::Timestamp*>(
-      PROTOBUF_NAMESPACE_ID::Timestamp::internal_default_instance());
-}
 class Snapshot::_Internal {
  public:
   static const PROTOBUF_NAMESPACE_ID::Timestamp& creation_time(const Snapshot* msg);
@@ -15868,12 +14645,12 @@ Snapshot::Snapshot(const Snapshot& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_snapshot_id().empty()) {
-    snapshot_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_snapshot_id(),
+    snapshot_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_snapshot_id(), 
       GetArena());
   }
   source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_source_volume_id().empty()) {
-    source_volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_source_volume_id(),
+    source_volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_source_volume_id(), 
       GetArena());
   }
   if (from._internal_has_creation_time()) {
@@ -15888,12 +14665,12 @@ Snapshot::Snapshot(const Snapshot& from)
 }
 
 void Snapshot::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_Snapshot_csi_2eproto.base);
-  snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&creation_time_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&ready_to_use_) -
-      reinterpret_cast<char*>(&creation_time_)) + sizeof(ready_to_use_));
+snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&creation_time_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&ready_to_use_) -
+    reinterpret_cast<char*>(&creation_time_)) + sizeof(ready_to_use_));
 }
 
 Snapshot::~Snapshot() {
@@ -15918,11 +14695,6 @@ void Snapshot::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void Snapshot::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const Snapshot& Snapshot::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_Snapshot_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void Snapshot::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.Snapshot)
@@ -15930,8 +14702,8 @@ void Snapshot::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  snapshot_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  source_volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  snapshot_id_.ClearToEmpty();
+  source_volume_id_.ClearToEmpty();
   if (GetArena() == nullptr && creation_time_ != nullptr) {
     delete creation_time_;
   }
@@ -15944,7 +14716,6 @@ void Snapshot::Clear() {
 
 const char* Snapshot::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -16209,8 +14980,6 @@ void DeleteSnapshotRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void DeleteSnapshotRequest::InitAsDefaultInstance() {
-}
 class DeleteSnapshotRequest::_Internal {
  public:
 };
@@ -16228,15 +14997,14 @@ DeleteSnapshotRequest::DeleteSnapshotRequest(const DeleteSnapshotRequest& from)
   secrets_.MergeFrom(from.secrets_);
   snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_snapshot_id().empty()) {
-    snapshot_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_snapshot_id(),
+    snapshot_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_snapshot_id(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.DeleteSnapshotRequest)
 }
 
 void DeleteSnapshotRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_DeleteSnapshotRequest_csi_2eproto.base);
-  snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 DeleteSnapshotRequest::~DeleteSnapshotRequest() {
@@ -16259,11 +15027,6 @@ void DeleteSnapshotRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void DeleteSnapshotRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const DeleteSnapshotRequest& DeleteSnapshotRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DeleteSnapshotRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void DeleteSnapshotRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.DeleteSnapshotRequest)
@@ -16272,13 +15035,12 @@ void DeleteSnapshotRequest::Clear() {
   (void) cached_has_bits;
 
   secrets_.Clear();
-  snapshot_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  snapshot_id_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* DeleteSnapshotRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -16489,8 +15251,6 @@ void DeleteSnapshotRequest::InternalSwap(DeleteSnapshotRequest* other) {
 
 // ===================================================================
 
-void DeleteSnapshotResponse::InitAsDefaultInstance() {
-}
 class DeleteSnapshotResponse::_Internal {
  public:
 };
@@ -16529,11 +15289,6 @@ void DeleteSnapshotResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) 
 void DeleteSnapshotResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const DeleteSnapshotResponse& DeleteSnapshotResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_DeleteSnapshotResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void DeleteSnapshotResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.DeleteSnapshotResponse)
@@ -16546,7 +15301,6 @@ void DeleteSnapshotResponse::Clear() {
 
 const char* DeleteSnapshotResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -16671,8 +15425,6 @@ void ListSnapshotsRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void ListSnapshotsRequest::InitAsDefaultInstance() {
-}
 class ListSnapshotsRequest::_Internal {
  public:
 };
@@ -16690,17 +15442,17 @@ ListSnapshotsRequest::ListSnapshotsRequest(const ListSnapshotsRequest& from)
   secrets_.MergeFrom(from.secrets_);
   starting_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_starting_token().empty()) {
-    starting_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_starting_token(),
+    starting_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_starting_token(), 
       GetArena());
   }
   source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_source_volume_id().empty()) {
-    source_volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_source_volume_id(),
+    source_volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_source_volume_id(), 
       GetArena());
   }
   snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_snapshot_id().empty()) {
-    snapshot_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_snapshot_id(),
+    snapshot_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_snapshot_id(), 
       GetArena());
   }
   max_entries_ = from.max_entries_;
@@ -16708,11 +15460,10 @@ ListSnapshotsRequest::ListSnapshotsRequest(const ListSnapshotsRequest& from)
 }
 
 void ListSnapshotsRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ListSnapshotsRequest_csi_2eproto.base);
-  starting_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  max_entries_ = 0;
+starting_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+source_volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+snapshot_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+max_entries_ = 0;
 }
 
 ListSnapshotsRequest::~ListSnapshotsRequest() {
@@ -16737,11 +15488,6 @@ void ListSnapshotsRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ListSnapshotsRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ListSnapshotsRequest& ListSnapshotsRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ListSnapshotsRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ListSnapshotsRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ListSnapshotsRequest)
@@ -16750,16 +15496,15 @@ void ListSnapshotsRequest::Clear() {
   (void) cached_has_bits;
 
   secrets_.Clear();
-  starting_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  source_volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  snapshot_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  starting_token_.ClearToEmpty();
+  source_volume_id_.ClearToEmpty();
+  snapshot_id_.ClearToEmpty();
   max_entries_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ListSnapshotsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -17054,10 +15799,6 @@ void ListSnapshotsRequest::InternalSwap(ListSnapshotsRequest* other) {
 
 // ===================================================================
 
-void ListSnapshotsResponse_Entry::InitAsDefaultInstance() {
-  ::csi::v1::_ListSnapshotsResponse_Entry_default_instance_._instance.get_mutable()->snapshot_ = const_cast< ::csi::v1::Snapshot*>(
-      ::csi::v1::Snapshot::internal_default_instance());
-}
 class ListSnapshotsResponse_Entry::_Internal {
  public:
   static const ::csi::v1::Snapshot& snapshot(const ListSnapshotsResponse_Entry* msg);
@@ -17085,8 +15826,7 @@ ListSnapshotsResponse_Entry::ListSnapshotsResponse_Entry(const ListSnapshotsResp
 }
 
 void ListSnapshotsResponse_Entry::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ListSnapshotsResponse_Entry_csi_2eproto.base);
-  snapshot_ = nullptr;
+snapshot_ = nullptr;
 }
 
 ListSnapshotsResponse_Entry::~ListSnapshotsResponse_Entry() {
@@ -17109,11 +15849,6 @@ void ListSnapshotsResponse_Entry::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void ListSnapshotsResponse_Entry::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ListSnapshotsResponse_Entry& ListSnapshotsResponse_Entry::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ListSnapshotsResponse_Entry_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ListSnapshotsResponse_Entry::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ListSnapshotsResponse.Entry)
@@ -17130,7 +15865,6 @@ void ListSnapshotsResponse_Entry::Clear() {
 
 const char* ListSnapshotsResponse_Entry::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -17269,8 +16003,6 @@ void ListSnapshotsResponse_Entry::InternalSwap(ListSnapshotsResponse_Entry* othe
 
 // ===================================================================
 
-void ListSnapshotsResponse::InitAsDefaultInstance() {
-}
 class ListSnapshotsResponse::_Internal {
  public:
 };
@@ -17288,15 +16020,14 @@ ListSnapshotsResponse::ListSnapshotsResponse(const ListSnapshotsResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   next_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_next_token().empty()) {
-    next_token_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_next_token(),
+    next_token_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_next_token(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.ListSnapshotsResponse)
 }
 
 void ListSnapshotsResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ListSnapshotsResponse_csi_2eproto.base);
-  next_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+next_token_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 ListSnapshotsResponse::~ListSnapshotsResponse() {
@@ -17319,11 +16050,6 @@ void ListSnapshotsResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void ListSnapshotsResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ListSnapshotsResponse& ListSnapshotsResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ListSnapshotsResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ListSnapshotsResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ListSnapshotsResponse)
@@ -17332,13 +16058,12 @@ void ListSnapshotsResponse::Clear() {
   (void) cached_has_bits;
 
   entries_.Clear();
-  next_token_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  next_token_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* ListSnapshotsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -17527,12 +16252,6 @@ void ControllerExpandVolumeRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void ControllerExpandVolumeRequest::InitAsDefaultInstance() {
-  ::csi::v1::_ControllerExpandVolumeRequest_default_instance_._instance.get_mutable()->capacity_range_ = const_cast< ::csi::v1::CapacityRange*>(
-      ::csi::v1::CapacityRange::internal_default_instance());
-  ::csi::v1::_ControllerExpandVolumeRequest_default_instance_._instance.get_mutable()->volume_capability_ = const_cast< ::csi::v1::VolumeCapability*>(
-      ::csi::v1::VolumeCapability::internal_default_instance());
-}
 class ControllerExpandVolumeRequest::_Internal {
  public:
   static const ::csi::v1::CapacityRange& capacity_range(const ControllerExpandVolumeRequest* msg);
@@ -17560,7 +16279,7 @@ ControllerExpandVolumeRequest::ControllerExpandVolumeRequest(const ControllerExp
   secrets_.MergeFrom(from.secrets_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   if (from._internal_has_capacity_range()) {
@@ -17577,11 +16296,11 @@ ControllerExpandVolumeRequest::ControllerExpandVolumeRequest(const ControllerExp
 }
 
 void ControllerExpandVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ControllerExpandVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&capacity_range_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&volume_capability_) -
-      reinterpret_cast<char*>(&capacity_range_)) + sizeof(volume_capability_));
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&capacity_range_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&volume_capability_) -
+    reinterpret_cast<char*>(&capacity_range_)) + sizeof(volume_capability_));
 }
 
 ControllerExpandVolumeRequest::~ControllerExpandVolumeRequest() {
@@ -17606,11 +16325,6 @@ void ControllerExpandVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::A
 void ControllerExpandVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerExpandVolumeRequest& ControllerExpandVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerExpandVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerExpandVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerExpandVolumeRequest)
@@ -17619,7 +16333,7 @@ void ControllerExpandVolumeRequest::Clear() {
   (void) cached_has_bits;
 
   secrets_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
   if (GetArena() == nullptr && capacity_range_ != nullptr) {
     delete capacity_range_;
   }
@@ -17633,7 +16347,6 @@ void ControllerExpandVolumeRequest::Clear() {
 
 const char* ControllerExpandVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -17900,8 +16613,6 @@ void ControllerExpandVolumeRequest::InternalSwap(ControllerExpandVolumeRequest* 
 
 // ===================================================================
 
-void ControllerExpandVolumeResponse::InitAsDefaultInstance() {
-}
 class ControllerExpandVolumeResponse::_Internal {
  public:
 };
@@ -17922,9 +16633,10 @@ ControllerExpandVolumeResponse::ControllerExpandVolumeResponse(const ControllerE
 }
 
 void ControllerExpandVolumeResponse::SharedCtor() {
-  ::memset(&capacity_bytes_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&node_expansion_required_) -
-      reinterpret_cast<char*>(&capacity_bytes_)) + sizeof(node_expansion_required_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&capacity_bytes_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&node_expansion_required_) -
+    reinterpret_cast<char*>(&capacity_bytes_)) + sizeof(node_expansion_required_));
 }
 
 ControllerExpandVolumeResponse::~ControllerExpandVolumeResponse() {
@@ -17946,11 +16658,6 @@ void ControllerExpandVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::
 void ControllerExpandVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const ControllerExpandVolumeResponse& ControllerExpandVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ControllerExpandVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void ControllerExpandVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.ControllerExpandVolumeResponse)
@@ -17966,7 +16673,6 @@ void ControllerExpandVolumeResponse::Clear() {
 
 const char* ControllerExpandVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -18180,10 +16886,6 @@ void NodeStageVolumeRequest_VolumeContextEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void NodeStageVolumeRequest::InitAsDefaultInstance() {
-  ::csi::v1::_NodeStageVolumeRequest_default_instance_._instance.get_mutable()->volume_capability_ = const_cast< ::csi::v1::VolumeCapability*>(
-      ::csi::v1::VolumeCapability::internal_default_instance());
-}
 class NodeStageVolumeRequest::_Internal {
  public:
   static const ::csi::v1::VolumeCapability& volume_capability(const NodeStageVolumeRequest* msg);
@@ -18210,12 +16912,12 @@ NodeStageVolumeRequest::NodeStageVolumeRequest(const NodeStageVolumeRequest& fro
   volume_context_.MergeFrom(from.volume_context_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_staging_target_path().empty()) {
-    staging_target_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_staging_target_path(),
+    staging_target_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_staging_target_path(), 
       GetArena());
   }
   if (from._internal_has_volume_capability()) {
@@ -18227,10 +16929,9 @@ NodeStageVolumeRequest::NodeStageVolumeRequest(const NodeStageVolumeRequest& fro
 }
 
 void NodeStageVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeStageVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  volume_capability_ = nullptr;
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_capability_ = nullptr;
 }
 
 NodeStageVolumeRequest::~NodeStageVolumeRequest() {
@@ -18255,11 +16956,6 @@ void NodeStageVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) 
 void NodeStageVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeStageVolumeRequest& NodeStageVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeStageVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeStageVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeStageVolumeRequest)
@@ -18270,8 +16966,8 @@ void NodeStageVolumeRequest::Clear() {
   publish_context_.Clear();
   secrets_.Clear();
   volume_context_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  staging_target_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  staging_target_path_.ClearToEmpty();
   if (GetArena() == nullptr && volume_capability_ != nullptr) {
     delete volume_capability_;
   }
@@ -18281,7 +16977,6 @@ void NodeStageVolumeRequest::Clear() {
 
 const char* NodeStageVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -18684,8 +17379,6 @@ void NodeStageVolumeRequest::InternalSwap(NodeStageVolumeRequest* other) {
 
 // ===================================================================
 
-void NodeStageVolumeResponse::InitAsDefaultInstance() {
-}
 class NodeStageVolumeResponse::_Internal {
  public:
 };
@@ -18724,11 +17417,6 @@ void NodeStageVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*)
 void NodeStageVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeStageVolumeResponse& NodeStageVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeStageVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeStageVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeStageVolumeResponse)
@@ -18741,7 +17429,6 @@ void NodeStageVolumeResponse::Clear() {
 
 const char* NodeStageVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -18849,8 +17536,6 @@ void NodeStageVolumeResponse::InternalSwap(NodeStageVolumeResponse* other) {
 
 // ===================================================================
 
-void NodeUnstageVolumeRequest::InitAsDefaultInstance() {
-}
 class NodeUnstageVolumeRequest::_Internal {
  public:
 };
@@ -18866,21 +17551,20 @@ NodeUnstageVolumeRequest::NodeUnstageVolumeRequest(const NodeUnstageVolumeReques
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_staging_target_path().empty()) {
-    staging_target_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_staging_target_path(),
+    staging_target_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_staging_target_path(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.NodeUnstageVolumeRequest)
 }
 
 void NodeUnstageVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeUnstageVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 NodeUnstageVolumeRequest::~NodeUnstageVolumeRequest() {
@@ -18904,11 +17588,6 @@ void NodeUnstageVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*
 void NodeUnstageVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeUnstageVolumeRequest& NodeUnstageVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeUnstageVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeUnstageVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeUnstageVolumeRequest)
@@ -18916,14 +17595,13 @@ void NodeUnstageVolumeRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  staging_target_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  staging_target_path_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* NodeUnstageVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -19096,8 +17774,6 @@ void NodeUnstageVolumeRequest::InternalSwap(NodeUnstageVolumeRequest* other) {
 
 // ===================================================================
 
-void NodeUnstageVolumeResponse::InitAsDefaultInstance() {
-}
 class NodeUnstageVolumeResponse::_Internal {
  public:
 };
@@ -19136,11 +17812,6 @@ void NodeUnstageVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void NodeUnstageVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeUnstageVolumeResponse& NodeUnstageVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeUnstageVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeUnstageVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeUnstageVolumeResponse)
@@ -19153,7 +17824,6 @@ void NodeUnstageVolumeResponse::Clear() {
 
 const char* NodeUnstageVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -19312,10 +17982,6 @@ void NodePublishVolumeRequest_VolumeContextEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void NodePublishVolumeRequest::InitAsDefaultInstance() {
-  ::csi::v1::_NodePublishVolumeRequest_default_instance_._instance.get_mutable()->volume_capability_ = const_cast< ::csi::v1::VolumeCapability*>(
-      ::csi::v1::VolumeCapability::internal_default_instance());
-}
 class NodePublishVolumeRequest::_Internal {
  public:
   static const ::csi::v1::VolumeCapability& volume_capability(const NodePublishVolumeRequest* msg);
@@ -19342,17 +18008,17 @@ NodePublishVolumeRequest::NodePublishVolumeRequest(const NodePublishVolumeReques
   volume_context_.MergeFrom(from.volume_context_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_staging_target_path().empty()) {
-    staging_target_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_staging_target_path(),
+    staging_target_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_staging_target_path(), 
       GetArena());
   }
   target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_target_path().empty()) {
-    target_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_target_path(),
+    target_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_target_path(), 
       GetArena());
   }
   if (from._internal_has_volume_capability()) {
@@ -19365,13 +18031,13 @@ NodePublishVolumeRequest::NodePublishVolumeRequest(const NodePublishVolumeReques
 }
 
 void NodePublishVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodePublishVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&volume_capability_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&readonly_) -
-      reinterpret_cast<char*>(&volume_capability_)) + sizeof(readonly_));
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&volume_capability_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&readonly_) -
+    reinterpret_cast<char*>(&volume_capability_)) + sizeof(readonly_));
 }
 
 NodePublishVolumeRequest::~NodePublishVolumeRequest() {
@@ -19397,11 +18063,6 @@ void NodePublishVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*
 void NodePublishVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodePublishVolumeRequest& NodePublishVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodePublishVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodePublishVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodePublishVolumeRequest)
@@ -19412,9 +18073,9 @@ void NodePublishVolumeRequest::Clear() {
   publish_context_.Clear();
   secrets_.Clear();
   volume_context_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  staging_target_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  target_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  staging_target_path_.ClearToEmpty();
+  target_path_.ClearToEmpty();
   if (GetArena() == nullptr && volume_capability_ != nullptr) {
     delete volume_capability_;
   }
@@ -19425,7 +18086,6 @@ void NodePublishVolumeRequest::Clear() {
 
 const char* NodePublishVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -19884,8 +18544,6 @@ void NodePublishVolumeRequest::InternalSwap(NodePublishVolumeRequest* other) {
 
 // ===================================================================
 
-void NodePublishVolumeResponse::InitAsDefaultInstance() {
-}
 class NodePublishVolumeResponse::_Internal {
  public:
 };
@@ -19924,11 +18582,6 @@ void NodePublishVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void NodePublishVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodePublishVolumeResponse& NodePublishVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodePublishVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodePublishVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodePublishVolumeResponse)
@@ -19941,7 +18594,6 @@ void NodePublishVolumeResponse::Clear() {
 
 const char* NodePublishVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -20049,8 +18701,6 @@ void NodePublishVolumeResponse::InternalSwap(NodePublishVolumeResponse* other) {
 
 // ===================================================================
 
-void NodeUnpublishVolumeRequest::InitAsDefaultInstance() {
-}
 class NodeUnpublishVolumeRequest::_Internal {
  public:
 };
@@ -20066,21 +18716,20 @@ NodeUnpublishVolumeRequest::NodeUnpublishVolumeRequest(const NodeUnpublishVolume
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_target_path().empty()) {
-    target_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_target_path(),
+    target_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_target_path(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.NodeUnpublishVolumeRequest)
 }
 
 void NodeUnpublishVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeUnpublishVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 NodeUnpublishVolumeRequest::~NodeUnpublishVolumeRequest() {
@@ -20104,11 +18753,6 @@ void NodeUnpublishVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void NodeUnpublishVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeUnpublishVolumeRequest& NodeUnpublishVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeUnpublishVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeUnpublishVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeUnpublishVolumeRequest)
@@ -20116,14 +18760,13 @@ void NodeUnpublishVolumeRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  target_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  target_path_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* NodeUnpublishVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -20296,8 +18939,6 @@ void NodeUnpublishVolumeRequest::InternalSwap(NodeUnpublishVolumeRequest* other)
 
 // ===================================================================
 
-void NodeUnpublishVolumeResponse::InitAsDefaultInstance() {
-}
 class NodeUnpublishVolumeResponse::_Internal {
  public:
 };
@@ -20336,11 +18977,6 @@ void NodeUnpublishVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void NodeUnpublishVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeUnpublishVolumeResponse& NodeUnpublishVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeUnpublishVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeUnpublishVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeUnpublishVolumeResponse)
@@ -20353,7 +18989,6 @@ void NodeUnpublishVolumeResponse::Clear() {
 
 const char* NodeUnpublishVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -20461,8 +19096,6 @@ void NodeUnpublishVolumeResponse::InternalSwap(NodeUnpublishVolumeResponse* othe
 
 // ===================================================================
 
-void NodeGetVolumeStatsRequest::InitAsDefaultInstance() {
-}
 class NodeGetVolumeStatsRequest::_Internal {
  public:
 };
@@ -20478,27 +19111,26 @@ NodeGetVolumeStatsRequest::NodeGetVolumeStatsRequest(const NodeGetVolumeStatsReq
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   volume_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_path().empty()) {
-    volume_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_path(),
+    volume_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_path(), 
       GetArena());
   }
   staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_staging_target_path().empty()) {
-    staging_target_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_staging_target_path(),
+    staging_target_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_staging_target_path(), 
       GetArena());
   }
   // @@protoc_insertion_point(copy_constructor:csi.v1.NodeGetVolumeStatsRequest)
 }
 
 void NodeGetVolumeStatsRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeGetVolumeStatsRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  volume_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 }
 
 NodeGetVolumeStatsRequest::~NodeGetVolumeStatsRequest() {
@@ -20523,11 +19155,6 @@ void NodeGetVolumeStatsRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void NodeGetVolumeStatsRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeGetVolumeStatsRequest& NodeGetVolumeStatsRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeGetVolumeStatsRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeGetVolumeStatsRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeGetVolumeStatsRequest)
@@ -20535,15 +19162,14 @@ void NodeGetVolumeStatsRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  volume_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  staging_target_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  volume_path_.ClearToEmpty();
+  staging_target_path_.ClearToEmpty();
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* NodeGetVolumeStatsRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -20746,10 +19372,6 @@ void NodeGetVolumeStatsRequest::InternalSwap(NodeGetVolumeStatsRequest* other) {
 
 // ===================================================================
 
-void NodeGetVolumeStatsResponse::InitAsDefaultInstance() {
-  ::csi::v1::_NodeGetVolumeStatsResponse_default_instance_._instance.get_mutable()->volume_condition_ = const_cast< ::csi::v1::VolumeCondition*>(
-      ::csi::v1::VolumeCondition::internal_default_instance());
-}
 class NodeGetVolumeStatsResponse::_Internal {
  public:
   static const ::csi::v1::VolumeCondition& volume_condition(const NodeGetVolumeStatsResponse* msg);
@@ -20779,8 +19401,7 @@ NodeGetVolumeStatsResponse::NodeGetVolumeStatsResponse(const NodeGetVolumeStatsR
 }
 
 void NodeGetVolumeStatsResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeGetVolumeStatsResponse_csi_2eproto.base);
-  volume_condition_ = nullptr;
+volume_condition_ = nullptr;
 }
 
 NodeGetVolumeStatsResponse::~NodeGetVolumeStatsResponse() {
@@ -20803,11 +19424,6 @@ void NodeGetVolumeStatsResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void NodeGetVolumeStatsResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeGetVolumeStatsResponse& NodeGetVolumeStatsResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeGetVolumeStatsResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeGetVolumeStatsResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeGetVolumeStatsResponse)
@@ -20825,7 +19441,6 @@ void NodeGetVolumeStatsResponse::Clear() {
 
 const char* NodeGetVolumeStatsResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -20993,8 +19608,6 @@ void NodeGetVolumeStatsResponse::InternalSwap(NodeGetVolumeStatsResponse* other)
 
 // ===================================================================
 
-void VolumeUsage::InitAsDefaultInstance() {
-}
 class VolumeUsage::_Internal {
  public:
 };
@@ -21015,9 +19628,10 @@ VolumeUsage::VolumeUsage(const VolumeUsage& from)
 }
 
 void VolumeUsage::SharedCtor() {
-  ::memset(&available_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&unit_) -
-      reinterpret_cast<char*>(&available_)) + sizeof(unit_));
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&available_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&unit_) -
+    reinterpret_cast<char*>(&available_)) + sizeof(unit_));
 }
 
 VolumeUsage::~VolumeUsage() {
@@ -21039,11 +19653,6 @@ void VolumeUsage::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void VolumeUsage::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeUsage& VolumeUsage::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeUsage_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeUsage::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.VolumeUsage)
@@ -21059,7 +19668,6 @@ void VolumeUsage::Clear() {
 
 const char* VolumeUsage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -21271,8 +19879,6 @@ void VolumeUsage::InternalSwap(VolumeUsage* other) {
 
 // ===================================================================
 
-void VolumeCondition::InitAsDefaultInstance() {
-}
 class VolumeCondition::_Internal {
  public:
 };
@@ -21288,7 +19894,7 @@ VolumeCondition::VolumeCondition(const VolumeCondition& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_message().empty()) {
-    message_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_message(),
+    message_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message(), 
       GetArena());
   }
   abnormal_ = from.abnormal_;
@@ -21296,9 +19902,8 @@ VolumeCondition::VolumeCondition(const VolumeCondition& from)
 }
 
 void VolumeCondition::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_VolumeCondition_csi_2eproto.base);
-  message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  abnormal_ = false;
+message_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+abnormal_ = false;
 }
 
 VolumeCondition::~VolumeCondition() {
@@ -21321,11 +19926,6 @@ void VolumeCondition::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void VolumeCondition::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const VolumeCondition& VolumeCondition::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_VolumeCondition_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void VolumeCondition::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.VolumeCondition)
@@ -21333,14 +19933,13 @@ void VolumeCondition::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  message_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  message_.ClearToEmpty();
   abnormal_ = false;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
 const char* VolumeCondition::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -21505,8 +20104,6 @@ void VolumeCondition::InternalSwap(VolumeCondition* other) {
 
 // ===================================================================
 
-void NodeGetCapabilitiesRequest::InitAsDefaultInstance() {
-}
 class NodeGetCapabilitiesRequest::_Internal {
  public:
 };
@@ -21545,11 +20142,6 @@ void NodeGetCapabilitiesRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Aren
 void NodeGetCapabilitiesRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeGetCapabilitiesRequest& NodeGetCapabilitiesRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeGetCapabilitiesRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeGetCapabilitiesRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeGetCapabilitiesRequest)
@@ -21562,7 +20154,6 @@ void NodeGetCapabilitiesRequest::Clear() {
 
 const char* NodeGetCapabilitiesRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -21670,8 +20261,6 @@ void NodeGetCapabilitiesRequest::InternalSwap(NodeGetCapabilitiesRequest* other)
 
 // ===================================================================
 
-void NodeGetCapabilitiesResponse::InitAsDefaultInstance() {
-}
 class NodeGetCapabilitiesResponse::_Internal {
  public:
 };
@@ -21691,7 +20280,6 @@ NodeGetCapabilitiesResponse::NodeGetCapabilitiesResponse(const NodeGetCapabiliti
 }
 
 void NodeGetCapabilitiesResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeGetCapabilitiesResponse_csi_2eproto.base);
 }
 
 NodeGetCapabilitiesResponse::~NodeGetCapabilitiesResponse() {
@@ -21713,11 +20301,6 @@ void NodeGetCapabilitiesResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Are
 void NodeGetCapabilitiesResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeGetCapabilitiesResponse& NodeGetCapabilitiesResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeGetCapabilitiesResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeGetCapabilitiesResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeGetCapabilitiesResponse)
@@ -21731,7 +20314,6 @@ void NodeGetCapabilitiesResponse::Clear() {
 
 const char* NodeGetCapabilitiesResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -21873,8 +20455,6 @@ void NodeGetCapabilitiesResponse::InternalSwap(NodeGetCapabilitiesResponse* othe
 
 // ===================================================================
 
-void NodeServiceCapability_RPC::InitAsDefaultInstance() {
-}
 class NodeServiceCapability_RPC::_Internal {
  public:
 };
@@ -21893,7 +20473,7 @@ NodeServiceCapability_RPC::NodeServiceCapability_RPC(const NodeServiceCapability
 }
 
 void NodeServiceCapability_RPC::SharedCtor() {
-  type_ = 0;
+type_ = 0;
 }
 
 NodeServiceCapability_RPC::~NodeServiceCapability_RPC() {
@@ -21915,11 +20495,6 @@ void NodeServiceCapability_RPC::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena
 void NodeServiceCapability_RPC::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeServiceCapability_RPC& NodeServiceCapability_RPC::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeServiceCapability_RPC_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeServiceCapability_RPC::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeServiceCapability.RPC)
@@ -21933,7 +20508,6 @@ void NodeServiceCapability_RPC::Clear() {
 
 const char* NodeServiceCapability_RPC::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -22071,10 +20645,6 @@ void NodeServiceCapability_RPC::InternalSwap(NodeServiceCapability_RPC* other) {
 
 // ===================================================================
 
-void NodeServiceCapability::InitAsDefaultInstance() {
-  ::csi::v1::_NodeServiceCapability_default_instance_.rpc_ = const_cast< ::csi::v1::NodeServiceCapability_RPC*>(
-      ::csi::v1::NodeServiceCapability_RPC::internal_default_instance());
-}
 class NodeServiceCapability::_Internal {
  public:
   static const ::csi::v1::NodeServiceCapability_RPC& rpc(const NodeServiceCapability* msg);
@@ -22122,8 +20692,7 @@ NodeServiceCapability::NodeServiceCapability(const NodeServiceCapability& from)
 }
 
 void NodeServiceCapability::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeServiceCapability_csi_2eproto.base);
-  clear_has_type();
+clear_has_type();
 }
 
 NodeServiceCapability::~NodeServiceCapability() {
@@ -22148,11 +20717,6 @@ void NodeServiceCapability::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void NodeServiceCapability::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeServiceCapability& NodeServiceCapability::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeServiceCapability_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeServiceCapability::clear_type() {
 // @@protoc_insertion_point(one_of_clear_start:csi.v1.NodeServiceCapability)
@@ -22183,7 +20747,6 @@ void NodeServiceCapability::Clear() {
 
 const char* NodeServiceCapability::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -22334,8 +20897,6 @@ void NodeServiceCapability::InternalSwap(NodeServiceCapability* other) {
 
 // ===================================================================
 
-void NodeGetInfoRequest::InitAsDefaultInstance() {
-}
 class NodeGetInfoRequest::_Internal {
  public:
 };
@@ -22374,11 +20935,6 @@ void NodeGetInfoRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void NodeGetInfoRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeGetInfoRequest& NodeGetInfoRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeGetInfoRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeGetInfoRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeGetInfoRequest)
@@ -22391,7 +20947,6 @@ void NodeGetInfoRequest::Clear() {
 
 const char* NodeGetInfoRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -22499,10 +21054,6 @@ void NodeGetInfoRequest::InternalSwap(NodeGetInfoRequest* other) {
 
 // ===================================================================
 
-void NodeGetInfoResponse::InitAsDefaultInstance() {
-  ::csi::v1::_NodeGetInfoResponse_default_instance_._instance.get_mutable()->accessible_topology_ = const_cast< ::csi::v1::Topology*>(
-      ::csi::v1::Topology::internal_default_instance());
-}
 class NodeGetInfoResponse::_Internal {
  public:
   static const ::csi::v1::Topology& accessible_topology(const NodeGetInfoResponse* msg);
@@ -22523,7 +21074,7 @@ NodeGetInfoResponse::NodeGetInfoResponse(const NodeGetInfoResponse& from)
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
   node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_node_id().empty()) {
-    node_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_node_id(),
+    node_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_node_id(), 
       GetArena());
   }
   if (from._internal_has_accessible_topology()) {
@@ -22536,11 +21087,11 @@ NodeGetInfoResponse::NodeGetInfoResponse(const NodeGetInfoResponse& from)
 }
 
 void NodeGetInfoResponse::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeGetInfoResponse_csi_2eproto.base);
-  node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&accessible_topology_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&max_volumes_per_node_) -
-      reinterpret_cast<char*>(&accessible_topology_)) + sizeof(max_volumes_per_node_));
+node_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&accessible_topology_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&max_volumes_per_node_) -
+    reinterpret_cast<char*>(&accessible_topology_)) + sizeof(max_volumes_per_node_));
 }
 
 NodeGetInfoResponse::~NodeGetInfoResponse() {
@@ -22564,11 +21115,6 @@ void NodeGetInfoResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
 void NodeGetInfoResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeGetInfoResponse& NodeGetInfoResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeGetInfoResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeGetInfoResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeGetInfoResponse)
@@ -22576,7 +21122,7 @@ void NodeGetInfoResponse::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  node_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  node_id_.ClearToEmpty();
   if (GetArena() == nullptr && accessible_topology_ != nullptr) {
     delete accessible_topology_;
   }
@@ -22587,7 +21133,6 @@ void NodeGetInfoResponse::Clear() {
 
 const char* NodeGetInfoResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -22801,12 +21346,6 @@ void NodeExpandVolumeRequest_SecretsEntry_DoNotUse::MergeFrom(
 
 // ===================================================================
 
-void NodeExpandVolumeRequest::InitAsDefaultInstance() {
-  ::csi::v1::_NodeExpandVolumeRequest_default_instance_._instance.get_mutable()->capacity_range_ = const_cast< ::csi::v1::CapacityRange*>(
-      ::csi::v1::CapacityRange::internal_default_instance());
-  ::csi::v1::_NodeExpandVolumeRequest_default_instance_._instance.get_mutable()->volume_capability_ = const_cast< ::csi::v1::VolumeCapability*>(
-      ::csi::v1::VolumeCapability::internal_default_instance());
-}
 class NodeExpandVolumeRequest::_Internal {
  public:
   static const ::csi::v1::CapacityRange& capacity_range(const NodeExpandVolumeRequest* msg);
@@ -22834,17 +21373,17 @@ NodeExpandVolumeRequest::NodeExpandVolumeRequest(const NodeExpandVolumeRequest& 
   secrets_.MergeFrom(from.secrets_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
-    volume_id_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_id(),
+    volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
       GetArena());
   }
   volume_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_path().empty()) {
-    volume_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_volume_path(),
+    volume_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_path(), 
       GetArena());
   }
   staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_staging_target_path().empty()) {
-    staging_target_path_.Set(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), from._internal_staging_target_path(),
+    staging_target_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_staging_target_path(), 
       GetArena());
   }
   if (from._internal_has_capacity_range()) {
@@ -22861,13 +21400,13 @@ NodeExpandVolumeRequest::NodeExpandVolumeRequest(const NodeExpandVolumeRequest& 
 }
 
 void NodeExpandVolumeRequest::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_NodeExpandVolumeRequest_csi_2eproto.base);
-  volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  volume_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  ::memset(&capacity_range_, 0, static_cast<size_t>(
-      reinterpret_cast<char*>(&volume_capability_) -
-      reinterpret_cast<char*>(&capacity_range_)) + sizeof(volume_capability_));
+volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+volume_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+staging_target_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+    reinterpret_cast<char*>(&capacity_range_) - reinterpret_cast<char*>(this)),
+    0, static_cast<size_t>(reinterpret_cast<char*>(&volume_capability_) -
+    reinterpret_cast<char*>(&capacity_range_)) + sizeof(volume_capability_));
 }
 
 NodeExpandVolumeRequest::~NodeExpandVolumeRequest() {
@@ -22894,11 +21433,6 @@ void NodeExpandVolumeRequest::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*)
 void NodeExpandVolumeRequest::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeExpandVolumeRequest& NodeExpandVolumeRequest::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeExpandVolumeRequest_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeExpandVolumeRequest::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeExpandVolumeRequest)
@@ -22907,9 +21441,9 @@ void NodeExpandVolumeRequest::Clear() {
   (void) cached_has_bits;
 
   secrets_.Clear();
-  volume_id_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  volume_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  staging_target_path_.ClearToEmpty(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  volume_id_.ClearToEmpty();
+  volume_path_.ClearToEmpty();
+  staging_target_path_.ClearToEmpty();
   if (GetArena() == nullptr && capacity_range_ != nullptr) {
     delete capacity_range_;
   }
@@ -22923,7 +21457,6 @@ void NodeExpandVolumeRequest::Clear() {
 
 const char* NodeExpandVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -23250,8 +21783,6 @@ void NodeExpandVolumeRequest::InternalSwap(NodeExpandVolumeRequest* other) {
 
 // ===================================================================
 
-void NodeExpandVolumeResponse::InitAsDefaultInstance() {
-}
 class NodeExpandVolumeResponse::_Internal {
  public:
 };
@@ -23270,7 +21801,7 @@ NodeExpandVolumeResponse::NodeExpandVolumeResponse(const NodeExpandVolumeRespons
 }
 
 void NodeExpandVolumeResponse::SharedCtor() {
-  capacity_bytes_ = PROTOBUF_LONGLONG(0);
+capacity_bytes_ = PROTOBUF_LONGLONG(0);
 }
 
 NodeExpandVolumeResponse::~NodeExpandVolumeResponse() {
@@ -23292,11 +21823,6 @@ void NodeExpandVolumeResponse::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*
 void NodeExpandVolumeResponse::SetCachedSize(int size) const {
   _cached_size_.Set(size);
 }
-const NodeExpandVolumeResponse& NodeExpandVolumeResponse::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_NodeExpandVolumeResponse_csi_2eproto.base);
-  return *internal_default_instance();
-}
-
 
 void NodeExpandVolumeResponse::Clear() {
 // @@protoc_insertion_point(message_clear_start:csi.v1.NodeExpandVolumeResponse)
@@ -23310,7 +21836,6 @@ void NodeExpandVolumeResponse::Clear() {
 
 const char* NodeExpandVolumeResponse::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
 #define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  ::PROTOBUF_NAMESPACE_ID::Arena* arena = GetArena(); (void)arena;
   while (!ctx->Done(&ptr)) {
     ::PROTOBUF_NAMESPACE_ID::uint32 tag;
     ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
@@ -23444,25 +21969,25 @@ void NodeExpandVolumeResponse::InternalSwap(NodeExpandVolumeResponse* other) {
   return GetMetadataStatic();
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::EnumOptions,
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::EnumOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   alpha_enum(kAlphaEnumFieldNumber, false);
-::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::EnumValueOptions,
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::EnumValueOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   alpha_enum_value(kAlphaEnumValueFieldNumber, false);
-::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   csi_secret(kCsiSecretFieldNumber, false);
-::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::FieldOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   alpha_field(kAlphaFieldFieldNumber, false);
-::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::MessageOptions,
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::MessageOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   alpha_message(kAlphaMessageFieldNumber, false);
-::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::MethodOptions,
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::MethodOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   alpha_method(kAlphaMethodFieldNumber, false);
-::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::ServiceOptions,
+PROTOBUF_ATTRIBUTE_INIT_PRIORITY ::PROTOBUF_NAMESPACE_ID::internal::ExtensionIdentifier< ::google::protobuf::ServiceOptions,
     ::PROTOBUF_NAMESPACE_ID::internal::PrimitiveTypeTraits< bool >, 8, false >
   alpha_service(kAlphaServiceFieldNumber, false);
 

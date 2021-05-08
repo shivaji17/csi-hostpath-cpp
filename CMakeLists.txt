@@ -7,7 +7,7 @@ set(CMAKE_CXX_STANDARD 17)
 
 # Set all required dependencies path
 set(gRPC_DIR "${CMAKE_SOURCE_DIR}/vendor/grpc/lib/cmake/grpc/")
-set(protobuf_DIR "${CMAKE_SOURCE_DIR}/vendor/grpc/lib64/cmake/protobuf/")
+set(protobuf_DIR "${CMAKE_SOURCE_DIR}/vendor/grpc/lib/cmake/protobuf/")
 
 # Find all required packages
 find_package(Threads REQUIRED)
