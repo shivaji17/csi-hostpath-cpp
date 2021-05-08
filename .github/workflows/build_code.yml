@@ -22,7 +22,7 @@ jobs:
     - uses: docker://ubuntu:focal
     
     - name: Install build tools
-      run: apt-get install cmake build-essential
+      run: sudo apt-get update && sudo apt-get install cmake build-essential
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
