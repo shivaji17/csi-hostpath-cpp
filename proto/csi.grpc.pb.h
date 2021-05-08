@@ -64,40 +64,22 @@ class Identity final {
      public:
       virtual ~experimental_async_interface() {}
       virtual void GetPluginInfo(::grpc::ClientContext* context, const ::csi::v1::GetPluginInfoRequest* request, ::csi::v1::GetPluginInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetPluginInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetPluginInfo(::grpc::ClientContext* context, const ::csi::v1::GetPluginInfoRequest* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void GetPluginInfo(::grpc::ClientContext* context, const ::csi::v1::GetPluginInfoRequest* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetPluginInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetPluginInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void GetPluginCapabilities(::grpc::ClientContext* context, const ::csi::v1::GetPluginCapabilitiesRequest* request, ::csi::v1::GetPluginCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetPluginCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetPluginCapabilities(::grpc::ClientContext* context, const ::csi::v1::GetPluginCapabilitiesRequest* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void GetPluginCapabilities(::grpc::ClientContext* context, const ::csi::v1::GetPluginCapabilitiesRequest* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetPluginCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetPluginCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void Probe(::grpc::ClientContext* context, const ::csi::v1::ProbeRequest* request, ::csi::v1::ProbeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void Probe(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ProbeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void Probe(::grpc::ClientContext* context, const ::csi::v1::ProbeRequest* request, ::csi::v1::ProbeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void Probe(::grpc::ClientContext* context, const ::csi::v1::ProbeRequest* request, ::csi::v1::ProbeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void Probe(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ProbeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void Probe(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ProbeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -143,40 +125,22 @@ class Identity final {
       public StubInterface::experimental_async_interface {
      public:
       void GetPluginInfo(::grpc::ClientContext* context, const ::csi::v1::GetPluginInfoRequest* request, ::csi::v1::GetPluginInfoResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetPluginInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginInfoResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetPluginInfo(::grpc::ClientContext* context, const ::csi::v1::GetPluginInfoRequest* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void GetPluginInfo(::grpc::ClientContext* context, const ::csi::v1::GetPluginInfoRequest* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetPluginInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetPluginInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void GetPluginCapabilities(::grpc::ClientContext* context, const ::csi::v1::GetPluginCapabilitiesRequest* request, ::csi::v1::GetPluginCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetPluginCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetPluginCapabilities(::grpc::ClientContext* context, const ::csi::v1::GetPluginCapabilitiesRequest* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void GetPluginCapabilities(::grpc::ClientContext* context, const ::csi::v1::GetPluginCapabilitiesRequest* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetPluginCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetPluginCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetPluginCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void Probe(::grpc::ClientContext* context, const ::csi::v1::ProbeRequest* request, ::csi::v1::ProbeResponse* response, std::function<void(::grpc::Status)>) override;
-      void Probe(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ProbeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void Probe(::grpc::ClientContext* context, const ::csi::v1::ProbeRequest* request, ::csi::v1::ProbeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void Probe(::grpc::ClientContext* context, const ::csi::v1::ProbeRequest* request, ::csi::v1::ProbeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void Probe(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ProbeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void Probe(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ProbeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -282,7 +246,7 @@ class Identity final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::GetPluginInfoRequest, ::csi::v1::GetPluginInfoResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::GetPluginInfoRequest, ::csi::v1::GetPluginInfoResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -297,7 +261,7 @@ class Identity final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::GetPluginInfoRequest, ::csi::v1::GetPluginInfoResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::GetPluginInfoRequest, ::csi::v1::GetPluginInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetPluginInfo() override {
@@ -329,7 +293,7 @@ class Identity final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::GetPluginCapabilitiesRequest, ::csi::v1::GetPluginCapabilitiesResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::GetPluginCapabilitiesRequest, ::csi::v1::GetPluginCapabilitiesResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -344,7 +308,7 @@ class Identity final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::GetPluginCapabilitiesRequest, ::csi::v1::GetPluginCapabilitiesResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::GetPluginCapabilitiesRequest, ::csi::v1::GetPluginCapabilitiesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetPluginCapabilities() override {
@@ -376,7 +340,7 @@ class Identity final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ProbeRequest, ::csi::v1::ProbeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ProbeRequest, ::csi::v1::ProbeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -391,7 +355,7 @@ class Identity final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ProbeRequest, ::csi::v1::ProbeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ProbeRequest, ::csi::v1::ProbeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_Probe() override {
@@ -539,7 +503,7 @@ class Identity final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -577,7 +541,7 @@ class Identity final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -615,7 +579,7 @@ class Identity final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -650,8 +614,8 @@ class Identity final {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::GetPluginInfoRequest, ::csi::v1::GetPluginInfoResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::GetPluginInfoRequest, ::csi::v1::GetPluginInfoResponse>* streamer) {
                        return this->StreamedGetPluginInfo(context,
                          streamer);
@@ -677,8 +641,8 @@ class Identity final {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::GetPluginCapabilitiesRequest, ::csi::v1::GetPluginCapabilitiesResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::GetPluginCapabilitiesRequest, ::csi::v1::GetPluginCapabilitiesResponse>* streamer) {
                        return this->StreamedGetPluginCapabilities(context,
                          streamer);
@@ -704,8 +668,8 @@ class Identity final {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ProbeRequest, ::csi::v1::ProbeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ProbeRequest, ::csi::v1::ProbeResponse>* streamer) {
                        return this->StreamedProbe(context,
                          streamer);
@@ -830,160 +794,82 @@ class Controller final {
      public:
       virtual ~experimental_async_interface() {}
       virtual void CreateVolume(::grpc::ClientContext* context, const ::csi::v1::CreateVolumeRequest* request, ::csi::v1::CreateVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CreateVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void CreateVolume(::grpc::ClientContext* context, const ::csi::v1::CreateVolumeRequest* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void CreateVolume(::grpc::ClientContext* context, const ::csi::v1::CreateVolumeRequest* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void CreateVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void CreateVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void DeleteVolume(::grpc::ClientContext* context, const ::csi::v1::DeleteVolumeRequest* request, ::csi::v1::DeleteVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void DeleteVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void DeleteVolume(::grpc::ClientContext* context, const ::csi::v1::DeleteVolumeRequest* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void DeleteVolume(::grpc::ClientContext* context, const ::csi::v1::DeleteVolumeRequest* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void DeleteVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void DeleteVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ControllerPublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerPublishVolumeRequest* request, ::csi::v1::ControllerPublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ControllerPublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerPublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ControllerPublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerPublishVolumeRequest* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ControllerPublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerPublishVolumeRequest* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ControllerPublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ControllerPublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerUnpublishVolumeRequest* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerUnpublishVolumeRequest* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerUnpublishVolumeRequest* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::csi::v1::ValidateVolumeCapabilitiesRequest* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::csi::v1::ValidateVolumeCapabilitiesRequest* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::csi::v1::ValidateVolumeCapabilitiesRequest* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ListVolumes(::grpc::ClientContext* context, const ::csi::v1::ListVolumesRequest* request, ::csi::v1::ListVolumesResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ListVolumes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListVolumesResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ListVolumes(::grpc::ClientContext* context, const ::csi::v1::ListVolumesRequest* request, ::csi::v1::ListVolumesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ListVolumes(::grpc::ClientContext* context, const ::csi::v1::ListVolumesRequest* request, ::csi::v1::ListVolumesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ListVolumes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListVolumesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ListVolumes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListVolumesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void GetCapacity(::grpc::ClientContext* context, const ::csi::v1::GetCapacityRequest* request, ::csi::v1::GetCapacityResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void GetCapacity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetCapacityResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void GetCapacity(::grpc::ClientContext* context, const ::csi::v1::GetCapacityRequest* request, ::csi::v1::GetCapacityResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void GetCapacity(::grpc::ClientContext* context, const ::csi::v1::GetCapacityRequest* request, ::csi::v1::GetCapacityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void GetCapacity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetCapacityResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void GetCapacity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetCapacityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ControllerGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::ControllerGetCapabilitiesRequest* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ControllerGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ControllerGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::ControllerGetCapabilitiesRequest* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ControllerGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::ControllerGetCapabilitiesRequest* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ControllerGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ControllerGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void CreateSnapshot(::grpc::ClientContext* context, const ::csi::v1::CreateSnapshotRequest* request, ::csi::v1::CreateSnapshotResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void CreateSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateSnapshotResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void CreateSnapshot(::grpc::ClientContext* context, const ::csi::v1::CreateSnapshotRequest* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void CreateSnapshot(::grpc::ClientContext* context, const ::csi::v1::CreateSnapshotRequest* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void CreateSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void CreateSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void DeleteSnapshot(::grpc::ClientContext* context, const ::csi::v1::DeleteSnapshotRequest* request, ::csi::v1::DeleteSnapshotResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void DeleteSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteSnapshotResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void DeleteSnapshot(::grpc::ClientContext* context, const ::csi::v1::DeleteSnapshotRequest* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void DeleteSnapshot(::grpc::ClientContext* context, const ::csi::v1::DeleteSnapshotRequest* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void DeleteSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void DeleteSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ListSnapshots(::grpc::ClientContext* context, const ::csi::v1::ListSnapshotsRequest* request, ::csi::v1::ListSnapshotsResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ListSnapshots(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListSnapshotsResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ListSnapshots(::grpc::ClientContext* context, const ::csi::v1::ListSnapshotsRequest* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ListSnapshots(::grpc::ClientContext* context, const ::csi::v1::ListSnapshotsRequest* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ListSnapshots(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ListSnapshots(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ControllerExpandVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerExpandVolumeRequest* request, ::csi::v1::ControllerExpandVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ControllerExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerExpandVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ControllerExpandVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerExpandVolumeRequest* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ControllerExpandVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerExpandVolumeRequest* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ControllerExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ControllerExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void ControllerGetVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerGetVolumeRequest* request, ::csi::v1::ControllerGetVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void ControllerGetVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void ControllerGetVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerGetVolumeRequest* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void ControllerGetVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerGetVolumeRequest* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void ControllerGetVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void ControllerGetVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -1119,160 +1005,82 @@ class Controller final {
       public StubInterface::experimental_async_interface {
      public:
       void CreateVolume(::grpc::ClientContext* context, const ::csi::v1::CreateVolumeRequest* request, ::csi::v1::CreateVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void CreateVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void CreateVolume(::grpc::ClientContext* context, const ::csi::v1::CreateVolumeRequest* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void CreateVolume(::grpc::ClientContext* context, const ::csi::v1::CreateVolumeRequest* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void CreateVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void CreateVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void DeleteVolume(::grpc::ClientContext* context, const ::csi::v1::DeleteVolumeRequest* request, ::csi::v1::DeleteVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void DeleteVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void DeleteVolume(::grpc::ClientContext* context, const ::csi::v1::DeleteVolumeRequest* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void DeleteVolume(::grpc::ClientContext* context, const ::csi::v1::DeleteVolumeRequest* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void DeleteVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void DeleteVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ControllerPublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerPublishVolumeRequest* request, ::csi::v1::ControllerPublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void ControllerPublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerPublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ControllerPublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerPublishVolumeRequest* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ControllerPublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerPublishVolumeRequest* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ControllerPublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ControllerPublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerPublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerUnpublishVolumeRequest* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerUnpublishVolumeRequest* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerUnpublishVolumeRequest* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ControllerUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::csi::v1::ValidateVolumeCapabilitiesRequest* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
-      void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::csi::v1::ValidateVolumeCapabilitiesRequest* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::csi::v1::ValidateVolumeCapabilitiesRequest* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ValidateVolumeCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ValidateVolumeCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ListVolumes(::grpc::ClientContext* context, const ::csi::v1::ListVolumesRequest* request, ::csi::v1::ListVolumesResponse* response, std::function<void(::grpc::Status)>) override;
-      void ListVolumes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListVolumesResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ListVolumes(::grpc::ClientContext* context, const ::csi::v1::ListVolumesRequest* request, ::csi::v1::ListVolumesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ListVolumes(::grpc::ClientContext* context, const ::csi::v1::ListVolumesRequest* request, ::csi::v1::ListVolumesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ListVolumes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListVolumesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ListVolumes(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListVolumesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void GetCapacity(::grpc::ClientContext* context, const ::csi::v1::GetCapacityRequest* request, ::csi::v1::GetCapacityResponse* response, std::function<void(::grpc::Status)>) override;
-      void GetCapacity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetCapacityResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void GetCapacity(::grpc::ClientContext* context, const ::csi::v1::GetCapacityRequest* request, ::csi::v1::GetCapacityResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void GetCapacity(::grpc::ClientContext* context, const ::csi::v1::GetCapacityRequest* request, ::csi::v1::GetCapacityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void GetCapacity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetCapacityResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void GetCapacity(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::GetCapacityResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ControllerGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::ControllerGetCapabilitiesRequest* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
-      void ControllerGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ControllerGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::ControllerGetCapabilitiesRequest* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ControllerGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::ControllerGetCapabilitiesRequest* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ControllerGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ControllerGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void CreateSnapshot(::grpc::ClientContext* context, const ::csi::v1::CreateSnapshotRequest* request, ::csi::v1::CreateSnapshotResponse* response, std::function<void(::grpc::Status)>) override;
-      void CreateSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateSnapshotResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void CreateSnapshot(::grpc::ClientContext* context, const ::csi::v1::CreateSnapshotRequest* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void CreateSnapshot(::grpc::ClientContext* context, const ::csi::v1::CreateSnapshotRequest* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void CreateSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void CreateSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::CreateSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void DeleteSnapshot(::grpc::ClientContext* context, const ::csi::v1::DeleteSnapshotRequest* request, ::csi::v1::DeleteSnapshotResponse* response, std::function<void(::grpc::Status)>) override;
-      void DeleteSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteSnapshotResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void DeleteSnapshot(::grpc::ClientContext* context, const ::csi::v1::DeleteSnapshotRequest* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void DeleteSnapshot(::grpc::ClientContext* context, const ::csi::v1::DeleteSnapshotRequest* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void DeleteSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void DeleteSnapshot(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::DeleteSnapshotResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ListSnapshots(::grpc::ClientContext* context, const ::csi::v1::ListSnapshotsRequest* request, ::csi::v1::ListSnapshotsResponse* response, std::function<void(::grpc::Status)>) override;
-      void ListSnapshots(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListSnapshotsResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ListSnapshots(::grpc::ClientContext* context, const ::csi::v1::ListSnapshotsRequest* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ListSnapshots(::grpc::ClientContext* context, const ::csi::v1::ListSnapshotsRequest* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ListSnapshots(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ListSnapshots(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ListSnapshotsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ControllerExpandVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerExpandVolumeRequest* request, ::csi::v1::ControllerExpandVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void ControllerExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerExpandVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ControllerExpandVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerExpandVolumeRequest* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ControllerExpandVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerExpandVolumeRequest* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ControllerExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ControllerExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void ControllerGetVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerGetVolumeRequest* request, ::csi::v1::ControllerGetVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void ControllerGetVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void ControllerGetVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerGetVolumeRequest* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void ControllerGetVolume(::grpc::ClientContext* context, const ::csi::v1::ControllerGetVolumeRequest* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void ControllerGetVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void ControllerGetVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::ControllerGetVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -1618,7 +1426,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::CreateVolumeRequest, ::csi::v1::CreateVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::CreateVolumeRequest, ::csi::v1::CreateVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1633,7 +1441,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::CreateVolumeRequest, ::csi::v1::CreateVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::CreateVolumeRequest, ::csi::v1::CreateVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_CreateVolume() override {
@@ -1665,7 +1473,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::DeleteVolumeRequest, ::csi::v1::DeleteVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::DeleteVolumeRequest, ::csi::v1::DeleteVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1680,7 +1488,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::DeleteVolumeRequest, ::csi::v1::DeleteVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::DeleteVolumeRequest, ::csi::v1::DeleteVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_DeleteVolume() override {
@@ -1712,7 +1520,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerPublishVolumeRequest, ::csi::v1::ControllerPublishVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerPublishVolumeRequest, ::csi::v1::ControllerPublishVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1727,7 +1535,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerPublishVolumeRequest, ::csi::v1::ControllerPublishVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerPublishVolumeRequest, ::csi::v1::ControllerPublishVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ControllerPublishVolume() override {
@@ -1759,7 +1567,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(3,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerUnpublishVolumeRequest, ::csi::v1::ControllerUnpublishVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerUnpublishVolumeRequest, ::csi::v1::ControllerUnpublishVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1774,7 +1582,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerUnpublishVolumeRequest, ::csi::v1::ControllerUnpublishVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerUnpublishVolumeRequest, ::csi::v1::ControllerUnpublishVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ControllerUnpublishVolume() override {
@@ -1806,7 +1614,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(4,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ValidateVolumeCapabilitiesRequest, ::csi::v1::ValidateVolumeCapabilitiesResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ValidateVolumeCapabilitiesRequest, ::csi::v1::ValidateVolumeCapabilitiesResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1821,7 +1629,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ValidateVolumeCapabilitiesRequest, ::csi::v1::ValidateVolumeCapabilitiesResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ValidateVolumeCapabilitiesRequest, ::csi::v1::ValidateVolumeCapabilitiesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ValidateVolumeCapabilities() override {
@@ -1853,7 +1661,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(5,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ListVolumesRequest, ::csi::v1::ListVolumesResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ListVolumesRequest, ::csi::v1::ListVolumesResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1868,7 +1676,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ListVolumesRequest, ::csi::v1::ListVolumesResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ListVolumesRequest, ::csi::v1::ListVolumesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ListVolumes() override {
@@ -1900,7 +1708,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(6,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::GetCapacityRequest, ::csi::v1::GetCapacityResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::GetCapacityRequest, ::csi::v1::GetCapacityResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1915,7 +1723,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(6);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::GetCapacityRequest, ::csi::v1::GetCapacityResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::GetCapacityRequest, ::csi::v1::GetCapacityResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_GetCapacity() override {
@@ -1947,7 +1755,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(7,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetCapabilitiesRequest, ::csi::v1::ControllerGetCapabilitiesResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetCapabilitiesRequest, ::csi::v1::ControllerGetCapabilitiesResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -1962,7 +1770,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(7);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetCapabilitiesRequest, ::csi::v1::ControllerGetCapabilitiesResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetCapabilitiesRequest, ::csi::v1::ControllerGetCapabilitiesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ControllerGetCapabilities() override {
@@ -1994,7 +1802,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(8,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::CreateSnapshotRequest, ::csi::v1::CreateSnapshotResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::CreateSnapshotRequest, ::csi::v1::CreateSnapshotResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2009,7 +1817,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(8);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::CreateSnapshotRequest, ::csi::v1::CreateSnapshotResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::CreateSnapshotRequest, ::csi::v1::CreateSnapshotResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_CreateSnapshot() override {
@@ -2041,7 +1849,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(9,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::DeleteSnapshotRequest, ::csi::v1::DeleteSnapshotResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::DeleteSnapshotRequest, ::csi::v1::DeleteSnapshotResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2056,7 +1864,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(9);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::DeleteSnapshotRequest, ::csi::v1::DeleteSnapshotResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::DeleteSnapshotRequest, ::csi::v1::DeleteSnapshotResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_DeleteSnapshot() override {
@@ -2088,7 +1896,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(10,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ListSnapshotsRequest, ::csi::v1::ListSnapshotsResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ListSnapshotsRequest, ::csi::v1::ListSnapshotsResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2103,7 +1911,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(10);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ListSnapshotsRequest, ::csi::v1::ListSnapshotsResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ListSnapshotsRequest, ::csi::v1::ListSnapshotsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ListSnapshots() override {
@@ -2135,7 +1943,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(11,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerExpandVolumeRequest, ::csi::v1::ControllerExpandVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerExpandVolumeRequest, ::csi::v1::ControllerExpandVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2150,7 +1958,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(11);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerExpandVolumeRequest, ::csi::v1::ControllerExpandVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerExpandVolumeRequest, ::csi::v1::ControllerExpandVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ControllerExpandVolume() override {
@@ -2182,7 +1990,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(12,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetVolumeRequest, ::csi::v1::ControllerGetVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetVolumeRequest, ::csi::v1::ControllerGetVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2197,7 +2005,7 @@ class Controller final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(12);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetVolumeRequest, ::csi::v1::ControllerGetVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::ControllerGetVolumeRequest, ::csi::v1::ControllerGetVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_ControllerGetVolume() override {
@@ -2715,7 +2523,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2753,7 +2561,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2791,7 +2599,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2829,7 +2637,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(3,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2867,7 +2675,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(4,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2905,7 +2713,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(5,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2943,7 +2751,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(6,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -2981,7 +2789,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(7,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -3019,7 +2827,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(8,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -3057,7 +2865,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(9,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -3095,7 +2903,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(10,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -3133,7 +2941,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(11,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -3171,7 +2979,7 @@ class Controller final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(12,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -3206,8 +3014,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::CreateVolumeRequest, ::csi::v1::CreateVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::CreateVolumeRequest, ::csi::v1::CreateVolumeResponse>* streamer) {
                        return this->StreamedCreateVolume(context,
                          streamer);
@@ -3233,8 +3041,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::DeleteVolumeRequest, ::csi::v1::DeleteVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::DeleteVolumeRequest, ::csi::v1::DeleteVolumeResponse>* streamer) {
                        return this->StreamedDeleteVolume(context,
                          streamer);
@@ -3260,8 +3068,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ControllerPublishVolumeRequest, ::csi::v1::ControllerPublishVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ControllerPublishVolumeRequest, ::csi::v1::ControllerPublishVolumeResponse>* streamer) {
                        return this->StreamedControllerPublishVolume(context,
                          streamer);
@@ -3287,8 +3095,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ControllerUnpublishVolumeRequest, ::csi::v1::ControllerUnpublishVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ControllerUnpublishVolumeRequest, ::csi::v1::ControllerUnpublishVolumeResponse>* streamer) {
                        return this->StreamedControllerUnpublishVolume(context,
                          streamer);
@@ -3314,8 +3122,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ValidateVolumeCapabilitiesRequest, ::csi::v1::ValidateVolumeCapabilitiesResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ValidateVolumeCapabilitiesRequest, ::csi::v1::ValidateVolumeCapabilitiesResponse>* streamer) {
                        return this->StreamedValidateVolumeCapabilities(context,
                          streamer);
@@ -3341,8 +3149,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ListVolumesRequest, ::csi::v1::ListVolumesResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ListVolumesRequest, ::csi::v1::ListVolumesResponse>* streamer) {
                        return this->StreamedListVolumes(context,
                          streamer);
@@ -3368,8 +3176,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(6,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::GetCapacityRequest, ::csi::v1::GetCapacityResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::GetCapacityRequest, ::csi::v1::GetCapacityResponse>* streamer) {
                        return this->StreamedGetCapacity(context,
                          streamer);
@@ -3395,8 +3203,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(7,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ControllerGetCapabilitiesRequest, ::csi::v1::ControllerGetCapabilitiesResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ControllerGetCapabilitiesRequest, ::csi::v1::ControllerGetCapabilitiesResponse>* streamer) {
                        return this->StreamedControllerGetCapabilities(context,
                          streamer);
@@ -3422,8 +3230,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(8,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::CreateSnapshotRequest, ::csi::v1::CreateSnapshotResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::CreateSnapshotRequest, ::csi::v1::CreateSnapshotResponse>* streamer) {
                        return this->StreamedCreateSnapshot(context,
                          streamer);
@@ -3449,8 +3257,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(9,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::DeleteSnapshotRequest, ::csi::v1::DeleteSnapshotResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::DeleteSnapshotRequest, ::csi::v1::DeleteSnapshotResponse>* streamer) {
                        return this->StreamedDeleteSnapshot(context,
                          streamer);
@@ -3476,8 +3284,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(10,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ListSnapshotsRequest, ::csi::v1::ListSnapshotsResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ListSnapshotsRequest, ::csi::v1::ListSnapshotsResponse>* streamer) {
                        return this->StreamedListSnapshots(context,
                          streamer);
@@ -3503,8 +3311,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(11,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ControllerExpandVolumeRequest, ::csi::v1::ControllerExpandVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ControllerExpandVolumeRequest, ::csi::v1::ControllerExpandVolumeResponse>* streamer) {
                        return this->StreamedControllerExpandVolume(context,
                          streamer);
@@ -3530,8 +3338,8 @@ class Controller final {
       ::grpc::Service::MarkMethodStreamed(12,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::ControllerGetVolumeRequest, ::csi::v1::ControllerGetVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::ControllerGetVolumeRequest, ::csi::v1::ControllerGetVolumeResponse>* streamer) {
                        return this->StreamedControllerGetVolume(context,
                          streamer);
@@ -3621,100 +3429,52 @@ class Node final {
      public:
       virtual ~experimental_async_interface() {}
       virtual void NodeStageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeStageVolumeRequest* request, ::csi::v1::NodeStageVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodeStageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeStageVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodeStageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeStageVolumeRequest* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodeStageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeStageVolumeRequest* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodeStageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodeStageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void NodeUnstageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnstageVolumeRequest* request, ::csi::v1::NodeUnstageVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodeUnstageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnstageVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodeUnstageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnstageVolumeRequest* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodeUnstageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnstageVolumeRequest* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodeUnstageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodeUnstageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void NodePublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodePublishVolumeRequest* request, ::csi::v1::NodePublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodePublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodePublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodePublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodePublishVolumeRequest* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodePublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodePublishVolumeRequest* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodePublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodePublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void NodeUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnpublishVolumeRequest* request, ::csi::v1::NodeUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodeUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodeUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnpublishVolumeRequest* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodeUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnpublishVolumeRequest* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodeUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodeUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void NodeGetVolumeStats(::grpc::ClientContext* context, const ::csi::v1::NodeGetVolumeStatsRequest* request, ::csi::v1::NodeGetVolumeStatsResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodeGetVolumeStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetVolumeStatsResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodeGetVolumeStats(::grpc::ClientContext* context, const ::csi::v1::NodeGetVolumeStatsRequest* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodeGetVolumeStats(::grpc::ClientContext* context, const ::csi::v1::NodeGetVolumeStatsRequest* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodeGetVolumeStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodeGetVolumeStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void NodeExpandVolume(::grpc::ClientContext* context, const ::csi::v1::NodeExpandVolumeRequest* request, ::csi::v1::NodeExpandVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodeExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeExpandVolumeResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodeExpandVolume(::grpc::ClientContext* context, const ::csi::v1::NodeExpandVolumeRequest* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodeExpandVolume(::grpc::ClientContext* context, const ::csi::v1::NodeExpandVolumeRequest* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodeExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodeExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void NodeGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::NodeGetCapabilitiesRequest* request, ::csi::v1::NodeGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodeGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodeGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::NodeGetCapabilitiesRequest* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodeGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::NodeGetCapabilitiesRequest* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodeGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodeGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
       virtual void NodeGetInfo(::grpc::ClientContext* context, const ::csi::v1::NodeGetInfoRequest* request, ::csi::v1::NodeGetInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
-      virtual void NodeGetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetInfoResponse* response, std::function<void(::grpc::Status)>) = 0;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       virtual void NodeGetInfo(::grpc::ClientContext* context, const ::csi::v1::NodeGetInfoRequest* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
       #else
       virtual void NodeGetInfo(::grpc::ClientContext* context, const ::csi::v1::NodeGetInfoRequest* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      virtual void NodeGetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) = 0;
-      #else
-      virtual void NodeGetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) = 0;
       #endif
     };
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
@@ -3805,100 +3565,52 @@ class Node final {
       public StubInterface::experimental_async_interface {
      public:
       void NodeStageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeStageVolumeRequest* request, ::csi::v1::NodeStageVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodeStageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeStageVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodeStageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeStageVolumeRequest* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodeStageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeStageVolumeRequest* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodeStageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodeStageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeStageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void NodeUnstageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnstageVolumeRequest* request, ::csi::v1::NodeUnstageVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodeUnstageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnstageVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodeUnstageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnstageVolumeRequest* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodeUnstageVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnstageVolumeRequest* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodeUnstageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodeUnstageVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnstageVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void NodePublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodePublishVolumeRequest* request, ::csi::v1::NodePublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodePublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodePublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodePublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodePublishVolumeRequest* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodePublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodePublishVolumeRequest* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodePublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodePublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodePublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void NodeUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnpublishVolumeRequest* request, ::csi::v1::NodeUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodeUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnpublishVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodeUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnpublishVolumeRequest* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodeUnpublishVolume(::grpc::ClientContext* context, const ::csi::v1::NodeUnpublishVolumeRequest* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodeUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodeUnpublishVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeUnpublishVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void NodeGetVolumeStats(::grpc::ClientContext* context, const ::csi::v1::NodeGetVolumeStatsRequest* request, ::csi::v1::NodeGetVolumeStatsResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodeGetVolumeStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetVolumeStatsResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodeGetVolumeStats(::grpc::ClientContext* context, const ::csi::v1::NodeGetVolumeStatsRequest* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodeGetVolumeStats(::grpc::ClientContext* context, const ::csi::v1::NodeGetVolumeStatsRequest* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodeGetVolumeStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodeGetVolumeStats(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetVolumeStatsResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void NodeExpandVolume(::grpc::ClientContext* context, const ::csi::v1::NodeExpandVolumeRequest* request, ::csi::v1::NodeExpandVolumeResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodeExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeExpandVolumeResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodeExpandVolume(::grpc::ClientContext* context, const ::csi::v1::NodeExpandVolumeRequest* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodeExpandVolume(::grpc::ClientContext* context, const ::csi::v1::NodeExpandVolumeRequest* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodeExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodeExpandVolume(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeExpandVolumeResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void NodeGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::NodeGetCapabilitiesRequest* request, ::csi::v1::NodeGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodeGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetCapabilitiesResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodeGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::NodeGetCapabilitiesRequest* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodeGetCapabilities(::grpc::ClientContext* context, const ::csi::v1::NodeGetCapabilitiesRequest* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodeGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodeGetCapabilities(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetCapabilitiesResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
       void NodeGetInfo(::grpc::ClientContext* context, const ::csi::v1::NodeGetInfoRequest* request, ::csi::v1::NodeGetInfoResponse* response, std::function<void(::grpc::Status)>) override;
-      void NodeGetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetInfoResponse* response, std::function<void(::grpc::Status)>) override;
       #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
       void NodeGetInfo(::grpc::ClientContext* context, const ::csi::v1::NodeGetInfoRequest* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
       #else
       void NodeGetInfo(::grpc::ClientContext* context, const ::csi::v1::NodeGetInfoRequest* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
-      #endif
-      #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
-      void NodeGetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::ClientUnaryReactor* reactor) override;
-      #else
-      void NodeGetInfo(::grpc::ClientContext* context, const ::grpc::ByteBuffer* request, ::csi::v1::NodeGetInfoResponse* response, ::grpc::experimental::ClientUnaryReactor* reactor) override;
       #endif
      private:
       friend class Stub;
@@ -4124,7 +3836,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeStageVolumeRequest, ::csi::v1::NodeStageVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeStageVolumeRequest, ::csi::v1::NodeStageVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4139,7 +3851,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(0);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeStageVolumeRequest, ::csi::v1::NodeStageVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeStageVolumeRequest, ::csi::v1::NodeStageVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodeStageVolume() override {
@@ -4171,7 +3883,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeUnstageVolumeRequest, ::csi::v1::NodeUnstageVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeUnstageVolumeRequest, ::csi::v1::NodeUnstageVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4186,7 +3898,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(1);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeUnstageVolumeRequest, ::csi::v1::NodeUnstageVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeUnstageVolumeRequest, ::csi::v1::NodeUnstageVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodeUnstageVolume() override {
@@ -4218,7 +3930,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodePublishVolumeRequest, ::csi::v1::NodePublishVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodePublishVolumeRequest, ::csi::v1::NodePublishVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4233,7 +3945,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(2);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodePublishVolumeRequest, ::csi::v1::NodePublishVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodePublishVolumeRequest, ::csi::v1::NodePublishVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodePublishVolume() override {
@@ -4265,7 +3977,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(3,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeUnpublishVolumeRequest, ::csi::v1::NodeUnpublishVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeUnpublishVolumeRequest, ::csi::v1::NodeUnpublishVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4280,7 +3992,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(3);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeUnpublishVolumeRequest, ::csi::v1::NodeUnpublishVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeUnpublishVolumeRequest, ::csi::v1::NodeUnpublishVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodeUnpublishVolume() override {
@@ -4312,7 +4024,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(4,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeGetVolumeStatsRequest, ::csi::v1::NodeGetVolumeStatsResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeGetVolumeStatsRequest, ::csi::v1::NodeGetVolumeStatsResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4327,7 +4039,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(4);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeGetVolumeStatsRequest, ::csi::v1::NodeGetVolumeStatsResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeGetVolumeStatsRequest, ::csi::v1::NodeGetVolumeStatsResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodeGetVolumeStats() override {
@@ -4359,7 +4071,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(5,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeExpandVolumeRequest, ::csi::v1::NodeExpandVolumeResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeExpandVolumeRequest, ::csi::v1::NodeExpandVolumeResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4374,7 +4086,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(5);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeExpandVolumeRequest, ::csi::v1::NodeExpandVolumeResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeExpandVolumeRequest, ::csi::v1::NodeExpandVolumeResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodeExpandVolume() override {
@@ -4406,7 +4118,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(6,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeGetCapabilitiesRequest, ::csi::v1::NodeGetCapabilitiesResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeGetCapabilitiesRequest, ::csi::v1::NodeGetCapabilitiesResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4421,7 +4133,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(6);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeGetCapabilitiesRequest, ::csi::v1::NodeGetCapabilitiesResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeGetCapabilitiesRequest, ::csi::v1::NodeGetCapabilitiesResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodeGetCapabilities() override {
@@ -4453,7 +4165,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodCallback(7,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeGetInfoRequest, ::csi::v1::NodeGetInfoResponse>(
+          new ::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeGetInfoRequest, ::csi::v1::NodeGetInfoResponse>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4468,7 +4180,7 @@ class Node final {
     #else
       ::grpc::internal::MethodHandler* const handler = ::grpc::Service::experimental().GetHandler(7);
     #endif
-      static_cast<::grpc_impl::internal::CallbackUnaryHandler< ::csi::v1::NodeGetInfoRequest, ::csi::v1::NodeGetInfoResponse>*>(handler)
+      static_cast<::grpc::internal::CallbackUnaryHandler< ::csi::v1::NodeGetInfoRequest, ::csi::v1::NodeGetInfoResponse>*>(handler)
               ->SetMessageAllocator(allocator);
     }
     ~ExperimentalWithCallbackMethod_NodeGetInfo() override {
@@ -4801,7 +4513,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(0,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4839,7 +4551,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(1,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4877,7 +4589,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(2,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4915,7 +4627,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(3,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4953,7 +4665,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(4,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -4991,7 +4703,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(5,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -5029,7 +4741,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(6,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -5067,7 +4779,7 @@ class Node final {
       ::grpc::Service::experimental().
     #endif
         MarkMethodRawCallback(7,
-          new ::grpc_impl::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
+          new ::grpc::internal::CallbackUnaryHandler< ::grpc::ByteBuffer, ::grpc::ByteBuffer>(
             [this](
     #ifdef GRPC_CALLBACK_API_NONEXPERIMENTAL
                    ::grpc::CallbackServerContext*
@@ -5102,8 +4814,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(0,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodeStageVolumeRequest, ::csi::v1::NodeStageVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodeStageVolumeRequest, ::csi::v1::NodeStageVolumeResponse>* streamer) {
                        return this->StreamedNodeStageVolume(context,
                          streamer);
@@ -5129,8 +4841,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(1,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodeUnstageVolumeRequest, ::csi::v1::NodeUnstageVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodeUnstageVolumeRequest, ::csi::v1::NodeUnstageVolumeResponse>* streamer) {
                        return this->StreamedNodeUnstageVolume(context,
                          streamer);
@@ -5156,8 +4868,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(2,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodePublishVolumeRequest, ::csi::v1::NodePublishVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodePublishVolumeRequest, ::csi::v1::NodePublishVolumeResponse>* streamer) {
                        return this->StreamedNodePublishVolume(context,
                          streamer);
@@ -5183,8 +4895,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(3,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodeUnpublishVolumeRequest, ::csi::v1::NodeUnpublishVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodeUnpublishVolumeRequest, ::csi::v1::NodeUnpublishVolumeResponse>* streamer) {
                        return this->StreamedNodeUnpublishVolume(context,
                          streamer);
@@ -5210,8 +4922,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(4,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodeGetVolumeStatsRequest, ::csi::v1::NodeGetVolumeStatsResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodeGetVolumeStatsRequest, ::csi::v1::NodeGetVolumeStatsResponse>* streamer) {
                        return this->StreamedNodeGetVolumeStats(context,
                          streamer);
@@ -5237,8 +4949,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(5,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodeExpandVolumeRequest, ::csi::v1::NodeExpandVolumeResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodeExpandVolumeRequest, ::csi::v1::NodeExpandVolumeResponse>* streamer) {
                        return this->StreamedNodeExpandVolume(context,
                          streamer);
@@ -5264,8 +4976,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(6,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodeGetCapabilitiesRequest, ::csi::v1::NodeGetCapabilitiesResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodeGetCapabilitiesRequest, ::csi::v1::NodeGetCapabilitiesResponse>* streamer) {
                        return this->StreamedNodeGetCapabilities(context,
                          streamer);
@@ -5291,8 +5003,8 @@ class Node final {
       ::grpc::Service::MarkMethodStreamed(7,
         new ::grpc::internal::StreamedUnaryHandler<
           ::csi::v1::NodeGetInfoRequest, ::csi::v1::NodeGetInfoResponse>(
-            [this](::grpc_impl::ServerContext* context,
-                   ::grpc_impl::ServerUnaryStreamer<
+            [this](::grpc::ServerContext* context,
+                   ::grpc::ServerUnaryStreamer<
                      ::csi::v1::NodeGetInfoRequest, ::csi::v1::NodeGetInfoResponse>* streamer) {
                        return this->StreamedNodeGetInfo(context,
                          streamer);
