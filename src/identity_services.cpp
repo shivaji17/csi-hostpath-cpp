@@ -42,6 +42,8 @@ Status IdentityImpl::GetPluginCapabilities(ServerContext *context,
 										   GetPluginCapabilitiesRequest const *req,
 										   GetPluginCapabilitiesResponse *rsp)
 {
+	auto *cap = rsp->mutable_capabilities()->Add();
+	cap->mutable_service()->set_type(PluginCapability::Service::Type::PluginCapability_Service_Type_CONTROLLER_SERVICE);
 	return Status::OK;
 }
 
