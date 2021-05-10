@@ -3,29 +3,31 @@
 
 #include <string>
 
-namespace csi::services {
-
-struct Config
+namespace csi::services
 {
-	std::string endpoint;
-	std::string nodeName;
-};
 
-class CSIServices
-{
+	struct Config
+	{
+		std::string endpoint;
+		std::string nodeName;
+		std::string driverName;
+		std::string vendorVersion;
+	};
+
+	class CSIServices
+	{
 	public:
-		CSIServices( Config config );
-		CSIServices( CSIServices const& ) = delete;
-		CSIServices& operator=( CSIServices const& ) = delete;
+		CSIServices(Config config);
+		CSIServices(CSIServices const &) = delete;
+		CSIServices &operator=(CSIServices const &) = delete;
 		~CSIServices();
 
 		bool Run();
 
 	private:
 		Config m_config;
-};
+	};
 
 }
 
 #endif // CSI_SERVICES_H
-

@@ -20,34 +20,29 @@ using namespace csi::services::node;
 using namespace csi::services::identity;
 using namespace csi::services::controller;
 
-CSIServices::CSIServices( Config config ):
-		m_config( config )
+CSIServices::CSIServices(Config config) : m_config(config)
 {
-
 }
 
 CSIServices::~CSIServices()
 {
-
 }
 
 bool CSIServices::Run()
 {
-	IdentityImpl   identitySvc;
-	NodeImpl       nodeSvc;
+	IdentityImpl identitySvc(m_config);
+	NodeImpl nodeSvc;
 	ControllerImpl controllerSvc;
 
 	ServerBuilder builder;
 
-	builder.AddListeningPort( m_config.endpoint, InsecureServerCredentials() );
-	builder.RegisterService( &identitySvc );
-	builder.RegisterService( &nodeSvc );
-	builder.RegisterService( &controllerSvc );
+	builder.AddListeningPort(m_config.endpoint, InsecureServerCredentials());
+	builder.RegisterService(&identitySvc);
+	builder.RegisterService(&nodeSvc);
+	builder.RegisterService(&controllerSvc);
 
-	unique_ptr<Server> server( builder.BuildAndStart() );
+	unique_ptr<Server> server(builder.BuildAndStart());
 	cout << "Server listening on " << m_config.endpoint << std::endl;
 	server->Wait();
 	return true;
 }
-
-
