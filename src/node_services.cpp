@@ -10,80 +10,79 @@ using namespace csi::services::node;
 ////////////////////////////////////////////////////////////////////////
 // NodeStageVolume
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeStageVolume( ServerContext* context,
-		NodeStageVolumeRequest const* req,
-		NodeStageVolumeResponse* rsp )
+Status NodeImpl::NodeStageVolume(ServerContext *context,
+                                 NodeStageVolumeRequest const *req,
+                                 NodeStageVolumeResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // NodeUnstageVolume
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeUnstageVolume( ServerContext* context,
-		NodeUnstageVolumeRequest const* req,
-		NodeUnstageVolumeResponse* rsp )
+Status NodeImpl::NodeUnstageVolume(ServerContext *context,
+                                   NodeUnstageVolumeRequest const *req,
+                                   NodeUnstageVolumeResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // NodePublishVolume
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodePublishVolume( ServerContext* context,
-		NodePublishVolumeRequest const* req,
-		NodePublishVolumeResponse* rsp )
+Status NodeImpl::NodePublishVolume(ServerContext *context,
+                                   NodePublishVolumeRequest const *req,
+                                   NodePublishVolumeResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // NodeUnpublishVolume
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeUnpublishVolume( ServerContext* context,
-		NodeUnpublishVolumeRequest const* req,
-		NodeUnpublishVolumeResponse* rsp )
+Status NodeImpl::NodeUnpublishVolume(ServerContext *context,
+                                     NodeUnpublishVolumeRequest const *req,
+                                     NodeUnpublishVolumeResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // NodeGetVolumeStats
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeGetVolumeStats( ServerContext* context,
-		NodeGetVolumeStatsRequest const* req,
-		NodeGetVolumeStatsResponse* rsp )
+Status NodeImpl::NodeGetVolumeStats(ServerContext *context,
+                                    NodeGetVolumeStatsRequest const *req,
+                                    NodeGetVolumeStatsResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // NodeExpandVolume
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeExpandVolume( ServerContext* context,
-		NodeExpandVolumeRequest const* req,
-		NodeExpandVolumeResponse* rsp )
+Status NodeImpl::NodeExpandVolume(ServerContext *context,
+                                  NodeExpandVolumeRequest const *req,
+                                  NodeExpandVolumeResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // NodeGetCapabilities
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeGetCapabilities( ServerContext* context,
-		NodeGetCapabilitiesRequest const* req,
-		NodeGetCapabilitiesResponse* rsp )
+Status NodeImpl::NodeGetCapabilities(ServerContext *context,
+                                     NodeGetCapabilitiesRequest const *req,
+                                     NodeGetCapabilitiesResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
 
 ////////////////////////////////////////////////////////////////////////
 // NodeGetInfo
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeGetInfo( ServerContext* context,
-		NodeGetInfoRequest const* req,
-		NodeGetInfoResponse* rsp )
+Status NodeImpl::NodeGetInfo(ServerContext *context,
+                             NodeGetInfoRequest const *req,
+                             NodeGetInfoResponse *rsp)
 {
-	return Status::OK;
+    return Status::OK;
 }
-

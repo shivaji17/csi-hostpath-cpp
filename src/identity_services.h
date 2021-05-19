@@ -8,29 +8,29 @@
 namespace csi::services::identity
 {
 
-	class IdentityImpl final : public csi::v1::Identity::Service
-	{
-	public:
-		explicit IdentityImpl(csi::services::Config const &config);
-		IdentityImpl(IdentityImpl const &) = delete;
-		IdentityImpl &operator=(IdentityImpl const &) = delete;
-		~IdentityImpl();
+    class IdentityImpl final : public csi::v1::Identity::Service
+    {
+    public:
+        explicit IdentityImpl(csi::services::Config const &config);
+        IdentityImpl(IdentityImpl const &) = delete;
+        IdentityImpl &operator=(IdentityImpl const &) = delete;
+        ~IdentityImpl();
 
-		grpc::Status GetPluginInfo(grpc::ServerContext *context,
-								   csi::v1::GetPluginInfoRequest const *req,
-								   csi::v1::GetPluginInfoResponse *rsp);
+        grpc::Status GetPluginInfo(grpc::ServerContext *context,
+                                   csi::v1::GetPluginInfoRequest const *req,
+                                   csi::v1::GetPluginInfoResponse *rsp);
 
-		grpc::Status GetPluginCapabilities(grpc::ServerContext *context,
-										   csi::v1::GetPluginCapabilitiesRequest const *req,
-										   csi::v1::GetPluginCapabilitiesResponse *rsp);
+        grpc::Status GetPluginCapabilities(grpc::ServerContext *context,
+                                           csi::v1::GetPluginCapabilitiesRequest const *req,
+                                           csi::v1::GetPluginCapabilitiesResponse *rsp);
 
-		grpc::Status Probe(grpc::ServerContext *context,
-						   csi::v1::ProbeRequest const *req,
-						   csi::v1::ProbeResponse *rsp);
+        grpc::Status Probe(grpc::ServerContext *context,
+                           csi::v1::ProbeRequest const *req,
+                           csi::v1::ProbeResponse *rsp);
 
-	private:
-		csi::services::Config const &m_config;
-	};
+    private:
+        csi::services::Config const &m_config;
+    };
 
 }
 

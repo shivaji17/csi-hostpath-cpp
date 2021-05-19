@@ -6,27 +6,27 @@
 namespace csi::services
 {
 
-	struct Config
-	{
-		std::string endpoint;
-		std::string nodeName;
-		std::string driverName;
-		std::string vendorVersion;
-	};
+    struct Config
+    {
+        std::string endpoint;
+        std::string nodeName;
+        std::string driverName;
+        std::string vendorVersion;
+    };
 
-	class CSIServices
-	{
-	public:
-		CSIServices(Config config);
-		CSIServices(CSIServices const &) = delete;
-		CSIServices &operator=(CSIServices const &) = delete;
-		~CSIServices();
+    class CSIServices
+    {
+    public:
+        CSIServices(Config config);
+        CSIServices(CSIServices const &) = delete;
+        CSIServices &operator=(CSIServices const &) = delete;
+        ~CSIServices();
 
-		bool Run();
+        bool Run();
 
-	private:
-		Config m_config;
-	};
+    private:
+        Config m_config;
+    };
 
 }
 
