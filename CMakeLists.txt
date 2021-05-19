@@ -22,6 +22,7 @@ add_executable(hostpath
 		src/identity_services.cpp
 		src/controller_services.cpp
 		src/node_services.cpp
+		src/utils.cpp
 		)
 
 target_include_directories(hostpath PRIVATE
