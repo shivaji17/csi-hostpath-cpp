@@ -4,6 +4,7 @@ project (csi-hostpath-cpp VERSION 0.0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fpic -shared -O2 -Wall -Wno-unused-but-set-variable  -Wno-misleading-indentation -Wno-deprecated-declarations -Wno-parentheses -Wno-switch -Wno-literal-suffix -Wno-conversion-null -Wno-format-contains-nul")
 
 # Set all required dependencies path
 set(gRPC_DIR "${CMAKE_SOURCE_DIR}/vendor/grpc/lib/cmake/grpc/")
@@ -16,6 +17,7 @@ find_package(gRPC CONFIG REQUIRED)
 
 add_executable(hostpath
 		main.cpp
+		vendor/loguru/loguru.cpp
 		proto/csi.pb.cc
 		proto/csi.grpc.pb.cc
 		src/csi_services.cpp
@@ -27,6 +29,7 @@ add_executable(hostpath
 
 target_include_directories(hostpath PRIVATE
 				"${CMAKE_SOURCE_DIR}"
+				"${CMAKE_SOURCE_DIR}/vendor"
 				"${CMAKE_SOURCE_DIR}/src"
 				"${CMAKE_SOURCE_DIR}/proto")
 

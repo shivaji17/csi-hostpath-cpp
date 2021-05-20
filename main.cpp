@@ -1,5 +1,6 @@
 #include <iostream>
 #include <getopt.h>
+#include <loguru/loguru.hpp>
 #include <csi_services.h>
 
 using namespace std;
