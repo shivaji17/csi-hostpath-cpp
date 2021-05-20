@@ -1,6 +1,7 @@
 #include <csi_services.h>
 #include <functional>
 #include <sstream>
+#include <loguru/loguru.hpp>
 #include <grpc/grpc.h>
 #include <grpcpp/security/server_credentials.h>
 #include <grpcpp/server.h>
@@ -42,7 +43,7 @@ bool CSIServices::Run()
     builder.RegisterService(&controllerSvc);
 
     unique_ptr<Server> server(builder.BuildAndStart());
-    cout << "Server listening on " << m_config.endpoint << std::endl;
+    LOG_F(INFO, "Server listening at '%s'", m_config.endpoint.c_str());
     server->Wait();
     return true;
 }

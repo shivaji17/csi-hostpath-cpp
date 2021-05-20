@@ -2,9 +2,24 @@
 #include <getopt.h>
 #include <loguru/loguru.hpp>
 #include <csi_services.h>
+#include <HostPathCPPConfig.h>
 
 using namespace std;
 using namespace csi::services;
+
+void Usage(int retVal)
+{
+    cout
+        << "Usage: ./hostpath [OPTIONS]\n"
+        << "\n"
+        << "\t--help               Print this help information and exit\n"
+        << "\t--version            Print CSI HostPath version and exit\n"
+        << "\t--endpoint=ENDPOINT  CSI endpoint (default 'unix://tmp/csi.sock')\n"
+        << "\t--nodeid=NODENAME    node id\n"
+        << endl;
+
+    exit(retVal);
+}
 
 Config ParseCommandLine(int argc, char *argv[])
 {
@@ -27,11 +42,15 @@ Config ParseCommandLine(int argc, char *argv[])
         switch (c)
         {
         case 0:
-            cout << "Help...!!!" << endl;
-            exit(1);
+            Usage(0);
 
         case 1:
-            cout << "CSI HostPath version: 0.0.1 " << endl;
+            cout
+                << "CSI HostPath version: "
+                << HostPathCPP_VERSION_MAJOR << "."
+                << HostPathCPP_VERSION_MINOR << "."
+                << HostPathCPP_VERSION_PATCH
+                << endl;
             exit(0);
 
         case 'e':
@@ -48,7 +67,7 @@ Config ParseCommandLine(int argc, char *argv[])
 
         case '?':
             cout << "Invalid option provided" << endl;
-            break;
+            Usage(1);
         }
     }
 
@@ -59,12 +78,13 @@ bool ValidateConfig(Config &config)
 {
     if (config.nodeName.empty())
     {
-        cout << "Node name cannot be empty" << endl;
+        LOG_F(ERROR, "Node name cannot be empty. Please provide node name with '--nodeid' input");
         return false;
     }
 
     if (config.endpoint.empty())
     {
+        LOG_F(INFO, "Endpoint not provided. Using endpoint 'unix://tmp/csi.sock'");
         config.endpoint = "unix://tmp/csi.sock";
     }
     else
@@ -73,7 +93,10 @@ bool ValidateConfig(Config &config)
     }
 
     if (config.driverName.empty())
+    {
+        LOG_F(INFO, "CSI driver name not provided. Using default drivername 'hostpath-cpp.csi.k8s.io'");
         config.driverName = "hostpath-cpp.csi.k8s.io";
+    }
 
     // FIXME: Set version at runtime
     config.vendorVersion = "0.0.1";
@@ -81,9 +104,15 @@ bool ValidateConfig(Config &config)
     return true;
 }
 
+void InitializeLogger(int argc, char *argv[])
+{
+    loguru::init(argc, argv);
+}
+
 int main(int argc, char *argv[])
 {
     auto config = ParseCommandLine(argc, argv);
+    InitializeLogger(argc, argv);
 
     if (!ValidateConfig(config))
     {

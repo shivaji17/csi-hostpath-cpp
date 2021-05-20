@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include <cstdio>
+#include <loguru/loguru.hpp>
 using namespace std;
 
 namespace utils
@@ -41,7 +42,7 @@ namespace utils
         string cmdOutput;
         if (!ExecuteCommand(cmd.str(), cmdOutput))
         {
-            cout << "Failed to create image file. Error " << cmdOutput;
+            LOG_F(ERROR, "Failed to create image file. Error: %s", cmdOutput.c_str());
             return false;
         }
         return true;

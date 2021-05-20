@@ -1,10 +1,12 @@
-cmake_minimum_required(VERSION 3.11.0)
+cmake_minimum_required(VERSION 3.10)
 
-project (csi-hostpath-cpp VERSION 0.0.1 LANGUAGES CXX)
+project (HostPathCPP VERSION 0.0.1 LANGUAGES CXX)
+
+configure_file(HostPathCPPConfig.h.in HostPathCPPConfig.h)
 
 set(CMAKE_CXX_STANDARD_REQUIRED True)
 set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -g -fpic -shared -O2 -Wall -Wno-unused-but-set-variable  -Wno-misleading-indentation -Wno-deprecated-declarations -Wno-parentheses -Wno-switch -Wno-literal-suffix -Wno-conversion-null -Wno-format-contains-nul")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fpic -O2 -Wall -Wno-unused-but-set-variable  -Wno-misleading-indentation -Wno-deprecated-declarations -Wno-parentheses -Wno-switch -Wno-literal-suffix -Wno-conversion-null -Wno-format-contains-nul")
 
 # Set all required dependencies path
 set(gRPC_DIR "${CMAKE_SOURCE_DIR}/vendor/grpc/lib/cmake/grpc/")
@@ -32,5 +34,7 @@ target_include_directories(hostpath PRIVATE
 				"${CMAKE_SOURCE_DIR}/vendor"
 				"${CMAKE_SOURCE_DIR}/src"
 				"${CMAKE_SOURCE_DIR}/proto")
+
+target_include_directories(hostpath PUBLIC "${PROJECT_BINARY_DIR}")
 
 target_link_libraries(hostpath gRPC::grpc++)
