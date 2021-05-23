@@ -1,8 +1,11 @@
 #ifndef CONTROLLER_SERVICES_H
 #define CONTROLLER_SERVICES_H
 
+#include <mutex>
 #include <csi.pb.h>
 #include <csi.grpc.pb.h>
+#include <csi_services.h>
+#include <state.h>
 
 namespace csi::services::controller
 {
@@ -10,10 +13,10 @@ namespace csi::services::controller
     class ControllerImpl final : public csi::v1::Controller::Service
     {
     public:
-        ControllerImpl() = default;
+        ControllerImpl(hostpath::Config const &config, hostpath::state::State &state);
         ControllerImpl(ControllerImpl const &) = delete;
         ControllerImpl &operator=(ControllerImpl const &) = delete;
-        ~ControllerImpl() = default;
+        ~ControllerImpl();
 
         grpc::Status CreateVolume(grpc::ServerContext *context,
                                   csi::v1::CreateVolumeRequest const *req,
@@ -66,6 +69,11 @@ namespace csi::services::controller
         grpc::Status ControllerGetVolume(grpc::ServerContext *context,
                                          csi::v1::ControllerGetVolumeRequest const *req,
                                          csi::v1::ControllerGetVolumeResponse *rsp);
+
+    private:
+        hostpath::Config const &m_config;
+        hostpath::state::State &m_state;
+        std::mutex m_mutex;
     };
 
 }

@@ -4,6 +4,7 @@
 
 using namespace std;
 using namespace grpc;
+using namespace hostpath;
 using namespace csi::v1;
 using namespace csi::services;
 using namespace csi::services::identity;
@@ -23,14 +24,14 @@ Status IdentityImpl::GetPluginInfo(ServerContext *context,
                                    GetPluginInfoRequest const *req,
                                    GetPluginInfoResponse *rsp)
 {
-    if (m_config.driverName.empty())
+    if (m_config.driver_name().empty())
         return Status::CANCELLED;
 
-    if (m_config.vendorVersion.empty())
+    if (m_config.vendor_version().empty())
         return Status::CANCELLED;
 
-    rsp->set_name(m_config.driverName);
-    rsp->set_vendor_version(m_config.vendorVersion);
+    rsp->set_name(m_config.driver_name());
+    rsp->set_vendor_version(m_config.vendor_version());
 
     return Status::OK;
 }

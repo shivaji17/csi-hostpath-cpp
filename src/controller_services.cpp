@@ -4,8 +4,19 @@
 
 using namespace std;
 using namespace grpc;
+using namespace hostpath;
+using namespace hostpath::state;
 using namespace csi::v1;
+using namespace csi::services;
 using namespace csi::services::controller;
+
+ControllerImpl::ControllerImpl(Config const &config, State &state) : m_config(config), m_state(state)
+{
+}
+
+ControllerImpl::~ControllerImpl()
+{
+}
 
 ////////////////////////////////////////////////////////////////////////
 // CreateVolume

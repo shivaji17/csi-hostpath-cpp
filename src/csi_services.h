@@ -2,22 +2,15 @@
 #define CSI_SERVICES_H
 
 #include <string>
+#include <loguru/loguru.hpp>
+#include <hostpath.pb.h>
 
 namespace csi::services
 {
-
-    struct Config
-    {
-        std::string endpoint;
-        std::string nodeName;
-        std::string driverName;
-        std::string vendorVersion;
-    };
-
     class CSIServices
     {
     public:
-        CSIServices(Config config);
+        CSIServices(hostpath::Config config);
         CSIServices(CSIServices const &) = delete;
         CSIServices &operator=(CSIServices const &) = delete;
         ~CSIServices();
@@ -25,7 +18,7 @@ namespace csi::services
         bool Run();
 
     private:
-        Config m_config;
+        hostpath::Config m_config;
     };
 
 }

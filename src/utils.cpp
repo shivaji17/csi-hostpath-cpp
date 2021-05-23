@@ -4,11 +4,15 @@
 #include <array>
 #include <cmath>
 #include <sstream>
+#include <fstream>
 #include <iostream>
 #include <cstdio>
 #include <regex>
+#include <filesystem>
 #include <loguru/loguru.hpp>
+
 using namespace std;
+using namespace std::filesystem;
 
 namespace utils
 {
@@ -62,5 +66,26 @@ namespace utils
     bool IsNameValid(string const &name)
     {
         return regex_match(name, regex("^[a-z0-9][a-z0-9.-]{0,251}[a-z0-9]$"));
+    }
+
+    bool ReadFile(string const &file, string &output)
+    {
+        if( !exists(file))
+        {
+            LOG_F(ERROR, "File '%s' does not exists", file.c_str());
+            return false;
+        }
+
+        ifstream fp(file, ofstream::binary);
+        if (fp.good())
+        {
+            string data((istreambuf_iterator<char>(fp)), istreambuf_iterator<char>());
+            output = data;
+            fp.close();
+            return true;
+        }
+
+        fp.close();
+        return false;
     }
 }

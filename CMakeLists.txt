@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.10)
 
-project (HostPathCPP VERSION 0.0.1 LANGUAGES CXX)
+project (HostPathCPP VERSION 0.0.0 LANGUAGES CXX)
 
 configure_file(HostPathCPPConfig.h.in HostPathCPPConfig.h)
 
@@ -22,6 +22,8 @@ add_executable(hostpath
 		vendor/loguru/loguru.cpp
 		proto/csi.pb.cc
 		proto/csi.grpc.pb.cc
+		proto/hostpath.pb.cc
+		src/state.cpp
 		src/csi_services.cpp
 		src/identity_services.cpp
 		src/controller_services.cpp
@@ -37,4 +39,4 @@ target_include_directories(hostpath PRIVATE
 
 target_include_directories(hostpath PUBLIC "${PROJECT_BINARY_DIR}")
 
-target_link_libraries(hostpath gRPC::grpc++)
+target_link_libraries(hostpath gRPC::grpc++ stdc++fs)

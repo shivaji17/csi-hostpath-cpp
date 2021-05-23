@@ -7,6 +7,7 @@
 
 using namespace std;
 using namespace utils;
+using namespace hostpath;
 using namespace csi::services;
 
 void Usage(int retVal)
@@ -14,10 +15,11 @@ void Usage(int retVal)
     cout
         << "Usage: ./hostpath [OPTIONS]\n"
         << "\n"
-        << "\t--help               Print this help information and exit\n"
-        << "\t--version            Print CSI HostPath version and exit\n"
-        << "\t--endpoint=ENDPOINT  CSI endpoint (default 'unix://tmp/csi.sock')\n"
-        << "\t--nodeid=NODENAME    node id\n"
+        << "\t--help                 Print this help information and exit\n"
+        << "\t--version              Print CSI HostPath version and exit\n"
+        << "\t--endpoint=ENDPOINT    CSI endpoint (default='unix://tmp/csi.sock')\n"
+        << "\t--nodeid=NODENAME      node id\n"
+        << "\t--state-dir=DIRECTORY  directory for storing state information across driver restarts, volumes and snapshots (default=/csi-data-dir)"
         << endl;
 
     exit(retVal);
@@ -31,6 +33,7 @@ Config ParseCommandLine(int argc, char *argv[])
         {"endpoint", required_argument, 0, 'e'},
         {"nodeid", required_argument, 0, 'n'},
         {"driver-name", required_argument, 0, 'd'},
+        {"state-dir", required_argument, 0, 's'},
         {0, 0, 0, 0}};
 
     Config config;
@@ -56,15 +59,19 @@ Config ParseCommandLine(int argc, char *argv[])
             exit(0);
 
         case 'e':
-            config.endpoint = string(optarg);
+            config.set_endpoint(string(optarg));
             break;
 
         case 'n':
-            config.nodeName = string(optarg);
+            config.set_node_name(string(optarg));
             break;
 
         case 'd':
-            config.driverName = string(optarg);
+            config.set_driver_name(string(optarg));
+            break;
+
+        case 's':
+            config.set_state_directory(string(optarg));
             break;
 
         case '?':
@@ -78,38 +85,44 @@ Config ParseCommandLine(int argc, char *argv[])
 
 bool ValidateConfig(Config &config)
 {
-    if (config.nodeName.empty())
+    if (config.node_name().empty())
     {
         LOG_F(ERROR, "Node name cannot be empty. Please provide node name with '--nodeid' input");
         return false;
     }
-    else if (!IsNameValid(config.nodeName))
+    else if (!IsNameValid(config.node_name()))
     {
-        LOG_F(ERROR, "Invalid node name '%s'", config.nodeName.c_str());
+        LOG_F(ERROR, "Invalid node name '%s'", config.node_name().c_str());
         return false;
     }
 
-    if (config.endpoint.empty())
+    if (config.endpoint().empty())
     {
         LOG_F(INFO, "Endpoint not provided. Using endpoint 'unix://tmp/csi.sock'");
-        config.endpoint = "unix://tmp/csi.sock";
+        config.set_endpoint("unix://tmp/csi.sock");
     }
     else
     {
-        if (!IsUnixSocket(config.endpoint) && !IsValidIPaddress(config.endpoint))
+        if (!IsUnixSocket(config.endpoint()) && !IsValidIPaddress(config.endpoint()))
         {
-            LOG_F(ERROR, "Invalid endpoint address'%s'", config.endpoint.c_str());
+            LOG_F(ERROR, "Invalid endpoint address'%s'", config.endpoint().c_str());
             return false;
         }
     }
 
-    if (config.driverName.empty())
+    if (config.driver_name().empty())
     {
         LOG_F(INFO, "CSI driver name not provided. Using default drivername 'hostpath-cpp.csi.k8s.io'");
-        config.driverName = "hostpath-cpp.csi.k8s.io";
+        config.set_driver_name("hostpath-cpp.csi.k8s.io");
     }
 
-    config.vendorVersion = to_string(HostPathCPP_VERSION_MAJOR) + "." + to_string(HostPathCPP_VERSION_MINOR) + "." + to_string(HostPathCPP_VERSION_PATCH);
+    if(config.state_directory().empty())
+    {
+        config.set_state_directory("/csi-data-dir");
+    }
+    // FIXME Add directory exists check
+
+    config.set_vendor_version(to_string(HostPathCPP_VERSION_MAJOR) + "." + to_string(HostPathCPP_VERSION_MINOR) + "." + to_string(HostPathCPP_VERSION_PATCH));
     return true;
 }
 

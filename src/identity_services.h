@@ -11,7 +11,7 @@ namespace csi::services::identity
     class IdentityImpl final : public csi::v1::Identity::Service
     {
     public:
-        explicit IdentityImpl(csi::services::Config const &config);
+        explicit IdentityImpl(hostpath::Config const &config);
         IdentityImpl(IdentityImpl const &) = delete;
         IdentityImpl &operator=(IdentityImpl const &) = delete;
         ~IdentityImpl();
@@ -29,7 +29,7 @@ namespace csi::services::identity
                            csi::v1::ProbeResponse *rsp);
 
     private:
-        csi::services::Config const &m_config;
+        hostpath::Config const &m_config;
     };
 
 }

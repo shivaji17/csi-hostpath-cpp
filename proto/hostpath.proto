@@ -1,0 +1,25 @@
+syntax= "proto3";
+package hostpath;
+
+message Config
+{
+    string endpoint = 1;
+    string node_name = 2;
+    string driver_name = 3;
+    string vendor_version = 4;
+    string state_directory = 5;
+}
+
+message Volume
+{
+    string volume_name = 1;
+    string volume_id = 2;
+    uint64 vol_size = 3;
+    string image_file_name = 4;
+    string image_file_path = 5;
+}
+
+message HostPathState
+{
+    repeated Volume volume_list = 1;
+}

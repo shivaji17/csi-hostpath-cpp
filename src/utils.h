@@ -9,7 +9,7 @@ namespace utils
     bool IsUnixSocket(std::string const &address);
     bool IsValidIPaddress(std::string const &address);
     bool IsNameValid(std::string const &name);
-    bool IsNameValid(std::string const &name);
+    bool ReadFile(std::string const &file, std::string &output);
 } // namespace utils
 
 #endif // UTILS_H
