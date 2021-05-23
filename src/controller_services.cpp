@@ -84,6 +84,13 @@ Status ControllerImpl::ControllerGetCapabilities(ServerContext *context,
                                                  ControllerGetCapabilitiesRequest const *req,
                                                  ControllerGetCapabilitiesResponse *rsp)
 {
+    using cap = ControllerServiceCapability::RPC::Type;
+    auto *capabilities = rsp->mutable_capabilities();
+    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_CREATE_DELETE_VOLUME);
+    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_LIST_VOLUMES);
+    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_GET_CAPACITY);
+    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_GET_VOLUME);
+    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_CLONE_VOLUME);
     return Status::OK;
 }
 

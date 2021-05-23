@@ -1,10 +1,12 @@
 #include <iostream>
 #include <getopt.h>
 #include <loguru/loguru.hpp>
-#include <csi_services.h>
 #include <HostPathCPPConfig.h>
+#include <utils.h>
+#include <csi_services.h>
 
 using namespace std;
+using namespace utils;
 using namespace csi::services;
 
 void Usage(int retVal)
@@ -81,6 +83,11 @@ bool ValidateConfig(Config &config)
         LOG_F(ERROR, "Node name cannot be empty. Please provide node name with '--nodeid' input");
         return false;
     }
+    else if (!IsNameValid(config.nodeName))
+    {
+        LOG_F(ERROR, "Invalid node name '%s'", config.nodeName.c_str());
+        return false;
+    }
 
     if (config.endpoint.empty())
     {
@@ -89,7 +96,11 @@ bool ValidateConfig(Config &config)
     }
     else
     {
-        // TODO Add IP address validation
+        if (!IsUnixSocket(config.endpoint) && !IsValidIPaddress(config.endpoint))
+        {
+            LOG_F(ERROR, "Invalid endpoint address'%s'", config.endpoint.c_str());
+            return false;
+        }
     }
 
     if (config.driverName.empty())
@@ -98,9 +109,7 @@ bool ValidateConfig(Config &config)
         config.driverName = "hostpath-cpp.csi.k8s.io";
     }
 
-    // FIXME: Set version at runtime
-    config.vendorVersion = "0.0.1";
-
+    config.vendorVersion = to_string(HostPathCPP_VERSION_MAJOR) + "." + to_string(HostPathCPP_VERSION_MINOR) + "." + to_string(HostPathCPP_VERSION_PATCH);
     return true;
 }
 

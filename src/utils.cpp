@@ -6,6 +6,7 @@
 #include <sstream>
 #include <iostream>
 #include <cstdio>
+#include <regex>
 #include <loguru/loguru.hpp>
 using namespace std;
 
@@ -46,5 +47,20 @@ namespace utils
             return false;
         }
         return true;
+    }
+
+    bool IsUnixSocket(string const &address)
+    {
+        return regex_match(address, regex("^unix://([a-zA-Z_])([/a-zA-Z0-9._-])*([a-zA-Z0-9._-])$"));
+    }
+
+    bool IsValidIPaddress(string const &address)
+    {
+        return regex_match(address, regex("^(tcp://)?((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?).){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?):([0-9]{1,4}|[1-5][0-9]{4}|6[0-4][0-9]{3}|65[0-4][0-9]{2}|655[0-2][0-9]|6553[0-5])$"));
+    }
+
+    bool IsNameValid(string const &name)
+    {
+        return regex_match(name, regex("^[a-z0-9][a-z0-9.-]{0,251}[a-z0-9]$"));
     }
 }
