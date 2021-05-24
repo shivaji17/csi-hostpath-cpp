@@ -13,6 +13,8 @@ set(gRPC_DIR "${CMAKE_SOURCE_DIR}/vendor/grpc/lib/cmake/grpc/")
 set(protobuf_DIR "${CMAKE_SOURCE_DIR}/vendor/grpc/lib/cmake/protobuf/")
 
 # Find all required packages
+find_path(LIBUUID_INCLUDE_DIR uuid.h PATH_SUFFIXES uuid)
+find_library(LIBUUID_LIBRARY libuuid.a REQUIRED)
 find_package(Threads REQUIRED)
 find_package(protobuf CONFIG REQUIRED)
 find_package(gRPC CONFIG REQUIRED)
@@ -37,6 +39,6 @@ target_include_directories(hostpath PRIVATE
 				"${CMAKE_SOURCE_DIR}/src"
 				"${CMAKE_SOURCE_DIR}/proto")
 
-target_include_directories(hostpath PUBLIC "${PROJECT_BINARY_DIR}")
+target_include_directories(hostpath PUBLIC "${PROJECT_BINARY_DIR}" "${LIBUUID_INCLUDE_DIR}")
 
-target_link_libraries(hostpath gRPC::grpc++ stdc++fs)
+target_link_libraries(hostpath gRPC::grpc++ stdc++fs ${LIBUUID_LIBRARY} )

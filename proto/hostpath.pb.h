@@ -61,14 +61,14 @@ extern ConfigDefaultTypeInternal _Config_default_instance_;
 class HostPathState;
 struct HostPathStateDefaultTypeInternal;
 extern HostPathStateDefaultTypeInternal _HostPathState_default_instance_;
-class Volume;
-struct VolumeDefaultTypeInternal;
-extern VolumeDefaultTypeInternal _Volume_default_instance_;
+class HostPathVolume;
+struct HostPathVolumeDefaultTypeInternal;
+extern HostPathVolumeDefaultTypeInternal _HostPathVolume_default_instance_;
 }  // namespace hostpath
 PROTOBUF_NAMESPACE_OPEN
 template<> ::hostpath::Config* Arena::CreateMaybeMessage<::hostpath::Config>(Arena*);
 template<> ::hostpath::HostPathState* Arena::CreateMaybeMessage<::hostpath::HostPathState>(Arena*);
-template<> ::hostpath::Volume* Arena::CreateMaybeMessage<::hostpath::Volume>(Arena*);
+template<> ::hostpath::HostPathVolume* Arena::CreateMaybeMessage<::hostpath::HostPathVolume>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace hostpath {
 
@@ -290,24 +290,24 @@ class Config PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class Volume PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hostpath.Volume) */ {
+class HostPathVolume PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:hostpath.HostPathVolume) */ {
  public:
-  inline Volume() : Volume(nullptr) {}
-  virtual ~Volume();
-  explicit constexpr Volume(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
+  inline HostPathVolume() : HostPathVolume(nullptr) {}
+  virtual ~HostPathVolume();
+  explicit constexpr HostPathVolume(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
 
-  Volume(const Volume& from);
-  Volume(Volume&& from) noexcept
-    : Volume() {
+  HostPathVolume(const HostPathVolume& from);
+  HostPathVolume(HostPathVolume&& from) noexcept
+    : HostPathVolume() {
     *this = ::std::move(from);
   }
 
-  inline Volume& operator=(const Volume& from) {
+  inline HostPathVolume& operator=(const HostPathVolume& from) {
     CopyFrom(from);
     return *this;
   }
-  inline Volume& operator=(Volume&& from) noexcept {
+  inline HostPathVolume& operator=(HostPathVolume&& from) noexcept {
     if (GetArena() == from.GetArena()) {
       if (this != &from) InternalSwap(&from);
     } else {
@@ -325,20 +325,20 @@ class Volume PROTOBUF_FINAL :
   static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
     return GetMetadataStatic().reflection;
   }
-  static const Volume& default_instance() {
+  static const HostPathVolume& default_instance() {
     return *internal_default_instance();
   }
-  static inline const Volume* internal_default_instance() {
-    return reinterpret_cast<const Volume*>(
-               &_Volume_default_instance_);
+  static inline const HostPathVolume* internal_default_instance() {
+    return reinterpret_cast<const HostPathVolume*>(
+               &_HostPathVolume_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
     1;
 
-  friend void swap(Volume& a, Volume& b) {
+  friend void swap(HostPathVolume& a, HostPathVolume& b) {
     a.Swap(&b);
   }
-  inline void Swap(Volume* other) {
+  inline void Swap(HostPathVolume* other) {
     if (other == this) return;
     if (GetArena() == other->GetArena()) {
       InternalSwap(other);
@@ -346,7 +346,7 @@ class Volume PROTOBUF_FINAL :
       ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
     }
   }
-  void UnsafeArenaSwap(Volume* other) {
+  void UnsafeArenaSwap(HostPathVolume* other) {
     if (other == this) return;
     GOOGLE_DCHECK(GetArena() == other->GetArena());
     InternalSwap(other);
@@ -354,17 +354,17 @@ class Volume PROTOBUF_FINAL :
 
   // implements Message ----------------------------------------------
 
-  inline Volume* New() const final {
-    return CreateMaybeMessage<Volume>(nullptr);
+  inline HostPathVolume* New() const final {
+    return CreateMaybeMessage<HostPathVolume>(nullptr);
   }
 
-  Volume* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<Volume>(arena);
+  HostPathVolume* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<HostPathVolume>(arena);
   }
   void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
   void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const Volume& from);
-  void MergeFrom(const Volume& from);
+  void CopyFrom(const HostPathVolume& from);
+  void MergeFrom(const HostPathVolume& from);
   PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
   bool IsInitialized() const final;
 
@@ -378,13 +378,13 @@ class Volume PROTOBUF_FINAL :
   inline void SharedCtor();
   inline void SharedDtor();
   void SetCachedSize(int size) const final;
-  void InternalSwap(Volume* other);
+  void InternalSwap(HostPathVolume* other);
   friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
   static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "hostpath.Volume";
+    return "hostpath.HostPathVolume";
   }
   protected:
-  explicit Volume(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  explicit HostPathVolume(::PROTOBUF_NAMESPACE_ID::Arena* arena);
   private:
   static void ArenaDtor(void* object);
   inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
@@ -405,8 +405,7 @@ class Volume PROTOBUF_FINAL :
   enum : int {
     kVolumeNameFieldNumber = 1,
     kVolumeIdFieldNumber = 2,
-    kImageFileNameFieldNumber = 4,
-    kImageFilePathFieldNumber = 5,
+    kDirectoryPathFieldNumber = 4,
     kVolSizeFieldNumber = 3,
   };
   // string volume_name = 1;
@@ -441,36 +440,20 @@ class Volume PROTOBUF_FINAL :
   std::string* _internal_mutable_volume_id();
   public:
 
-  // string image_file_name = 4;
-  void clear_image_file_name();
-  const std::string& image_file_name() const;
-  void set_image_file_name(const std::string& value);
-  void set_image_file_name(std::string&& value);
-  void set_image_file_name(const char* value);
-  void set_image_file_name(const char* value, size_t size);
-  std::string* mutable_image_file_name();
-  std::string* release_image_file_name();
-  void set_allocated_image_file_name(std::string* image_file_name);
+  // string directory_path = 4;
+  void clear_directory_path();
+  const std::string& directory_path() const;
+  void set_directory_path(const std::string& value);
+  void set_directory_path(std::string&& value);
+  void set_directory_path(const char* value);
+  void set_directory_path(const char* value, size_t size);
+  std::string* mutable_directory_path();
+  std::string* release_directory_path();
+  void set_allocated_directory_path(std::string* directory_path);
   private:
-  const std::string& _internal_image_file_name() const;
-  void _internal_set_image_file_name(const std::string& value);
-  std::string* _internal_mutable_image_file_name();
-  public:
-
-  // string image_file_path = 5;
-  void clear_image_file_path();
-  const std::string& image_file_path() const;
-  void set_image_file_path(const std::string& value);
-  void set_image_file_path(std::string&& value);
-  void set_image_file_path(const char* value);
-  void set_image_file_path(const char* value, size_t size);
-  std::string* mutable_image_file_path();
-  std::string* release_image_file_path();
-  void set_allocated_image_file_path(std::string* image_file_path);
-  private:
-  const std::string& _internal_image_file_path() const;
-  void _internal_set_image_file_path(const std::string& value);
-  std::string* _internal_mutable_image_file_path();
+  const std::string& _internal_directory_path() const;
+  void _internal_set_directory_path(const std::string& value);
+  std::string* _internal_mutable_directory_path();
   public:
 
   // uint64 vol_size = 3;
@@ -482,7 +465,7 @@ class Volume PROTOBUF_FINAL :
   void _internal_set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value);
   public:
 
-  // @@protoc_insertion_point(class_scope:hostpath.Volume)
+  // @@protoc_insertion_point(class_scope:hostpath.HostPathVolume)
  private:
   class _Internal;
 
@@ -491,8 +474,7 @@ class Volume PROTOBUF_FINAL :
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr volume_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr volume_id_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr image_file_name_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr image_file_path_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr directory_path_;
   ::PROTOBUF_NAMESPACE_ID::uint64 vol_size_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_hostpath_2eproto;
@@ -614,22 +596,22 @@ class HostPathState PROTOBUF_FINAL :
   enum : int {
     kVolumeListFieldNumber = 1,
   };
-  // repeated .hostpath.Volume volume_list = 1;
+  // repeated .hostpath.HostPathVolume volume_list = 1;
   int volume_list_size() const;
   private:
   int _internal_volume_list_size() const;
   public:
   void clear_volume_list();
-  ::hostpath::Volume* mutable_volume_list(int index);
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::Volume >*
+  ::hostpath::HostPathVolume* mutable_volume_list(int index);
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::HostPathVolume >*
       mutable_volume_list();
   private:
-  const ::hostpath::Volume& _internal_volume_list(int index) const;
-  ::hostpath::Volume* _internal_add_volume_list();
+  const ::hostpath::HostPathVolume& _internal_volume_list(int index) const;
+  ::hostpath::HostPathVolume* _internal_add_volume_list();
   public:
-  const ::hostpath::Volume& volume_list(int index) const;
-  ::hostpath::Volume* add_volume_list();
-  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::Volume >&
+  const ::hostpath::HostPathVolume& volume_list(int index) const;
+  ::hostpath::HostPathVolume* add_volume_list();
+  const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::HostPathVolume >&
       volume_list() const;
 
   // @@protoc_insertion_point(class_scope:hostpath.HostPathState)
@@ -639,7 +621,7 @@ class HostPathState PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::Volume > volume_list_;
+  ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::HostPathVolume > volume_list_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_hostpath_2eproto;
 };
@@ -961,59 +943,59 @@ inline void Config::set_allocated_state_directory(std::string* state_directory) 
 
 // -------------------------------------------------------------------
 
-// Volume
+// HostPathVolume
 
 // string volume_name = 1;
-inline void Volume::clear_volume_name() {
+inline void HostPathVolume::clear_volume_name() {
   volume_name_.ClearToEmpty();
 }
-inline const std::string& Volume::volume_name() const {
-  // @@protoc_insertion_point(field_get:hostpath.Volume.volume_name)
+inline const std::string& HostPathVolume::volume_name() const {
+  // @@protoc_insertion_point(field_get:hostpath.HostPathVolume.volume_name)
   return _internal_volume_name();
 }
-inline void Volume::set_volume_name(const std::string& value) {
+inline void HostPathVolume::set_volume_name(const std::string& value) {
   _internal_set_volume_name(value);
-  // @@protoc_insertion_point(field_set:hostpath.Volume.volume_name)
+  // @@protoc_insertion_point(field_set:hostpath.HostPathVolume.volume_name)
 }
-inline std::string* Volume::mutable_volume_name() {
-  // @@protoc_insertion_point(field_mutable:hostpath.Volume.volume_name)
+inline std::string* HostPathVolume::mutable_volume_name() {
+  // @@protoc_insertion_point(field_mutable:hostpath.HostPathVolume.volume_name)
   return _internal_mutable_volume_name();
 }
-inline const std::string& Volume::_internal_volume_name() const {
+inline const std::string& HostPathVolume::_internal_volume_name() const {
   return volume_name_.Get();
 }
-inline void Volume::_internal_set_volume_name(const std::string& value) {
+inline void HostPathVolume::_internal_set_volume_name(const std::string& value) {
   
   volume_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void Volume::set_volume_name(std::string&& value) {
+inline void HostPathVolume::set_volume_name(std::string&& value) {
   
   volume_name_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:hostpath.Volume.volume_name)
+  // @@protoc_insertion_point(field_set_rvalue:hostpath.HostPathVolume.volume_name)
 }
-inline void Volume::set_volume_name(const char* value) {
+inline void HostPathVolume::set_volume_name(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   volume_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:hostpath.Volume.volume_name)
+  // @@protoc_insertion_point(field_set_char:hostpath.HostPathVolume.volume_name)
 }
-inline void Volume::set_volume_name(const char* value,
+inline void HostPathVolume::set_volume_name(const char* value,
     size_t size) {
   
   volume_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:hostpath.Volume.volume_name)
+  // @@protoc_insertion_point(field_set_pointer:hostpath.HostPathVolume.volume_name)
 }
-inline std::string* Volume::_internal_mutable_volume_name() {
+inline std::string* HostPathVolume::_internal_mutable_volume_name() {
   
   return volume_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* Volume::release_volume_name() {
-  // @@protoc_insertion_point(field_release:hostpath.Volume.volume_name)
+inline std::string* HostPathVolume::release_volume_name() {
+  // @@protoc_insertion_point(field_release:hostpath.HostPathVolume.volume_name)
   return volume_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void Volume::set_allocated_volume_name(std::string* volume_name) {
+inline void HostPathVolume::set_allocated_volume_name(std::string* volume_name) {
   if (volume_name != nullptr) {
     
   } else {
@@ -1021,60 +1003,60 @@ inline void Volume::set_allocated_volume_name(std::string* volume_name) {
   }
   volume_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), volume_name,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:hostpath.Volume.volume_name)
+  // @@protoc_insertion_point(field_set_allocated:hostpath.HostPathVolume.volume_name)
 }
 
 // string volume_id = 2;
-inline void Volume::clear_volume_id() {
+inline void HostPathVolume::clear_volume_id() {
   volume_id_.ClearToEmpty();
 }
-inline const std::string& Volume::volume_id() const {
-  // @@protoc_insertion_point(field_get:hostpath.Volume.volume_id)
+inline const std::string& HostPathVolume::volume_id() const {
+  // @@protoc_insertion_point(field_get:hostpath.HostPathVolume.volume_id)
   return _internal_volume_id();
 }
-inline void Volume::set_volume_id(const std::string& value) {
+inline void HostPathVolume::set_volume_id(const std::string& value) {
   _internal_set_volume_id(value);
-  // @@protoc_insertion_point(field_set:hostpath.Volume.volume_id)
+  // @@protoc_insertion_point(field_set:hostpath.HostPathVolume.volume_id)
 }
-inline std::string* Volume::mutable_volume_id() {
-  // @@protoc_insertion_point(field_mutable:hostpath.Volume.volume_id)
+inline std::string* HostPathVolume::mutable_volume_id() {
+  // @@protoc_insertion_point(field_mutable:hostpath.HostPathVolume.volume_id)
   return _internal_mutable_volume_id();
 }
-inline const std::string& Volume::_internal_volume_id() const {
+inline const std::string& HostPathVolume::_internal_volume_id() const {
   return volume_id_.Get();
 }
-inline void Volume::_internal_set_volume_id(const std::string& value) {
+inline void HostPathVolume::_internal_set_volume_id(const std::string& value) {
   
   volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void Volume::set_volume_id(std::string&& value) {
+inline void HostPathVolume::set_volume_id(std::string&& value) {
   
   volume_id_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:hostpath.Volume.volume_id)
+  // @@protoc_insertion_point(field_set_rvalue:hostpath.HostPathVolume.volume_id)
 }
-inline void Volume::set_volume_id(const char* value) {
+inline void HostPathVolume::set_volume_id(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
   volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:hostpath.Volume.volume_id)
+  // @@protoc_insertion_point(field_set_char:hostpath.HostPathVolume.volume_id)
 }
-inline void Volume::set_volume_id(const char* value,
+inline void HostPathVolume::set_volume_id(const char* value,
     size_t size) {
   
   volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:hostpath.Volume.volume_id)
+  // @@protoc_insertion_point(field_set_pointer:hostpath.HostPathVolume.volume_id)
 }
-inline std::string* Volume::_internal_mutable_volume_id() {
+inline std::string* HostPathVolume::_internal_mutable_volume_id() {
   
   return volume_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* Volume::release_volume_id() {
-  // @@protoc_insertion_point(field_release:hostpath.Volume.volume_id)
+inline std::string* HostPathVolume::release_volume_id() {
+  // @@protoc_insertion_point(field_release:hostpath.HostPathVolume.volume_id)
   return volume_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void Volume::set_allocated_volume_id(std::string* volume_id) {
+inline void HostPathVolume::set_allocated_volume_id(std::string* volume_id) {
   if (volume_id != nullptr) {
     
   } else {
@@ -1082,156 +1064,95 @@ inline void Volume::set_allocated_volume_id(std::string* volume_id) {
   }
   volume_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), volume_id,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:hostpath.Volume.volume_id)
+  // @@protoc_insertion_point(field_set_allocated:hostpath.HostPathVolume.volume_id)
 }
 
 // uint64 vol_size = 3;
-inline void Volume::clear_vol_size() {
+inline void HostPathVolume::clear_vol_size() {
   vol_size_ = PROTOBUF_ULONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 Volume::_internal_vol_size() const {
+inline ::PROTOBUF_NAMESPACE_ID::uint64 HostPathVolume::_internal_vol_size() const {
   return vol_size_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 Volume::vol_size() const {
-  // @@protoc_insertion_point(field_get:hostpath.Volume.vol_size)
+inline ::PROTOBUF_NAMESPACE_ID::uint64 HostPathVolume::vol_size() const {
+  // @@protoc_insertion_point(field_get:hostpath.HostPathVolume.vol_size)
   return _internal_vol_size();
 }
-inline void Volume::_internal_set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void HostPathVolume::_internal_set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   
   vol_size_ = value;
 }
-inline void Volume::set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void HostPathVolume::set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value) {
   _internal_set_vol_size(value);
-  // @@protoc_insertion_point(field_set:hostpath.Volume.vol_size)
+  // @@protoc_insertion_point(field_set:hostpath.HostPathVolume.vol_size)
 }
 
-// string image_file_name = 4;
-inline void Volume::clear_image_file_name() {
-  image_file_name_.ClearToEmpty();
+// string directory_path = 4;
+inline void HostPathVolume::clear_directory_path() {
+  directory_path_.ClearToEmpty();
 }
-inline const std::string& Volume::image_file_name() const {
-  // @@protoc_insertion_point(field_get:hostpath.Volume.image_file_name)
-  return _internal_image_file_name();
+inline const std::string& HostPathVolume::directory_path() const {
+  // @@protoc_insertion_point(field_get:hostpath.HostPathVolume.directory_path)
+  return _internal_directory_path();
 }
-inline void Volume::set_image_file_name(const std::string& value) {
-  _internal_set_image_file_name(value);
-  // @@protoc_insertion_point(field_set:hostpath.Volume.image_file_name)
+inline void HostPathVolume::set_directory_path(const std::string& value) {
+  _internal_set_directory_path(value);
+  // @@protoc_insertion_point(field_set:hostpath.HostPathVolume.directory_path)
 }
-inline std::string* Volume::mutable_image_file_name() {
-  // @@protoc_insertion_point(field_mutable:hostpath.Volume.image_file_name)
-  return _internal_mutable_image_file_name();
+inline std::string* HostPathVolume::mutable_directory_path() {
+  // @@protoc_insertion_point(field_mutable:hostpath.HostPathVolume.directory_path)
+  return _internal_mutable_directory_path();
 }
-inline const std::string& Volume::_internal_image_file_name() const {
-  return image_file_name_.Get();
+inline const std::string& HostPathVolume::_internal_directory_path() const {
+  return directory_path_.Get();
 }
-inline void Volume::_internal_set_image_file_name(const std::string& value) {
+inline void HostPathVolume::_internal_set_directory_path(const std::string& value) {
   
-  image_file_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+  directory_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
 }
-inline void Volume::set_image_file_name(std::string&& value) {
+inline void HostPathVolume::set_directory_path(std::string&& value) {
   
-  image_file_name_.Set(
+  directory_path_.Set(
     ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:hostpath.Volume.image_file_name)
+  // @@protoc_insertion_point(field_set_rvalue:hostpath.HostPathVolume.directory_path)
 }
-inline void Volume::set_image_file_name(const char* value) {
+inline void HostPathVolume::set_directory_path(const char* value) {
   GOOGLE_DCHECK(value != nullptr);
   
-  image_file_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:hostpath.Volume.image_file_name)
+  directory_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:hostpath.HostPathVolume.directory_path)
 }
-inline void Volume::set_image_file_name(const char* value,
+inline void HostPathVolume::set_directory_path(const char* value,
     size_t size) {
   
-  image_file_name_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+  directory_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
       reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:hostpath.Volume.image_file_name)
+  // @@protoc_insertion_point(field_set_pointer:hostpath.HostPathVolume.directory_path)
 }
-inline std::string* Volume::_internal_mutable_image_file_name() {
+inline std::string* HostPathVolume::_internal_mutable_directory_path() {
   
-  return image_file_name_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+  return directory_path_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
 }
-inline std::string* Volume::release_image_file_name() {
-  // @@protoc_insertion_point(field_release:hostpath.Volume.image_file_name)
-  return image_file_name_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+inline std::string* HostPathVolume::release_directory_path() {
+  // @@protoc_insertion_point(field_release:hostpath.HostPathVolume.directory_path)
+  return directory_path_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
 }
-inline void Volume::set_allocated_image_file_name(std::string* image_file_name) {
-  if (image_file_name != nullptr) {
+inline void HostPathVolume::set_allocated_directory_path(std::string* directory_path) {
+  if (directory_path != nullptr) {
     
   } else {
     
   }
-  image_file_name_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), image_file_name,
+  directory_path_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), directory_path,
       GetArena());
-  // @@protoc_insertion_point(field_set_allocated:hostpath.Volume.image_file_name)
-}
-
-// string image_file_path = 5;
-inline void Volume::clear_image_file_path() {
-  image_file_path_.ClearToEmpty();
-}
-inline const std::string& Volume::image_file_path() const {
-  // @@protoc_insertion_point(field_get:hostpath.Volume.image_file_path)
-  return _internal_image_file_path();
-}
-inline void Volume::set_image_file_path(const std::string& value) {
-  _internal_set_image_file_path(value);
-  // @@protoc_insertion_point(field_set:hostpath.Volume.image_file_path)
-}
-inline std::string* Volume::mutable_image_file_path() {
-  // @@protoc_insertion_point(field_mutable:hostpath.Volume.image_file_path)
-  return _internal_mutable_image_file_path();
-}
-inline const std::string& Volume::_internal_image_file_path() const {
-  return image_file_path_.Get();
-}
-inline void Volume::_internal_set_image_file_path(const std::string& value) {
-  
-  image_file_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void Volume::set_image_file_path(std::string&& value) {
-  
-  image_file_path_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:hostpath.Volume.image_file_path)
-}
-inline void Volume::set_image_file_path(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  image_file_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:hostpath.Volume.image_file_path)
-}
-inline void Volume::set_image_file_path(const char* value,
-    size_t size) {
-  
-  image_file_path_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:hostpath.Volume.image_file_path)
-}
-inline std::string* Volume::_internal_mutable_image_file_path() {
-  
-  return image_file_path_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* Volume::release_image_file_path() {
-  // @@protoc_insertion_point(field_release:hostpath.Volume.image_file_path)
-  return image_file_path_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void Volume::set_allocated_image_file_path(std::string* image_file_path) {
-  if (image_file_path != nullptr) {
-    
-  } else {
-    
-  }
-  image_file_path_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), image_file_path,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:hostpath.Volume.image_file_path)
+  // @@protoc_insertion_point(field_set_allocated:hostpath.HostPathVolume.directory_path)
 }
 
 // -------------------------------------------------------------------
 
 // HostPathState
 
-// repeated .hostpath.Volume volume_list = 1;
+// repeated .hostpath.HostPathVolume volume_list = 1;
 inline int HostPathState::_internal_volume_list_size() const {
   return volume_list_.size();
 }
@@ -1241,30 +1162,30 @@ inline int HostPathState::volume_list_size() const {
 inline void HostPathState::clear_volume_list() {
   volume_list_.Clear();
 }
-inline ::hostpath::Volume* HostPathState::mutable_volume_list(int index) {
+inline ::hostpath::HostPathVolume* HostPathState::mutable_volume_list(int index) {
   // @@protoc_insertion_point(field_mutable:hostpath.HostPathState.volume_list)
   return volume_list_.Mutable(index);
 }
-inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::Volume >*
+inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::HostPathVolume >*
 HostPathState::mutable_volume_list() {
   // @@protoc_insertion_point(field_mutable_list:hostpath.HostPathState.volume_list)
   return &volume_list_;
 }
-inline const ::hostpath::Volume& HostPathState::_internal_volume_list(int index) const {
+inline const ::hostpath::HostPathVolume& HostPathState::_internal_volume_list(int index) const {
   return volume_list_.Get(index);
 }
-inline const ::hostpath::Volume& HostPathState::volume_list(int index) const {
+inline const ::hostpath::HostPathVolume& HostPathState::volume_list(int index) const {
   // @@protoc_insertion_point(field_get:hostpath.HostPathState.volume_list)
   return _internal_volume_list(index);
 }
-inline ::hostpath::Volume* HostPathState::_internal_add_volume_list() {
+inline ::hostpath::HostPathVolume* HostPathState::_internal_add_volume_list() {
   return volume_list_.Add();
 }
-inline ::hostpath::Volume* HostPathState::add_volume_list() {
+inline ::hostpath::HostPathVolume* HostPathState::add_volume_list() {
   // @@protoc_insertion_point(field_add:hostpath.HostPathState.volume_list)
   return _internal_add_volume_list();
 }
-inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::Volume >&
+inline const ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField< ::hostpath::HostPathVolume >&
 HostPathState::volume_list() const {
   // @@protoc_insertion_point(field_list:hostpath.HostPathState.volume_list)
   return volume_list_;

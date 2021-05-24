@@ -10,16 +10,15 @@ message Config
     string state_directory = 5;
 }
 
-message Volume
+message HostPathVolume
 {
     string volume_name = 1;
     string volume_id = 2;
     uint64 vol_size = 3;
-    string image_file_name = 4;
-    string image_file_path = 5;
+    string directory_path = 4;
 }
 
 message HostPathState
 {
-    repeated Volume volume_list = 1;
+    repeated HostPathVolume volume_list = 1;
 }

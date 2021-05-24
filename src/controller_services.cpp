@@ -1,9 +1,12 @@
 #include <controller_services.h>
 #include <csi.pb.h>
 #include <csi.grpc.pb.h>
+#include <hostpath.pb.h>
+#include <utils.h>
 
 using namespace std;
 using namespace grpc;
+using namespace utils;
 using namespace hostpath;
 using namespace hostpath::state;
 using namespace csi::v1;
@@ -25,6 +28,52 @@ Status ControllerImpl::CreateVolume(ServerContext *context,
                                     CreateVolumeRequest const *req,
                                     CreateVolumeResponse *rsp)
 {
+    if (req->name().empty())
+    {
+        LOG_F(ERROR, "Volume name missing in the request");
+        return Status::CANCELLED;
+    }
+
+    auto &caps = req->volume_capabilities();
+    if (caps.empty())
+    {
+        LOG_F(ERROR, "Volume capabilities missing in the request");
+        return Status::CANCELLED;
+    }
+
+    for (auto &cap : caps)
+    {
+        if (cap.has_block())
+        {
+            LOG_F(ERROR, "Block type volume is not supported");
+            return Status::CANCELLED;
+        }
+    }
+
+    auto volSize = req->capacity_range().required_bytes();
+    std::lock_guard<mutex> lock(m_mutex);
+    HostPathVolume volume;
+    if (m_state.GetVolumeByName(req->name(), volume))
+    {
+        LOG_F(ERROR, "Volume '%s' already exists", req->name().c_str());
+        return Status::CANCELLED;
+    }
+
+    volume.set_volume_name(req->name());
+    volume.set_volume_id(CreateUUID());
+    volume.set_vol_size(volSize);
+    string dirPath = m_config.state_directory() + "/" + volume.volume_id();
+    if (CreateDirectory(dirPath))
+    {
+        LOG_F(ERROR, "Failed to create volume %s. Error: Failed to create directory", req->name().c_str());
+        return Status::CANCELLED;
+    }
+    volume.set_directory_path(dirPath);
+
+    m_state.UpdateVolume(volume);
+    auto *vol = rsp->mutable_volume();
+    vol->set_capacity_bytes(volSize);
+    vol->set_volume_id(volume.volume_id());
     return Status::OK;
 }
 

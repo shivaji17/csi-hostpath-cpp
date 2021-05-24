@@ -9,6 +9,7 @@
 #include <cstdio>
 #include <regex>
 #include <filesystem>
+#include <uuid/uuid.h>
 #include <loguru/loguru.hpp>
 
 using namespace std;
@@ -70,7 +71,7 @@ namespace utils
 
     bool ReadFile(string const &file, string &output)
     {
-        if( !exists(file))
+        if (!exists(file))
         {
             LOG_F(ERROR, "File '%s' does not exists", file.c_str());
             return false;
@@ -87,5 +88,70 @@ namespace utils
 
         fp.close();
         return false;
+    }
+
+    bool WriteToFile(string const &file, string const &input)
+    {
+        ofstream fileStream;
+        string tempFile = "temp-" + file;
+        try
+        {
+            fileStream.open(tempFile.c_str(), ofstream::binary | ofstream::trunc);
+
+            if (!fileStream.is_open())
+            {
+                LOG_F(ERROR, "Failed to open file %s", tempFile.c_str());
+                return false;
+            }
+
+            fileStream << input;
+            if (fileStream.bad())
+            {
+                fileStream.close();
+                remove(tempFile.c_str());
+                LOG_F(ERROR, "Failed to write data to file %s", tempFile.c_str());
+                return false;
+            }
+        }
+        catch (ios_base::failure const &e)
+        {
+            remove(tempFile.c_str());
+            LOG_F(ERROR, "Execption occured while writing to file %s. ERROR: %s", tempFile.c_str(), e.what());
+            return false;
+        }
+
+        if (rename(tempFile.c_str(), file.c_str()) != 0)
+        {
+            LOG_F(ERROR, "Failed to rename file. Error: %s", strerror(errno));
+            return false;
+        }
+
+        return true;
+    }
+
+    bool DirectoryExists(std::string const &directoryPath)
+    {
+        return is_directory(directoryPath);
+    }
+
+    bool CreateDirectory(std::string const &directoryPath)
+    {
+        // If directory exists, return true
+        if (is_directory(directoryPath))
+            return true;
+
+        return create_directories(directoryPath);
+    }
+
+    std::string CreateUUID()
+    {
+        uuid_t uuid;
+        uuid_generate(uuid);
+        string uuidStr;
+        char uuidArr[37] = "";
+        uuid_unparse(uuid, uuidArr);
+        for (int i = 0; uuidArr[i] != '\0'; ++i)
+            uuidStr += uuidArr[i];
+        return uuidStr;
     }
 }

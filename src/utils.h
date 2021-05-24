@@ -10,6 +10,10 @@ namespace utils
     bool IsValidIPaddress(std::string const &address);
     bool IsNameValid(std::string const &name);
     bool ReadFile(std::string const &file, std::string &output);
+    bool WriteToFile(std::string const &file, std::string const &input);
+    bool DirectoryExists(std::string const &directoryPath);
+    bool CreateDirectory(std::string const &directoryPath);
+    std::string CreateUUID();
 } // namespace utils
 
 #endif // UTILS_H
