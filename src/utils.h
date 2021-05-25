@@ -13,6 +13,7 @@ namespace utils
     bool WriteToFile(std::string const &file, std::string const &input);
     bool DirectoryExists(std::string const &directoryPath);
     bool CreateDirectory(std::string const &directoryPath);
+    void DeleteDirectory(std::string const &directoryPath);
     std::string CreateUUID();
 } // namespace utils
 

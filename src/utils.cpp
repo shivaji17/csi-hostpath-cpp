@@ -154,4 +154,9 @@ namespace utils
             uuidStr += uuidArr[i];
         return uuidStr;
     }
+
+    void DeleteDirectory(string const &directoryPath)
+    {
+        remove_all(directoryPath);
+    }
 }

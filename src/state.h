@@ -17,6 +17,8 @@ namespace hostpath::state
         std::string GetLastError() const;
         bool GetVolumeByName(std::string const &volumeName, hostpath::HostPathVolume &volume) const;
         void UpdateVolume(hostpath::HostPathVolume const &volume);
+        bool GetVolumeByID(std::string const &volumeID, hostpath::HostPathVolume &volume) const;
+        bool DeleteVolumeByID(std::string const &volumeID);
 
     private:
         bool Dump();

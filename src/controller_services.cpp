@@ -28,6 +28,12 @@ Status ControllerImpl::CreateVolume(ServerContext *context,
                                     CreateVolumeRequest const *req,
                                     CreateVolumeResponse *rsp)
 {
+    if (!IsControllerServiceRequestValid(ControllerServiceCapability_RPC_Type::ControllerServiceCapability_RPC_Type_CREATE_DELETE_VOLUME))
+    {
+        LOG_F(ERROR, "Volume creation is not supported");
+        return Status::CANCELLED;
+    }
+
     if (req->name().empty())
     {
         LOG_F(ERROR, "Volume name missing in the request");
@@ -70,6 +76,8 @@ Status ControllerImpl::CreateVolume(ServerContext *context,
     }
     volume.set_directory_path(dirPath);
 
+    LOG_F(INFO, "Successfully creaeted volume '%s'", req->name().c_str());
+    
     m_state.UpdateVolume(volume);
     auto *vol = rsp->mutable_volume();
     vol->set_capacity_bytes(volSize);
@@ -84,6 +92,35 @@ Status ControllerImpl::DeleteVolume(ServerContext *context,
                                     DeleteVolumeRequest const *req,
                                     DeleteVolumeResponse *rsp)
 {
+    if (!IsControllerServiceRequestValid(ControllerServiceCapability_RPC_Type::ControllerServiceCapability_RPC_Type_CREATE_DELETE_VOLUME))
+    {
+        LOG_F(ERROR, "Volume deletion is not supported");
+        return Status::CANCELLED;
+    }
+
+    if (req->volume_id().empty())
+    {
+        LOG_F(ERROR, "Volume ID missing in request");
+        return Status::CANCELLED;
+    }
+
+    std::lock_guard<mutex> lock(m_mutex);
+    HostPathVolume volume;
+    if (!m_state.GetVolumeByID(req->volume_id(), volume))
+    {
+        LOG_F(WARNING, "Volume with volume-id '%s' does not exists", req->volume_id().c_str());
+        return Status::OK;
+    }
+
+    // FIXME Add checks to see if volume is used or not
+
+    if (!m_state.DeleteVolumeByID(req->volume_id()))
+    {
+        LOG_F(ERROR, "Failed to delete volume with id '%s'", req->volume_id().c_str());
+        return Status::CANCELLED;
+    }
+
+    LOG_F(INFO, "Successfully deleted volume with id '%s'", req->volume_id().c_str());
     return Status::OK;
 }
 
@@ -144,13 +181,9 @@ Status ControllerImpl::ControllerGetCapabilities(ServerContext *context,
                                                  ControllerGetCapabilitiesRequest const *req,
                                                  ControllerGetCapabilitiesResponse *rsp)
 {
-    using cap = ControllerServiceCapability::RPC::Type;
     auto *capabilities = rsp->mutable_capabilities();
-    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_CREATE_DELETE_VOLUME);
-    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_LIST_VOLUMES);
-    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_GET_CAPACITY);
-    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_GET_VOLUME);
-    capabilities->Add()->mutable_rpc()->set_type(cap::ControllerServiceCapability_RPC_Type_CLONE_VOLUME);
+    for (auto const cap : GetControllerServiceCapabilities())
+        capabilities->Add()->mutable_rpc()->set_type(cap);
     return Status::OK;
 }
 
@@ -202,4 +235,25 @@ Status ControllerImpl::ControllerGetVolume(ServerContext *context,
                                            ControllerGetVolumeResponse *rsp)
 {
     return Status::OK;
+}
+
+bool ControllerImpl::IsControllerServiceRequestValid(ControllerServiceCapability_RPC_Type serviceType) const
+{
+    for (auto const cap : GetControllerServiceCapabilities())
+    {
+        if (cap == serviceType)
+            return true;
+    }
+    return false;
+}
+
+vector<ControllerServiceCapability_RPC_Type> ControllerImpl::GetControllerServiceCapabilities() const
+{
+    using cap = ControllerServiceCapability::RPC::Type;
+    return std::vector<ControllerServiceCapability_RPC_Type>{
+        cap::ControllerServiceCapability_RPC_Type_CREATE_DELETE_VOLUME,
+        cap::ControllerServiceCapability_RPC_Type_LIST_VOLUMES,
+        cap::ControllerServiceCapability_RPC_Type_GET_CAPACITY,
+        cap::ControllerServiceCapability_RPC_Type_GET_VOLUME,
+        cap::ControllerServiceCapability_RPC_Type_CLONE_VOLUME};
 }

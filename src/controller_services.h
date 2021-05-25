@@ -2,6 +2,7 @@
 #define CONTROLLER_SERVICES_H
 
 #include <mutex>
+#include <vector>
 #include <csi.pb.h>
 #include <csi.grpc.pb.h>
 #include <csi_services.h>
@@ -71,7 +72,10 @@ namespace csi::services::controller
                                          csi::v1::ControllerGetVolumeResponse *rsp);
 
     private:
-        hostpath::Config const &m_config;
+        bool IsControllerServiceRequestValid(csi::v1::ControllerServiceCapability_RPC_Type serviceType) const;
+        std::vector<csi::v1::ControllerServiceCapability_RPC_Type> GetControllerServiceCapabilities() const;
+
+            private : hostpath::Config const &m_config;
         hostpath::state::State &m_state;
         std::mutex m_mutex;
     };

@@ -91,3 +91,45 @@ void State::UpdateVolume(HostPathVolume const &volume)
     m_hostpathState.mutable_volume_list()->Add()->CopyFrom(volume);
     Dump();
 }
+
+bool State::GetVolumeByID(string const &volumeID, HostPathVolume &volume) const
+{
+    for (auto const &vol : m_hostpathState.volume_list())
+    {
+        if (vol.volume_id() == volumeID)
+        {
+            volume.CopyFrom(vol);
+            return true;
+        }
+    }
+    return false;
+}
+
+bool State::DeleteVolumeByID(string const &volumeID)
+{
+    bool volumeFound = false;
+    for (auto it = m_hostpathState.mutable_volume_list()->begin(); it != m_hostpathState.mutable_volume_list()->end();)
+    {
+        auto &vol = *it;
+        if (vol.volume_id() == volumeID)
+        {
+            DeleteDirectory(vol.directory_path());
+            it = m_hostpathState.mutable_volume_list()->erase(it);
+            volumeFound = true;
+            break;
+        }
+        else
+        {
+            ++it;
+        }
+    }
+
+    if (!volumeFound)
+    {
+        LOG_F(ERROR, "Volume with id '%s' does not exists", volumeID.c_str());
+        return false;
+    }
+    
+    Dump();
+    return true;
+}
