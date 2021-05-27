@@ -77,7 +77,7 @@ Status ControllerImpl::CreateVolume(ServerContext *context,
     volume.set_directory_path(dirPath);
 
     LOG_F(INFO, "Successfully creaeted volume '%s'", req->name().c_str());
-    
+
     m_state.UpdateVolume(volume);
     auto *vol = rsp->mutable_volume();
     vol->set_capacity_bytes(volSize);
@@ -151,6 +151,50 @@ Status ControllerImpl::ValidateVolumeCapabilities(ServerContext *context,
                                                   ValidateVolumeCapabilitiesRequest const *req,
                                                   ValidateVolumeCapabilitiesResponse *rsp)
 {
+    if (req->volume_id().empty())
+    {
+        LOG_F(ERROR, "Volume ID missing in request");
+        return Status::CANCELLED;
+    }
+
+    if (req->volume_capabilities().size() == 0)
+    {
+        LOG_F(ERROR, "Invalid capabilities requested");
+        return Status::CANCELLED;
+    }
+
+    std::lock_guard<mutex> lock(m_mutex);
+    HostPathVolume volume;
+
+    if (!m_state.GetVolumeByID(req->volume_id(), volume))
+    {
+        LOG_F(ERROR, "Volume with id '%s' does not exists", req->volume_id().c_str());
+        return Status::CANCELLED;
+    }
+
+    bool capabilitiesProvided = false;
+    for (auto const &cap : req->volume_capabilities())
+    {
+        if (cap.has_block())
+        {
+            LOG_F(ERROR, "Block volume type is not supported");
+            return Status::CANCELLED;
+        }
+        else if (cap.has_mount())
+        {
+            capabilitiesProvided = true;
+        }
+    }
+
+    if (!capabilitiesProvided)
+    {
+        LOG_F(ERROR, "No capabilities provided in request");
+        return Status::CANCELLED;
+    }
+
+    rsp->mutable_confirmed()->mutable_volume_capabilities()->CopyFrom(req->volume_capabilities());
+    *(rsp->mutable_confirmed()->mutable_volume_context()) = req->volume_context();
+    *(rsp->mutable_confirmed()->mutable_parameters()) = req->parameters();
     return Status::OK;
 }
 
@@ -161,6 +205,7 @@ Status ControllerImpl::ListVolumes(ServerContext *context,
                                    ListVolumesRequest const *req,
                                    ListVolumesResponse *rsp)
 {
+
     return Status::OK;
 }
 

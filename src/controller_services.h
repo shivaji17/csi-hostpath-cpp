@@ -75,7 +75,8 @@ namespace csi::services::controller
         bool IsControllerServiceRequestValid(csi::v1::ControllerServiceCapability_RPC_Type serviceType) const;
         std::vector<csi::v1::ControllerServiceCapability_RPC_Type> GetControllerServiceCapabilities() const;
 
-            private : hostpath::Config const &m_config;
+    private:
+        hostpath::Config const &m_config;
         hostpath::state::State &m_state;
         std::mutex m_mutex;
     };
