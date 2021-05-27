@@ -159,4 +159,10 @@ namespace utils
     {
         remove_all(directoryPath);
     }
+
+    tuple<Capacity, Available> GetDirectorySpace(string const &directoryPath)
+    {
+        auto info = space(directoryPath);
+        return make_tuple(static_cast<uint64_t>(info.capacity), static_cast<uint64_t>(info.available));
+    }
 }

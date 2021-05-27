@@ -116,11 +116,21 @@ bool ValidateConfig(Config &config)
         config.set_driver_name("hostpath-cpp.csi.k8s.io");
     }
 
-    if(config.state_directory().empty())
+    if (config.state_directory().empty())
     {
         config.set_state_directory("/csi-data-dir");
     }
-    // FIXME Add directory exists check
+    else
+    {
+        if (!DirectoryExists(config.state_directory()) && !CreateDirectory(config.state_directory()))
+        {
+            LOG_F(ERROR, "Failed to create state directory '%s'", config.state_directory().c_str());
+            return false;
+        }
+    }
+
+    auto [capacity, available] = GetDirectorySpace(config.state_directory());
+    config.set_max_capacity(capacity);
 
     config.set_vendor_version(to_string(HostPathCPP_VERSION_MAJOR) + "." + to_string(HostPathCPP_VERSION_MINOR) + "." + to_string(HostPathCPP_VERSION_PATCH));
     return true;

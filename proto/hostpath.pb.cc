@@ -23,7 +23,8 @@ constexpr Config::Config(
   , node_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , driver_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , vendor_version_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , state_directory_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string){}
+  , state_directory_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  , max_capacity_(PROTOBUF_ULONGLONG(0)){}
 struct ConfigDefaultTypeInternal {
   constexpr ConfigDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -76,6 +77,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_hostpath_2eproto::offsets[] PR
   PROTOBUF_FIELD_OFFSET(::hostpath::Config, driver_name_),
   PROTOBUF_FIELD_OFFSET(::hostpath::Config, vendor_version_),
   PROTOBUF_FIELD_OFFSET(::hostpath::Config, state_directory_),
+  PROTOBUF_FIELD_OFFSET(::hostpath::Config, max_capacity_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::hostpath::HostPathVolume, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -94,8 +96,8 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_hostpath_2eproto::offsets[] PR
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::hostpath::Config)},
-  { 10, -1, sizeof(::hostpath::HostPathVolume)},
-  { 19, -1, sizeof(::hostpath::HostPathState)},
+  { 11, -1, sizeof(::hostpath::HostPathVolume)},
+  { 20, -1, sizeof(::hostpath::HostPathState)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -105,18 +107,19 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
 };
 
 const char descriptor_table_protodef_hostpath_2eproto[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) =
-  "\n\016hostpath.proto\022\010hostpath\"s\n\006Config\022\020\n\010"
-  "endpoint\030\001 \001(\t\022\021\n\tnode_name\030\002 \001(\t\022\023\n\013dri"
-  "ver_name\030\003 \001(\t\022\026\n\016vendor_version\030\004 \001(\t\022\027"
-  "\n\017state_directory\030\005 \001(\t\"b\n\016HostPathVolum"
-  "e\022\023\n\013volume_name\030\001 \001(\t\022\021\n\tvolume_id\030\002 \001("
-  "\t\022\020\n\010vol_size\030\003 \001(\004\022\026\n\016directory_path\030\004 "
-  "\001(\t\">\n\rHostPathState\022-\n\013volume_list\030\001 \003("
-  "\0132\030.hostpath.HostPathVolumeb\006proto3"
+  "\n\016hostpath.proto\022\010hostpath\"\211\001\n\006Config\022\020\n"
+  "\010endpoint\030\001 \001(\t\022\021\n\tnode_name\030\002 \001(\t\022\023\n\013dr"
+  "iver_name\030\003 \001(\t\022\026\n\016vendor_version\030\004 \001(\t\022"
+  "\027\n\017state_directory\030\005 \001(\t\022\024\n\014max_capacity"
+  "\030\006 \001(\004\"b\n\016HostPathVolume\022\023\n\013volume_name\030"
+  "\001 \001(\t\022\021\n\tvolume_id\030\002 \001(\t\022\020\n\010vol_size\030\003 \001"
+  "(\004\022\026\n\016directory_path\030\004 \001(\t\">\n\rHostPathSt"
+  "ate\022-\n\013volume_list\030\001 \003(\0132\030.hostpath.Host"
+  "PathVolumeb\006proto3"
   ;
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_hostpath_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_hostpath_2eproto = {
-  false, false, 315, descriptor_table_protodef_hostpath_2eproto, "hostpath.proto", 
+  false, false, 338, descriptor_table_protodef_hostpath_2eproto, "hostpath.proto", 
   &descriptor_table_hostpath_2eproto_once, nullptr, 0, 3,
   schemas, file_default_instances, TableStruct_hostpath_2eproto::offsets,
   file_level_metadata_hostpath_2eproto, file_level_enum_descriptors_hostpath_2eproto, file_level_service_descriptors_hostpath_2eproto,
@@ -171,6 +174,7 @@ Config::Config(const Config& from)
     state_directory_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_state_directory(), 
       GetArena());
   }
+  max_capacity_ = from.max_capacity_;
   // @@protoc_insertion_point(copy_constructor:hostpath.Config)
 }
 
@@ -180,6 +184,7 @@ node_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAl
 driver_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 vendor_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 state_directory_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+max_capacity_ = PROTOBUF_ULONGLONG(0);
 }
 
 Config::~Config() {
@@ -218,6 +223,7 @@ void Config::Clear() {
   driver_name_.ClearToEmpty();
   vendor_version_.ClearToEmpty();
   state_directory_.ClearToEmpty();
+  max_capacity_ = PROTOBUF_ULONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -270,6 +276,13 @@ const char* Config::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           auto str = _internal_mutable_state_directory();
           ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
           CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "hostpath.Config.state_directory"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // uint64 max_capacity = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          max_capacity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -351,6 +364,12 @@ failure:
         5, this->_internal_state_directory(), target);
   }
 
+  // uint64 max_capacity = 6;
+  if (this->max_capacity() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(6, this->_internal_max_capacity(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -402,6 +421,13 @@ size_t Config::ByteSizeLong() const {
         this->_internal_state_directory());
   }
 
+  // uint64 max_capacity = 6;
+  if (this->max_capacity() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+        this->_internal_max_capacity());
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
         _internal_metadata_, total_size, &_cached_size_);
@@ -448,6 +474,9 @@ void Config::MergeFrom(const Config& from) {
   if (from.state_directory().size() > 0) {
     _internal_set_state_directory(from._internal_state_directory());
   }
+  if (from.max_capacity() != 0) {
+    _internal_set_max_capacity(from._internal_max_capacity());
+  }
 }
 
 void Config::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
@@ -476,6 +505,7 @@ void Config::InternalSwap(Config* other) {
   driver_name_.Swap(&other->driver_name_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   vendor_version_.Swap(&other->vendor_version_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   state_directory_.Swap(&other->state_directory_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  swap(max_capacity_, other->max_capacity_);
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata Config::GetMetadata() const {

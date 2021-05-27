@@ -57,7 +57,7 @@ Status ControllerImpl::CreateVolume(ServerContext *context,
     }
 
     auto volSize = req->capacity_range().required_bytes();
-    std::lock_guard<mutex> lock(m_mutex);
+    lock_guard<mutex> lock(m_mutex);
     HostPathVolume volume;
     if (m_state.GetVolumeByName(req->name(), volume))
     {
@@ -104,7 +104,7 @@ Status ControllerImpl::DeleteVolume(ServerContext *context,
         return Status::CANCELLED;
     }
 
-    std::lock_guard<mutex> lock(m_mutex);
+    lock_guard<mutex> lock(m_mutex);
     HostPathVolume volume;
     if (!m_state.GetVolumeByID(req->volume_id(), volume))
     {
@@ -163,7 +163,7 @@ Status ControllerImpl::ValidateVolumeCapabilities(ServerContext *context,
         return Status::CANCELLED;
     }
 
-    std::lock_guard<mutex> lock(m_mutex);
+    lock_guard<mutex> lock(m_mutex);
     HostPathVolume volume;
 
     if (!m_state.GetVolumeByID(req->volume_id(), volume))
@@ -216,6 +216,10 @@ Status ControllerImpl::GetCapacity(ServerContext *context,
                                    GetCapacityRequest const *req,
                                    GetCapacityResponse *rsp)
 {
+    lock_guard<mutex> lock(m_mutex);
+
+    auto [capacity, available] = GetDirectorySpace(m_config.state_directory());
+    rsp->set_available_capacity(available);
     return Status::OK;
 }
 

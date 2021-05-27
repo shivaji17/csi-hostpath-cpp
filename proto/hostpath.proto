@@ -8,6 +8,7 @@ message Config
     string driver_name = 3;
     string vendor_version = 4;
     string state_directory = 5;
+    uint64 max_capacity = 6;
 }
 
 message HostPathVolume
