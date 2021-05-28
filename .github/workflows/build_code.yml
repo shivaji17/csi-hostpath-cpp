@@ -42,5 +42,4 @@ jobs:
     - name: Build Docker image
       run: |
         docker build . --tag ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:latest
-        docker run ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:latest
         docker push ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:latest
