@@ -9,6 +9,8 @@ on:
 env:
   # Customize the CMake build type here (Release, Debug, RelWithDebInfo, etc.)
   BUILD_TYPE: Release
+  BUILD_DIRECTORY: build
+  DOCKER_IMAGE_NAME: cpp-hostpath
 
 jobs:
   build:
@@ -26,7 +28,18 @@ jobs:
       # See https://cmake.org/cmake/help/latest/variable/CMAKE_BUILD_TYPE.html?highlight=cmake_build_type
       run: cmake -B ${{github.workspace}}/build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
 
-    - name: Build
+    - name: Build Code
       # Build your program with the given configuration
-      run: cmake --build ${{github.workspace}}/build --config ${{env.BUILD_TYPE}} -j
+      run: cmake --build ${{github.workspace}}/${{env.BUILD_DIRECTORY}} --config ${{env.BUILD_TYPE}} -j
       
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v1
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.HOSTPATH_IMAGE_BUILD_SECRET }}
+        
+    - name: Build Docker image
+      run: |
+        docker build . --tag ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:latest
+        docker push ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:latest
