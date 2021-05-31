@@ -45,9 +45,9 @@ jobs:
     - name: Build Docker image
       run: docker build . --tag ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:${{env.VERSION}}
         
-    - name: Retag Image
-      if: ${{ env.VERSION == '0.0.0' }}
-      run: docker tag ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:${{env.VERSION}} ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:latest
-        
-    - name: Push Docker Image
-      run: docker push ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:${{env.VERSION}}
+    - name: Retag and Push Image
+      # Retag and push images only if it is not development branch
+      if: ${{ env.VERSION != '0.0.0' }}
+      run: |
+      docker tag ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:${{env.VERSION}} ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:latest
+      docker push ghcr.io/sawantshivaji1997/${{env.DOCKER_IMAGE_NAME}}:${{env.VERSION}}
