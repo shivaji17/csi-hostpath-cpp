@@ -51,7 +51,6 @@ Config ParseCommandLine(int argc, char *argv[])
 
         case 1:
             cout
-                << "CSI HostPath version: "
                 << HostPathCPP_VERSION_MAJOR << "."
                 << HostPathCPP_VERSION_MINOR << "."
                 << HostPathCPP_VERSION_PATCH
