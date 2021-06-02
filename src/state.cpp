@@ -129,7 +129,56 @@ bool State::DeleteVolumeByID(string const &volumeID)
         LOG_F(ERROR, "Volume with id '%s' does not exists", volumeID.c_str());
         return false;
     }
-    
+
     Dump();
+    return true;
+}
+
+VolumeListWithToken State::GetVolumeList(int maxLength)
+{
+    if (maxLength <= 0)
+    {
+        vector<HostPathVolume> volumeList(m_hostpathState.volume_list().begin(), m_hostpathState.volume_list().end());
+        return make_pair(volumeList, "");
+    }
+
+    if (m_hostpathState.volume_list().size() < maxLength)
+    {
+        vector<HostPathVolume> volumeList(m_hostpathState.volume_list().begin(), m_hostpathState.volume_list().end());
+        return make_pair(volumeList, "");
+    }
+
+    vector<HostPathVolume> volumeList(m_hostpathState.volume_list().begin(), m_hostpathState.volume_list().begin() + maxLength);
+    auto token = CreateUUID();
+    m_tokenList.insert({token, maxLength});
+
+    return make_pair(volumeList, token);
+}
+
+bool State::GetVolumeListForGivenToken(string const &token, vector<HostPathVolume> &volumeList, int maxLength)
+{
+    auto itr = m_tokenList.find(token);
+
+    if (itr == m_tokenList.end())
+    {
+        m_lastError = "Token " + token + "does not exist";
+        return false;
+    }
+
+    if (maxLength <= 0 || m_hostpathState.volume_list().size() - itr->second < maxLength)
+    {
+        auto index = itr->second;
+        m_tokenList.erase(itr);
+        if (itr->second >= m_hostpathState.volume_list().size())
+        {
+            return true;
+        }
+
+        copy(m_hostpathState.volume_list().begin() + index, m_hostpathState.volume_list().end(), volumeList.begin());
+        return true;
+    }
+
+    copy(m_hostpathState.volume_list().begin() + itr->second, m_hostpathState.volume_list().begin() + itr->second + maxLength, volumeList.begin());
+    itr->second = itr->second + maxLength;
     return true;
 }

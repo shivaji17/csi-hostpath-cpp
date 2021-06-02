@@ -207,7 +207,42 @@ Status ControllerImpl::ListVolumes(ServerContext *context,
                                    ListVolumesRequest const *req,
                                    ListVolumesResponse *rsp)
 {
+    lock_guard<mutex> lock(m_mutex);
 
+    auto CopyVolumes = [&](vector<HostPathVolume> const &volumeList) -> void
+    {
+        auto *entries = rsp->mutable_entries();
+        for (auto const &vol : volumeList)
+        {
+            auto rspVol = entries->Add();
+            rspVol->mutable_volume()->set_volume_id(vol.volume_id());
+            rspVol->mutable_volume()->set_capacity_bytes(vol.vol_size());
+            rspVol->mutable_status()->add_published_node_ids(m_config.node_name());
+
+            // FIXME Add volume condition
+        }
+    };
+
+    if (req->starting_token().empty())
+    {
+        auto [volumeList, token] = m_state.GetVolumeList(req->max_entries());
+
+        if (!token.empty())
+            rsp->set_next_token(token);
+
+        CopyVolumes(volumeList);
+    }
+    else
+    {
+        vector<HostPathVolume> volumeList;
+        if (!m_state.GetVolumeListForGivenToken(req->starting_token(), volumeList, req->max_entries()))
+        {
+            LOG_F(ERROR, "Failed to fetch volumes: Error: %s", m_state.GetLastError().c_str());
+            return Status::CANCELLED;
+        }
+
+        CopyVolumes(volumeList);
+    }
     return Status::OK;
 }
 
