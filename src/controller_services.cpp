@@ -131,7 +131,8 @@ Status ControllerImpl::ControllerPublishVolume(ServerContext *context,
                                                ControllerPublishVolumeRequest const *req,
                                                ControllerPublishVolumeResponse *rsp)
 {
-    return Status::OK;
+    LOG_F(ERROR, "ControllerPublishVolume is not supported");
+    return Status::CANCELLED;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -141,7 +142,8 @@ Status ControllerImpl::ControllerUnpublishVolume(ServerContext *context,
                                                  ControllerUnpublishVolumeRequest const *req,
                                                  ControllerUnpublishVolumeResponse *rsp)
 {
-    return Status::OK;
+    LOG_F(ERROR, "ControllerUnpublishVolume is not supported");
+    return Status::CANCELLED;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -243,7 +245,8 @@ Status ControllerImpl::CreateSnapshot(ServerContext *context,
                                       CreateSnapshotRequest const *req,
                                       CreateSnapshotResponse *rsp)
 {
-    return Status::OK;
+    LOG_F(ERROR, "Create Snapshot is not supported");
+    return Status::CANCELLED;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -253,7 +256,8 @@ Status ControllerImpl::DeleteSnapshot(ServerContext *context,
                                       DeleteSnapshotRequest const *req,
                                       DeleteSnapshotResponse *rsp)
 {
-    return Status::OK;
+    LOG_F(ERROR, "Delete Snapshot is not supported");
+    return Status::CANCELLED;
 }
 
 ////////////////////////////////////////////////////////////////////////
@@ -263,7 +267,8 @@ Status ControllerImpl::ListSnapshots(ServerContext *context,
                                      ListSnapshotsRequest const *req,
                                      ListSnapshotsResponse *rsp)
 {
-    return Status::OK;
+    LOG_F(ERROR, "List Snapshot is not supported");
+    return Status::CANCELLED;
 }
 
 ////////////////////////////////////////////////////////////////////////
