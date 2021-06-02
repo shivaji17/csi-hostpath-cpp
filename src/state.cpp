@@ -134,7 +134,7 @@ bool State::DeleteVolumeByID(string const &volumeID)
     return true;
 }
 
-VolumeListWithToken State::GetVolumeList(int maxLength)
+VolumeListWithToken State::GetVolumeList(int maxLength) const
 {
     if (maxLength <= 0)
     {
@@ -155,13 +155,13 @@ VolumeListWithToken State::GetVolumeList(int maxLength)
     return make_pair(volumeList, token);
 }
 
-bool State::GetVolumeListForGivenToken(string const &token, vector<HostPathVolume> &volumeList, int maxLength)
+bool State::GetVolumeListForGivenToken(string const &token, vector<HostPathVolume> &volumeList, int maxLength) const
 {
     auto itr = m_tokenList.find(token);
 
     if (itr == m_tokenList.end())
     {
-        m_lastError = "Token " + token + "does not exist";
+        m_lastError = "Token '" + token + "' does not exist";
         return false;
     }
 

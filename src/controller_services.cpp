@@ -323,6 +323,22 @@ Status ControllerImpl::ControllerGetVolume(ServerContext *context,
                                            ControllerGetVolumeRequest const *req,
                                            ControllerGetVolumeResponse *rsp)
 {
+    if (req->volume_id().empty())
+    {
+        LOG_F(ERROR, "Volume ID is missing in request");
+        return Status::CANCELLED;
+    }
+
+    HostPathVolume volume;
+    if (!m_state.GetVolumeByID(req->volume_id(), volume))
+    {
+        LOG_F(ERROR, "Volume with id '%s' does not exists", req->volume_id().c_str());
+        return Status::CANCELLED;
+    }
+
+    rsp->mutable_volume()->set_volume_id(volume.volume_id());
+    rsp->mutable_volume()->set_capacity_bytes(volume.vol_size());
+    rsp->mutable_status()->add_published_node_ids(m_config.node_name());
     return Status::OK;
 }
 
