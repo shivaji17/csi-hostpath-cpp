@@ -5,10 +5,11 @@
 using namespace std;
 using namespace grpc;
 using namespace hostpath;
+using namespace hostpath::state;
 using namespace csi::v1;
 using namespace csi::services::node;
 
-NodeImpl::NodeImpl(Config const &config) : m_config(config)
+NodeImpl::NodeImpl(Config const &config, State &state) : m_config(config), m_state(state)
 {
 }
 
@@ -94,6 +95,7 @@ Status NodeImpl::NodeGetInfo(ServerContext *context,
                              NodeGetInfoRequest const *req,
                              NodeGetInfoResponse *rsp)
 {
+    lock_guard<mutex> lock(m_state.GetMutex());
     rsp->set_node_id(m_config.node_name());
     return Status::OK;
 }

@@ -1,7 +1,7 @@
 #ifndef CONTROLLER_SERVICES_H
 #define CONTROLLER_SERVICES_H
 
-#include <mutex>
+
 #include <vector>
 #include <loguru/loguru.hpp>
 #include <csi.pb.h>
@@ -79,7 +79,6 @@ namespace csi::services::controller
     private:
         hostpath::Config const &m_config;
         hostpath::state::State &m_state;
-        std::mutex m_mutex;
     };
 
 }

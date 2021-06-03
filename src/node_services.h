@@ -13,7 +13,7 @@ namespace csi::services::node
     class NodeImpl final : public csi::v1::Node::Service
     {
     public:
-        NodeImpl(hostpath::Config const &config);
+        NodeImpl(hostpath::Config const &config, hostpath::state::State &state);
         NodeImpl(NodeImpl const &) = delete;
         NodeImpl &operator=(NodeImpl const &) = delete;
         ~NodeImpl();
@@ -52,6 +52,7 @@ namespace csi::services::node
 
     private:
         hostpath::Config const &m_config;
+        hostpath::state::State &m_state;
     };
 
 }

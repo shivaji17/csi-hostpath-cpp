@@ -1,6 +1,7 @@
 #ifndef STATE_H
 #define STATE_H
 
+#include <mutex>
 #include <hostpath.pb.h>
 
 namespace hostpath::state
@@ -23,6 +24,7 @@ namespace hostpath::state
         bool DeleteVolumeByID(std::string const &volumeID);
         VolumeListWithToken GetVolumeList(int maxLength = 0) const;
         bool GetVolumeListForGivenToken(std::string const &token, std::vector<hostpath::HostPathVolume> &volumeList, int maxLength = 0) const;
+        std::mutex &GetMutex() { return m_mutex; }
 
     private:
         bool Dump();
@@ -33,6 +35,7 @@ namespace hostpath::state
         hostpath::HostPathState m_hostpathState;
         mutable std::map<std::string, int> m_tokenList;
         mutable std::string m_lastError;
+        std::mutex m_mutex;
     };
 }
 #endif // STATE_H
