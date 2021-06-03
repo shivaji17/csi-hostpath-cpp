@@ -1,8 +1,11 @@
 #ifndef NODE_SERVICES_H
 #define NODE_SERVICES_H
 
+#include <loguru/loguru.hpp>
 #include <csi.pb.h>
 #include <csi.grpc.pb.h>
+#include <hostpath.pb.h>
+#include <state.h>
 
 namespace csi::services::node
 {
@@ -10,10 +13,10 @@ namespace csi::services::node
     class NodeImpl final : public csi::v1::Node::Service
     {
     public:
-        NodeImpl() = default;
+        NodeImpl(hostpath::Config const &config);
         NodeImpl(NodeImpl const &) = delete;
         NodeImpl &operator=(NodeImpl const &) = delete;
-        ~NodeImpl() = default;
+        ~NodeImpl();
 
         grpc::Status NodeStageVolume(grpc::ServerContext *context,
                                      csi::v1::NodeStageVolumeRequest const *req,
@@ -46,6 +49,9 @@ namespace csi::services::node
         grpc::Status NodeGetInfo(grpc::ServerContext *context,
                                  csi::v1::NodeGetInfoRequest const *req,
                                  csi::v1::NodeGetInfoResponse *rsp);
+
+    private:
+        hostpath::Config const &m_config;
     };
 
 }

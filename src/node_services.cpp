@@ -4,15 +4,25 @@
 
 using namespace std;
 using namespace grpc;
+using namespace hostpath;
 using namespace csi::v1;
 using namespace csi::services::node;
+
+NodeImpl::NodeImpl(Config const &config) : m_config(config)
+{
+}
+
+NodeImpl::~NodeImpl()
+{
+}
 
 ////////////////////////////////////////////////////////////////////////
 // NodeStageVolume
 ////////////////////////////////////////////////////////////////////////
-Status NodeImpl::NodeStageVolume(ServerContext *context,
-                                 NodeStageVolumeRequest const *req,
-                                 NodeStageVolumeResponse *rsp)
+Status
+NodeImpl::NodeStageVolume(ServerContext *context,
+                          NodeStageVolumeRequest const *req,
+                          NodeStageVolumeResponse *rsp)
 {
     return Status::OK;
 }
@@ -84,5 +94,6 @@ Status NodeImpl::NodeGetInfo(ServerContext *context,
                              NodeGetInfoRequest const *req,
                              NodeGetInfoResponse *rsp)
 {
+    rsp->set_node_id(m_config.node_name());
     return Status::OK;
 }

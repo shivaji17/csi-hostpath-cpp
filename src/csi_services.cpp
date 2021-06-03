@@ -40,7 +40,7 @@ bool CSIServices::Run()
     state.Init();
 
     IdentityImpl identitySvc(m_config);
-    NodeImpl nodeSvc;
+    NodeImpl nodeSvc(m_config);
     ControllerImpl controllerSvc(m_config, state);
 
     ServerBuilder builder;

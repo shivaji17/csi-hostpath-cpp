@@ -1,9 +1,10 @@
 #ifndef IDENTITY_SERVICES_H
 #define IDENTITY_SERVICES_H
 
+#include <loguru/loguru.hpp>
 #include <csi.pb.h>
 #include <csi.grpc.pb.h>
-#include <csi_services.h>
+#include <hostpath.pb.h>
 
 namespace csi::services::identity
 {
