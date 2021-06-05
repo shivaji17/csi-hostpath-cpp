@@ -93,7 +93,7 @@ namespace utils
     bool WriteToFile(string const &file, string const &input)
     {
         ofstream fileStream;
-        string tempFile = "temp-" + file;
+        string tempFile =  file + "-temp";
         try
         {
             fileStream.open(tempFile.c_str(), ofstream::binary | ofstream::trunc);
