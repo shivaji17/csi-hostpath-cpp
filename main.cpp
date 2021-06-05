@@ -119,13 +119,11 @@ bool ValidateConfig(Config &config)
     {
         config.set_state_directory("/csi-data-dir");
     }
-    else
+    
+    if (!DirectoryExists(config.state_directory()) && !CreateDirectory(config.state_directory()))
     {
-        if (!DirectoryExists(config.state_directory()) && !CreateDirectory(config.state_directory()))
-        {
-            LOG_F(ERROR, "Failed to create state directory '%s'", config.state_directory().c_str());
-            return false;
-        }
+        LOG_F(ERROR, "Failed to create state directory '%s'", config.state_directory().c_str());
+        return false;
     }
 
     auto [capacity, available] = GetDirectorySpace(config.state_directory());
