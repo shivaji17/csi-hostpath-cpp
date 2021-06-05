@@ -78,7 +78,11 @@ Status ControllerImpl::CreateVolume(ServerContext *context,
 
     LOG_F(INFO, "Successfully creaeted volume '%s'", req->name().c_str());
 
-    m_state.UpdateVolume(volume);
+    if (!m_state.InsertVolume(volume))
+    {
+        LOG_F(ERROR, "Failed to insert volume in state file.");
+        return Status::CANCELLED;
+    }
     auto *vol = rsp->mutable_volume();
     vol->set_capacity_bytes(volSize);
     vol->set_volume_id(volume.volume_id());
@@ -207,6 +211,12 @@ Status ControllerImpl::ListVolumes(ServerContext *context,
                                    ListVolumesRequest const *req,
                                    ListVolumesResponse *rsp)
 {
+    if (!IsControllerServiceRequestValid(ControllerServiceCapability_RPC_Type::ControllerServiceCapability_RPC_Type_LIST_VOLUMES))
+    {
+        LOG_F(ERROR, "Volume get capacity is not supported");
+        return Status::CANCELLED;
+    }
+
     lock_guard<mutex> lock(m_state.GetMutex());
 
     auto CopyVolumes = [&](vector<HostPathVolume> const &volumeList) -> void
@@ -253,6 +263,12 @@ Status ControllerImpl::GetCapacity(ServerContext *context,
                                    GetCapacityRequest const *req,
                                    GetCapacityResponse *rsp)
 {
+    if (!IsControllerServiceRequestValid(ControllerServiceCapability_RPC_Type::ControllerServiceCapability_RPC_Type_GET_CAPACITY))
+    {
+        LOG_F(ERROR, "Volume get capacity is not supported");
+        return Status::CANCELLED;
+    }
+
     lock_guard<mutex> lock(m_state.GetMutex());
 
     auto [capacity, available] = GetDirectorySpace(m_config.state_directory());
@@ -313,6 +329,52 @@ Status ControllerImpl::ControllerExpandVolume(ServerContext *context,
                                               ControllerExpandVolumeRequest const *req,
                                               ControllerExpandVolumeResponse *rsp)
 {
+    if (!IsControllerServiceRequestValid(ControllerServiceCapability_RPC_Type::ControllerServiceCapability_RPC_Type_EXPAND_VOLUME))
+    {
+        LOG_F(ERROR, "Volume expansion is not supported");
+        return Status::CANCELLED;
+    }
+
+    if (req->volume_id().empty())
+    {
+        LOG_F(ERROR, "Volume ID is missing in request");
+        return Status::CANCELLED;
+    }
+
+    if (!req->has_capacity_range())
+    {
+        LOG_F(ERROR, "New capacity missing in request");
+        return Status::CANCELLED;
+    }
+
+    if (req->capacity_range().required_bytes() > m_config.max_capacity())
+    {
+        LOG_F(ERROR, "Requested capacity %ld exceeds maximum allowed %ld", req->capacity_range().required_bytes(), m_config.max_capacity());
+        return Status::CANCELLED;
+    }
+
+    lock_guard<mutex> lock(m_state.GetMutex());
+
+    HostPathVolume volume;
+    if (!m_state.GetVolumeByID(req->volume_id(), volume))
+    {
+        LOG_F(ERROR, "Volume with id '%s' does not exists", req->volume_id().c_str());
+        return Status::CANCELLED;
+    }
+
+    if (volume.vol_size() < req->capacity_range().required_bytes())
+    {
+        volume.set_vol_size(req->capacity_range().required_bytes());
+        if (!m_state.UpdateVolume(volume))
+        {
+            LOG_F(ERROR, "Failed to update volume with id '%s'", volume.volume_id().c_str());
+            return Status::CANCELLED;
+        }
+    }
+
+    rsp->set_node_expansion_required(false);
+    rsp->set_capacity_bytes(volume.vol_size());
+
     return Status::OK;
 }
 
@@ -323,6 +385,12 @@ Status ControllerImpl::ControllerGetVolume(ServerContext *context,
                                            ControllerGetVolumeRequest const *req,
                                            ControllerGetVolumeResponse *rsp)
 {
+    if (!IsControllerServiceRequestValid(ControllerServiceCapability_RPC_Type::ControllerServiceCapability_RPC_Type_GET_VOLUME))
+    {
+        LOG_F(ERROR, "Volume get volume is not supported");
+        return Status::CANCELLED;
+    }
+
     if (req->volume_id().empty())
     {
         LOG_F(ERROR, "Volume ID is missing in request");
@@ -359,6 +427,5 @@ vector<ControllerServiceCapability_RPC_Type> ControllerImpl::GetControllerServic
         cap::ControllerServiceCapability_RPC_Type_CREATE_DELETE_VOLUME,
         cap::ControllerServiceCapability_RPC_Type_LIST_VOLUMES,
         cap::ControllerServiceCapability_RPC_Type_GET_CAPACITY,
-        cap::ControllerServiceCapability_RPC_Type_GET_VOLUME,
-        cap::ControllerServiceCapability_RPC_Type_CLONE_VOLUME};
+        cap::ControllerServiceCapability_RPC_Type_GET_VOLUME};
 }

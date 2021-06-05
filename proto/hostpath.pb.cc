@@ -24,7 +24,7 @@ constexpr Config::Config(
   , driver_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , vendor_version_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , state_directory_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , max_capacity_(PROTOBUF_ULONGLONG(0)){}
+  , max_capacity_(PROTOBUF_LONGLONG(0)){}
 struct ConfigDefaultTypeInternal {
   constexpr ConfigDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -39,7 +39,7 @@ constexpr HostPathVolume::HostPathVolume(
   : volume_name_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , directory_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
-  , vol_size_(PROTOBUF_ULONGLONG(0)){}
+  , vol_size_(PROTOBUF_LONGLONG(0)){}
 struct HostPathVolumeDefaultTypeInternal {
   constexpr HostPathVolumeDefaultTypeInternal()
     : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
@@ -111,9 +111,9 @@ const char descriptor_table_protodef_hostpath_2eproto[] PROTOBUF_SECTION_VARIABL
   "\010endpoint\030\001 \001(\t\022\021\n\tnode_name\030\002 \001(\t\022\023\n\013dr"
   "iver_name\030\003 \001(\t\022\026\n\016vendor_version\030\004 \001(\t\022"
   "\027\n\017state_directory\030\005 \001(\t\022\024\n\014max_capacity"
-  "\030\006 \001(\004\"b\n\016HostPathVolume\022\023\n\013volume_name\030"
+  "\030\006 \001(\003\"b\n\016HostPathVolume\022\023\n\013volume_name\030"
   "\001 \001(\t\022\021\n\tvolume_id\030\002 \001(\t\022\020\n\010vol_size\030\003 \001"
-  "(\004\022\026\n\016directory_path\030\004 \001(\t\">\n\rHostPathSt"
+  "(\003\022\026\n\016directory_path\030\004 \001(\t\">\n\rHostPathSt"
   "ate\022-\n\013volume_list\030\001 \003(\0132\030.hostpath.Host"
   "PathVolumeb\006proto3"
   ;
@@ -184,7 +184,7 @@ node_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAl
 driver_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 vendor_version_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 state_directory_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-max_capacity_ = PROTOBUF_ULONGLONG(0);
+max_capacity_ = PROTOBUF_LONGLONG(0);
 }
 
 Config::~Config() {
@@ -223,7 +223,7 @@ void Config::Clear() {
   driver_name_.ClearToEmpty();
   vendor_version_.ClearToEmpty();
   state_directory_.ClearToEmpty();
-  max_capacity_ = PROTOBUF_ULONGLONG(0);
+  max_capacity_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -279,7 +279,7 @@ const char* Config::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::int
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint64 max_capacity = 6;
+      // int64 max_capacity = 6;
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
           max_capacity_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
@@ -364,10 +364,10 @@ failure:
         5, this->_internal_state_directory(), target);
   }
 
-  // uint64 max_capacity = 6;
+  // int64 max_capacity = 6;
   if (this->max_capacity() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(6, this->_internal_max_capacity(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(6, this->_internal_max_capacity(), target);
   }
 
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
@@ -421,10 +421,10 @@ size_t Config::ByteSizeLong() const {
         this->_internal_state_directory());
   }
 
-  // uint64 max_capacity = 6;
+  // int64 max_capacity = 6;
   if (this->max_capacity() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_max_capacity());
   }
 
@@ -551,7 +551,7 @@ void HostPathVolume::SharedCtor() {
 volume_name_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
 directory_path_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-vol_size_ = PROTOBUF_ULONGLONG(0);
+vol_size_ = PROTOBUF_LONGLONG(0);
 }
 
 HostPathVolume::~HostPathVolume() {
@@ -586,7 +586,7 @@ void HostPathVolume::Clear() {
   volume_name_.ClearToEmpty();
   volume_id_.ClearToEmpty();
   directory_path_.ClearToEmpty();
-  vol_size_ = PROTOBUF_ULONGLONG(0);
+  vol_size_ = PROTOBUF_LONGLONG(0);
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
 
@@ -615,7 +615,7 @@ const char* HostPathVolume::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
-      // uint64 vol_size = 3;
+      // int64 vol_size = 3;
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
           vol_size_ = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
@@ -679,10 +679,10 @@ failure:
         2, this->_internal_volume_id(), target);
   }
 
-  // uint64 vol_size = 3;
+  // int64 vol_size = 3;
   if (this->vol_size() != 0) {
     target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteUInt64ToArray(3, this->_internal_vol_size(), target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteInt64ToArray(3, this->_internal_vol_size(), target);
   }
 
   // string directory_path = 4;
@@ -732,10 +732,10 @@ size_t HostPathVolume::ByteSizeLong() const {
         this->_internal_directory_path());
   }
 
-  // uint64 vol_size = 3;
+  // int64 vol_size = 3;
   if (this->vol_size() != 0) {
     total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::UInt64Size(
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::Int64Size(
         this->_internal_vol_size());
   }
 

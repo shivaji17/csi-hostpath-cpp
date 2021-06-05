@@ -274,13 +274,13 @@ class Config PROTOBUF_FINAL :
   std::string* _internal_mutable_state_directory();
   public:
 
-  // uint64 max_capacity = 6;
+  // int64 max_capacity = 6;
   void clear_max_capacity();
-  ::PROTOBUF_NAMESPACE_ID::uint64 max_capacity() const;
-  void set_max_capacity(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 max_capacity() const;
+  void set_max_capacity(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_max_capacity() const;
-  void _internal_set_max_capacity(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_max_capacity() const;
+  void _internal_set_max_capacity(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
   // @@protoc_insertion_point(class_scope:hostpath.Config)
@@ -295,7 +295,7 @@ class Config PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr driver_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr vendor_version_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr state_directory_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 max_capacity_;
+  ::PROTOBUF_NAMESPACE_ID::int64 max_capacity_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_hostpath_2eproto;
 };
@@ -467,13 +467,13 @@ class HostPathVolume PROTOBUF_FINAL :
   std::string* _internal_mutable_directory_path();
   public:
 
-  // uint64 vol_size = 3;
+  // int64 vol_size = 3;
   void clear_vol_size();
-  ::PROTOBUF_NAMESPACE_ID::uint64 vol_size() const;
-  void set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 vol_size() const;
+  void set_vol_size(::PROTOBUF_NAMESPACE_ID::int64 value);
   private:
-  ::PROTOBUF_NAMESPACE_ID::uint64 _internal_vol_size() const;
-  void _internal_set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value);
+  ::PROTOBUF_NAMESPACE_ID::int64 _internal_vol_size() const;
+  void _internal_set_vol_size(::PROTOBUF_NAMESPACE_ID::int64 value);
   public:
 
   // @@protoc_insertion_point(class_scope:hostpath.HostPathVolume)
@@ -486,7 +486,7 @@ class HostPathVolume PROTOBUF_FINAL :
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr volume_name_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr volume_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr directory_path_;
-  ::PROTOBUF_NAMESPACE_ID::uint64 vol_size_;
+  ::PROTOBUF_NAMESPACE_ID::int64 vol_size_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_hostpath_2eproto;
 };
@@ -952,22 +952,22 @@ inline void Config::set_allocated_state_directory(std::string* state_directory) 
   // @@protoc_insertion_point(field_set_allocated:hostpath.Config.state_directory)
 }
 
-// uint64 max_capacity = 6;
+// int64 max_capacity = 6;
 inline void Config::clear_max_capacity() {
-  max_capacity_ = PROTOBUF_ULONGLONG(0);
+  max_capacity_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 Config::_internal_max_capacity() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Config::_internal_max_capacity() const {
   return max_capacity_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 Config::max_capacity() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 Config::max_capacity() const {
   // @@protoc_insertion_point(field_get:hostpath.Config.max_capacity)
   return _internal_max_capacity();
 }
-inline void Config::_internal_set_max_capacity(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void Config::_internal_set_max_capacity(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   max_capacity_ = value;
 }
-inline void Config::set_max_capacity(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void Config::set_max_capacity(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_max_capacity(value);
   // @@protoc_insertion_point(field_set:hostpath.Config.max_capacity)
 }
@@ -1098,22 +1098,22 @@ inline void HostPathVolume::set_allocated_volume_id(std::string* volume_id) {
   // @@protoc_insertion_point(field_set_allocated:hostpath.HostPathVolume.volume_id)
 }
 
-// uint64 vol_size = 3;
+// int64 vol_size = 3;
 inline void HostPathVolume::clear_vol_size() {
-  vol_size_ = PROTOBUF_ULONGLONG(0);
+  vol_size_ = PROTOBUF_LONGLONG(0);
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 HostPathVolume::_internal_vol_size() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 HostPathVolume::_internal_vol_size() const {
   return vol_size_;
 }
-inline ::PROTOBUF_NAMESPACE_ID::uint64 HostPathVolume::vol_size() const {
+inline ::PROTOBUF_NAMESPACE_ID::int64 HostPathVolume::vol_size() const {
   // @@protoc_insertion_point(field_get:hostpath.HostPathVolume.vol_size)
   return _internal_vol_size();
 }
-inline void HostPathVolume::_internal_set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void HostPathVolume::_internal_set_vol_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
   
   vol_size_ = value;
 }
-inline void HostPathVolume::set_vol_size(::PROTOBUF_NAMESPACE_ID::uint64 value) {
+inline void HostPathVolume::set_vol_size(::PROTOBUF_NAMESPACE_ID::int64 value) {
   _internal_set_vol_size(value);
   // @@protoc_insertion_point(field_set:hostpath.HostPathVolume.vol_size)
 }

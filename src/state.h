@@ -19,7 +19,8 @@ namespace hostpath::state
         void Init();
         std::string GetLastError() const;
         bool GetVolumeByName(std::string const &volumeName, hostpath::HostPathVolume &volume) const;
-        void UpdateVolume(hostpath::HostPathVolume const &volume);
+        bool InsertVolume(hostpath::HostPathVolume const &volume);
+        bool UpdateVolume(hostpath::HostPathVolume const &volume);
         bool GetVolumeByID(std::string const &volumeID, hostpath::HostPathVolume &volume) const;
         bool DeleteVolumeByID(std::string const &volumeID);
         VolumeListWithToken GetVolumeList(int maxLength = 0) const;
