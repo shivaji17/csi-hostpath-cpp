@@ -53,7 +53,7 @@ struct TableStruct_csi_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[102]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[101]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -213,9 +213,6 @@ extern ListVolumesResponse_VolumeStatusDefaultTypeInternal _ListVolumesResponse_
 class NodeExpandVolumeRequest;
 struct NodeExpandVolumeRequestDefaultTypeInternal;
 extern NodeExpandVolumeRequestDefaultTypeInternal _NodeExpandVolumeRequest_default_instance_;
-class NodeExpandVolumeRequest_SecretsEntry_DoNotUse;
-struct NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal;
-extern NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _NodeExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
 class NodeExpandVolumeResponse;
 struct NodeExpandVolumeResponseDefaultTypeInternal;
 extern NodeExpandVolumeResponseDefaultTypeInternal _NodeExpandVolumeResponse_default_instance_;
@@ -422,7 +419,6 @@ template<> ::csi::v1::ListVolumesResponse* Arena::CreateMaybeMessage<::csi::v1::
 template<> ::csi::v1::ListVolumesResponse_Entry* Arena::CreateMaybeMessage<::csi::v1::ListVolumesResponse_Entry>(Arena*);
 template<> ::csi::v1::ListVolumesResponse_VolumeStatus* Arena::CreateMaybeMessage<::csi::v1::ListVolumesResponse_VolumeStatus>(Arena*);
 template<> ::csi::v1::NodeExpandVolumeRequest* Arena::CreateMaybeMessage<::csi::v1::NodeExpandVolumeRequest>(Arena*);
-template<> ::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse* Arena::CreateMaybeMessage<::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse>(Arena*);
 template<> ::csi::v1::NodeExpandVolumeResponse* Arena::CreateMaybeMessage<::csi::v1::NodeExpandVolumeResponse>(Arena*);
 template<> ::csi::v1::NodeGetCapabilitiesRequest* Arena::CreateMaybeMessage<::csi::v1::NodeGetCapabilitiesRequest>(Arena*);
 template<> ::csi::v1::NodeGetCapabilitiesResponse* Arena::CreateMaybeMessage<::csi::v1::NodeGetCapabilitiesResponse>(Arena*);
@@ -13616,40 +13612,6 @@ class NodeGetInfoResponse PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class NodeExpandVolumeRequest_SecretsEntry_DoNotUse : public ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<NodeExpandVolumeRequest_SecretsEntry_DoNotUse, 
-    std::string, std::string,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING> {
-public:
-  typedef ::PROTOBUF_NAMESPACE_ID::internal::MapEntry<NodeExpandVolumeRequest_SecretsEntry_DoNotUse, 
-    std::string, std::string,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING> SuperType;
-  NodeExpandVolumeRequest_SecretsEntry_DoNotUse();
-  explicit constexpr NodeExpandVolumeRequest_SecretsEntry_DoNotUse(
-      ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized);
-  explicit NodeExpandVolumeRequest_SecretsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  void MergeFrom(const NodeExpandVolumeRequest_SecretsEntry_DoNotUse& other);
-  static const NodeExpandVolumeRequest_SecretsEntry_DoNotUse* internal_default_instance() { return reinterpret_cast<const NodeExpandVolumeRequest_SecretsEntry_DoNotUse*>(&_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_); }
-  static bool ValidateKey(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "csi.v1.NodeExpandVolumeRequest.SecretsEntry.key");
- }
-  static bool ValidateValue(std::string* s) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(s->data(), static_cast<int>(s->size()), ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::PARSE, "csi.v1.NodeExpandVolumeRequest.SecretsEntry.value");
- }
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& other) final;
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_csi_2eproto);
-    return ::descriptor_table_csi_2eproto.file_level_metadata[99];
-  }
-
-  public:
-};
-
-// -------------------------------------------------------------------
-
 class NodeExpandVolumeRequest PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:csi.v1.NodeExpandVolumeRequest) */ {
  public:
@@ -13693,7 +13655,7 @@ class NodeExpandVolumeRequest PROTOBUF_FINAL :
                &_NodeExpandVolumeRequest_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    100;
+    99;
 
   friend void swap(NodeExpandVolumeRequest& a, NodeExpandVolumeRequest& b) {
     a.Swap(&b);
@@ -13760,34 +13722,15 @@ class NodeExpandVolumeRequest PROTOBUF_FINAL :
 
   // nested types ----------------------------------------------------
 
-
   // accessors -------------------------------------------------------
 
   enum : int {
-    kSecretsFieldNumber = 6,
     kVolumeIdFieldNumber = 1,
     kVolumePathFieldNumber = 2,
     kStagingTargetPathFieldNumber = 4,
     kCapacityRangeFieldNumber = 3,
     kVolumeCapabilityFieldNumber = 5,
   };
-  // map<string, string> secrets = 6 [(.csi.v1.csi_secret) = true, (.csi.v1.alpha_field) = true];
-  int secrets_size() const;
-  private:
-  int _internal_secrets_size() const;
-  public:
-  void clear_secrets();
-  private:
-  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-      _internal_secrets() const;
-  ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-      _internal_mutable_secrets();
-  public:
-  const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-      secrets() const;
-  ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-      mutable_secrets();
-
   // string volume_id = 1;
   void clear_volume_id();
   const std::string& volume_id() const;
@@ -13879,11 +13822,6 @@ class NodeExpandVolumeRequest PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::MapField<
-      NodeExpandVolumeRequest_SecretsEntry_DoNotUse,
-      std::string, std::string,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING,
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::TYPE_STRING> secrets_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr volume_id_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr volume_path_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr staging_target_path_;
@@ -13937,7 +13875,7 @@ class NodeExpandVolumeResponse PROTOBUF_FINAL :
                &_NodeExpandVolumeResponse_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    101;
+    100;
 
   friend void swap(NodeExpandVolumeResponse& a, NodeExpandVolumeResponse& b) {
     a.Swap(&b);
@@ -21727,8 +21665,6 @@ inline void NodeGetInfoResponse::set_allocated_accessible_topology(::csi::v1::To
 
 // -------------------------------------------------------------------
 
-// -------------------------------------------------------------------
-
 // NodeExpandVolumeRequest
 
 // string volume_id = 1;
@@ -22080,35 +22016,6 @@ inline void NodeExpandVolumeRequest::set_allocated_volume_capability(::csi::v1::
   // @@protoc_insertion_point(field_set_allocated:csi.v1.NodeExpandVolumeRequest.volume_capability)
 }
 
-// map<string, string> secrets = 6 [(.csi.v1.csi_secret) = true, (.csi.v1.alpha_field) = true];
-inline int NodeExpandVolumeRequest::_internal_secrets_size() const {
-  return secrets_.size();
-}
-inline int NodeExpandVolumeRequest::secrets_size() const {
-  return _internal_secrets_size();
-}
-inline void NodeExpandVolumeRequest::clear_secrets() {
-  secrets_.Clear();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-NodeExpandVolumeRequest::_internal_secrets() const {
-  return secrets_.GetMap();
-}
-inline const ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >&
-NodeExpandVolumeRequest::secrets() const {
-  // @@protoc_insertion_point(field_map:csi.v1.NodeExpandVolumeRequest.secrets)
-  return _internal_secrets();
-}
-inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-NodeExpandVolumeRequest::_internal_mutable_secrets() {
-  return secrets_.MutableMap();
-}
-inline ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >*
-NodeExpandVolumeRequest::mutable_secrets() {
-  // @@protoc_insertion_point(field_mutable_map:csi.v1.NodeExpandVolumeRequest.secrets)
-  return _internal_mutable_secrets();
-}
-
 // -------------------------------------------------------------------
 
 // NodeExpandVolumeResponse
@@ -22136,8 +22043,6 @@ inline void NodeExpandVolumeResponse::set_capacity_bytes(::PROTOBUF_NAMESPACE_ID
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

@@ -1252,21 +1252,9 @@ struct NodeGetInfoResponseDefaultTypeInternal {
   };
 };
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeGetInfoResponseDefaultTypeInternal _NodeGetInfoResponse_default_instance_;
-constexpr NodeExpandVolumeRequest_SecretsEntry_DoNotUse::NodeExpandVolumeRequest_SecretsEntry_DoNotUse(
-  ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized){}
-struct NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal {
-  constexpr NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal()
-    : _instance(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{}) {}
-  ~NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal() {}
-  union {
-    NodeExpandVolumeRequest_SecretsEntry_DoNotUse _instance;
-  };
-};
-PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeExpandVolumeRequest_SecretsEntry_DoNotUseDefaultTypeInternal _NodeExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_;
 constexpr NodeExpandVolumeRequest::NodeExpandVolumeRequest(
   ::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized)
-  : secrets_(::PROTOBUF_NAMESPACE_ID::internal::ConstantInitialized{})
-  , volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
+  : volume_id_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , volume_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , staging_target_path_(&::PROTOBUF_NAMESPACE_ID::internal::fixed_address_empty_string)
   , capacity_range_(nullptr)
@@ -1294,7 +1282,7 @@ struct NodeExpandVolumeResponseDefaultTypeInternal {
 PROTOBUF_ATTRIBUTE_NO_DESTROY PROTOBUF_CONSTINIT NodeExpandVolumeResponseDefaultTypeInternal _NodeExpandVolumeResponse_default_instance_;
 }  // namespace v1
 }  // namespace csi
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_csi_2eproto[102];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_csi_2eproto[101];
 static const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* file_level_enum_descriptors_csi_2eproto[6];
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_csi_2eproto = nullptr;
 
@@ -2049,15 +2037,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_csi_2eproto::offsets[] PROTOBU
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeGetInfoResponse, node_id_),
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeGetInfoResponse, max_volumes_per_node_),
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeGetInfoResponse, accessible_topology_),
-  PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse, _has_bits_),
-  PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse, key_),
-  PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse, value_),
-  0,
-  1,
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2068,7 +2047,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_csi_2eproto::offsets[] PROTOBU
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest, capacity_range_),
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest, staging_target_path_),
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest, volume_capability_),
-  PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeRequest, secrets_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::csi::v1::NodeExpandVolumeResponse, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2176,9 +2154,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 730, -1, sizeof(::csi::v1::NodeServiceCapability)},
   { 737, -1, sizeof(::csi::v1::NodeGetInfoRequest)},
   { 742, -1, sizeof(::csi::v1::NodeGetInfoResponse)},
-  { 750, 757, sizeof(::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse)},
-  { 759, -1, sizeof(::csi::v1::NodeExpandVolumeRequest)},
-  { 770, -1, sizeof(::csi::v1::NodeExpandVolumeResponse)},
+  { 750, -1, sizeof(::csi::v1::NodeExpandVolumeRequest)},
+  { 760, -1, sizeof(::csi::v1::NodeExpandVolumeResponse)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -2281,7 +2258,6 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::csi::v1::_NodeServiceCapability_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::csi::v1::_NodeGetInfoRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::csi::v1::_NodeGetInfoResponse_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::csi::v1::_NodeExpandVolumeRequest_SecretsEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::csi::v1::_NodeExpandVolumeRequest_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::csi::v1::_NodeExpandVolumeResponse_default_instance_),
 };
@@ -2539,82 +2515,79 @@ const char descriptor_table_protodef_csi_2eproto[] PROTOBUF_SECTION_VARIABLE(pro
   "B\006\n\004type\"\024\n\022NodeGetInfoRequest\"s\n\023NodeGe"
   "tInfoResponse\022\017\n\007node_id\030\001 \001(\t\022\034\n\024max_vo"
   "lumes_per_node\030\002 \001(\003\022-\n\023accessible_topol"
-  "ogy\030\003 \001(\0132\020.csi.v1.Topology\"\271\002\n\027NodeExpa"
+  "ogy\030\003 \001(\0132\020.csi.v1.Topology\"\302\001\n\027NodeExpa"
   "ndVolumeRequest\022\021\n\tvolume_id\030\001 \001(\t\022\023\n\013vo"
   "lume_path\030\002 \001(\t\022-\n\016capacity_range\030\003 \001(\0132"
   "\025.csi.v1.CapacityRange\022\033\n\023staging_target"
   "_path\030\004 \001(\t\0223\n\021volume_capability\030\005 \001(\0132\030"
-  ".csi.v1.VolumeCapability\022E\n\007secrets\030\006 \003("
-  "\0132,.csi.v1.NodeExpandVolumeRequest.Secre"
-  "tsEntryB\006\230B\001\240B\001\032.\n\014SecretsEntry\022\013\n\003key\030\001"
-  " \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"2\n\030NodeExpandVol"
-  "umeResponse\022\026\n\016capacity_bytes\030\001 \001(\0032\372\001\n\010"
-  "Identity\022N\n\rGetPluginInfo\022\034.csi.v1.GetPl"
-  "uginInfoRequest\032\035.csi.v1.GetPluginInfoRe"
-  "sponse\"\000\022f\n\025GetPluginCapabilities\022$.csi."
-  "v1.GetPluginCapabilitiesRequest\032%.csi.v1"
-  ".GetPluginCapabilitiesResponse\"\000\0226\n\005Prob"
-  "e\022\024.csi.v1.ProbeRequest\032\025.csi.v1.ProbeRe"
-  "sponse\"\0002\315\t\n\nController\022K\n\014CreateVolume\022"
-  "\033.csi.v1.CreateVolumeRequest\032\034.csi.v1.Cr"
-  "eateVolumeResponse\"\000\022K\n\014DeleteVolume\022\033.c"
-  "si.v1.DeleteVolumeRequest\032\034.csi.v1.Delet"
-  "eVolumeResponse\"\000\022l\n\027ControllerPublishVo"
-  "lume\022&.csi.v1.ControllerPublishVolumeReq"
-  "uest\032\'.csi.v1.ControllerPublishVolumeRes"
-  "ponse\"\000\022r\n\031ControllerUnpublishVolume\022(.c"
-  "si.v1.ControllerUnpublishVolumeRequest\032)"
-  ".csi.v1.ControllerUnpublishVolumeRespons"
-  "e\"\000\022u\n\032ValidateVolumeCapabilities\022).csi."
-  "v1.ValidateVolumeCapabilitiesRequest\032*.c"
-  "si.v1.ValidateVolumeCapabilitiesResponse"
-  "\"\000\022H\n\013ListVolumes\022\032.csi.v1.ListVolumesRe"
-  "quest\032\033.csi.v1.ListVolumesResponse\"\000\022H\n\013"
-  "GetCapacity\022\032.csi.v1.GetCapacityRequest\032"
-  "\033.csi.v1.GetCapacityResponse\"\000\022r\n\031Contro"
-  "llerGetCapabilities\022(.csi.v1.ControllerG"
-  "etCapabilitiesRequest\032).csi.v1.Controlle"
-  "rGetCapabilitiesResponse\"\000\022Q\n\016CreateSnap"
-  "shot\022\035.csi.v1.CreateSnapshotRequest\032\036.cs"
-  "i.v1.CreateSnapshotResponse\"\000\022Q\n\016DeleteS"
-  "napshot\022\035.csi.v1.DeleteSnapshotRequest\032\036"
-  ".csi.v1.DeleteSnapshotResponse\"\000\022N\n\rList"
-  "Snapshots\022\034.csi.v1.ListSnapshotsRequest\032"
-  "\035.csi.v1.ListSnapshotsResponse\"\000\022i\n\026Cont"
-  "rollerExpandVolume\022%.csi.v1.ControllerEx"
-  "pandVolumeRequest\032&.csi.v1.ControllerExp"
-  "andVolumeResponse\"\000\022c\n\023ControllerGetVolu"
-  "me\022\".csi.v1.ControllerGetVolumeRequest\032#"
-  ".csi.v1.ControllerGetVolumeResponse\"\003\240B\001"
-  "2\332\005\n\004Node\022T\n\017NodeStageVolume\022\036.csi.v1.No"
-  "deStageVolumeRequest\032\037.csi.v1.NodeStageV"
-  "olumeResponse\"\000\022Z\n\021NodeUnstageVolume\022 .c"
-  "si.v1.NodeUnstageVolumeRequest\032!.csi.v1."
-  "NodeUnstageVolumeResponse\"\000\022Z\n\021NodePubli"
-  "shVolume\022 .csi.v1.NodePublishVolumeReque"
-  "st\032!.csi.v1.NodePublishVolumeResponse\"\000\022"
-  "`\n\023NodeUnpublishVolume\022\".csi.v1.NodeUnpu"
-  "blishVolumeRequest\032#.csi.v1.NodeUnpublis"
-  "hVolumeResponse\"\000\022]\n\022NodeGetVolumeStats\022"
-  "!.csi.v1.NodeGetVolumeStatsRequest\032\".csi"
-  ".v1.NodeGetVolumeStatsResponse\"\000\022W\n\020Node"
-  "ExpandVolume\022\037.csi.v1.NodeExpandVolumeRe"
-  "quest\032 .csi.v1.NodeExpandVolumeResponse\""
-  "\000\022`\n\023NodeGetCapabilities\022\".csi.v1.NodeGe"
-  "tCapabilitiesRequest\032#.csi.v1.NodeGetCap"
-  "abilitiesResponse\"\000\022H\n\013NodeGetInfo\022\032.csi"
-  ".v1.NodeGetInfoRequest\032\033.csi.v1.NodeGetI"
-  "nfoResponse\"\000:1\n\nalpha_enum\022\034.google.pro"
-  "tobuf.EnumOptions\030\244\010 \001(\010:<\n\020alpha_enum_v"
-  "alue\022!.google.protobuf.EnumValueOptions\030"
-  "\244\010 \001(\010:2\n\ncsi_secret\022\035.google.protobuf.F"
-  "ieldOptions\030\243\010 \001(\010:3\n\013alpha_field\022\035.goog"
-  "le.protobuf.FieldOptions\030\244\010 \001(\010:7\n\ralpha"
-  "_message\022\037.google.protobuf.MessageOption"
-  "s\030\244\010 \001(\010:5\n\014alpha_method\022\036.google.protob"
-  "uf.MethodOptions\030\244\010 \001(\010:7\n\ralpha_service"
-  "\022\037.google.protobuf.ServiceOptions\030\244\010 \001(\010"
-  "B\005Z\003csib\006proto3"
+  ".csi.v1.VolumeCapability\"2\n\030NodeExpandVo"
+  "lumeResponse\022\026\n\016capacity_bytes\030\001 \001(\0032\372\001\n"
+  "\010Identity\022N\n\rGetPluginInfo\022\034.csi.v1.GetP"
+  "luginInfoRequest\032\035.csi.v1.GetPluginInfoR"
+  "esponse\"\000\022f\n\025GetPluginCapabilities\022$.csi"
+  ".v1.GetPluginCapabilitiesRequest\032%.csi.v"
+  "1.GetPluginCapabilitiesResponse\"\000\0226\n\005Pro"
+  "be\022\024.csi.v1.ProbeRequest\032\025.csi.v1.ProbeR"
+  "esponse\"\0002\315\t\n\nController\022K\n\014CreateVolume"
+  "\022\033.csi.v1.CreateVolumeRequest\032\034.csi.v1.C"
+  "reateVolumeResponse\"\000\022K\n\014DeleteVolume\022\033."
+  "csi.v1.DeleteVolumeRequest\032\034.csi.v1.Dele"
+  "teVolumeResponse\"\000\022l\n\027ControllerPublishV"
+  "olume\022&.csi.v1.ControllerPublishVolumeRe"
+  "quest\032\'.csi.v1.ControllerPublishVolumeRe"
+  "sponse\"\000\022r\n\031ControllerUnpublishVolume\022(."
+  "csi.v1.ControllerUnpublishVolumeRequest\032"
+  ").csi.v1.ControllerUnpublishVolumeRespon"
+  "se\"\000\022u\n\032ValidateVolumeCapabilities\022).csi"
+  ".v1.ValidateVolumeCapabilitiesRequest\032*."
+  "csi.v1.ValidateVolumeCapabilitiesRespons"
+  "e\"\000\022H\n\013ListVolumes\022\032.csi.v1.ListVolumesR"
+  "equest\032\033.csi.v1.ListVolumesResponse\"\000\022H\n"
+  "\013GetCapacity\022\032.csi.v1.GetCapacityRequest"
+  "\032\033.csi.v1.GetCapacityResponse\"\000\022r\n\031Contr"
+  "ollerGetCapabilities\022(.csi.v1.Controller"
+  "GetCapabilitiesRequest\032).csi.v1.Controll"
+  "erGetCapabilitiesResponse\"\000\022Q\n\016CreateSna"
+  "pshot\022\035.csi.v1.CreateSnapshotRequest\032\036.c"
+  "si.v1.CreateSnapshotResponse\"\000\022Q\n\016Delete"
+  "Snapshot\022\035.csi.v1.DeleteSnapshotRequest\032"
+  "\036.csi.v1.DeleteSnapshotResponse\"\000\022N\n\rLis"
+  "tSnapshots\022\034.csi.v1.ListSnapshotsRequest"
+  "\032\035.csi.v1.ListSnapshotsResponse\"\000\022i\n\026Con"
+  "trollerExpandVolume\022%.csi.v1.ControllerE"
+  "xpandVolumeRequest\032&.csi.v1.ControllerEx"
+  "pandVolumeResponse\"\000\022c\n\023ControllerGetVol"
+  "ume\022\".csi.v1.ControllerGetVolumeRequest\032"
+  "#.csi.v1.ControllerGetVolumeResponse\"\003\240B"
+  "\0012\332\005\n\004Node\022T\n\017NodeStageVolume\022\036.csi.v1.N"
+  "odeStageVolumeRequest\032\037.csi.v1.NodeStage"
+  "VolumeResponse\"\000\022Z\n\021NodeUnstageVolume\022 ."
+  "csi.v1.NodeUnstageVolumeRequest\032!.csi.v1"
+  ".NodeUnstageVolumeResponse\"\000\022Z\n\021NodePubl"
+  "ishVolume\022 .csi.v1.NodePublishVolumeRequ"
+  "est\032!.csi.v1.NodePublishVolumeResponse\"\000"
+  "\022`\n\023NodeUnpublishVolume\022\".csi.v1.NodeUnp"
+  "ublishVolumeRequest\032#.csi.v1.NodeUnpubli"
+  "shVolumeResponse\"\000\022]\n\022NodeGetVolumeStats"
+  "\022!.csi.v1.NodeGetVolumeStatsRequest\032\".cs"
+  "i.v1.NodeGetVolumeStatsResponse\"\000\022W\n\020Nod"
+  "eExpandVolume\022\037.csi.v1.NodeExpandVolumeR"
+  "equest\032 .csi.v1.NodeExpandVolumeResponse"
+  "\"\000\022`\n\023NodeGetCapabilities\022\".csi.v1.NodeG"
+  "etCapabilitiesRequest\032#.csi.v1.NodeGetCa"
+  "pabilitiesResponse\"\000\022H\n\013NodeGetInfo\022\032.cs"
+  "i.v1.NodeGetInfoRequest\032\033.csi.v1.NodeGet"
+  "InfoResponse\"\000:1\n\nalpha_enum\022\034.google.pr"
+  "otobuf.EnumOptions\030\244\010 \001(\010:<\n\020alpha_enum_"
+  "value\022!.google.protobuf.EnumValueOptions"
+  "\030\244\010 \001(\010:2\n\ncsi_secret\022\035.google.protobuf."
+  "FieldOptions\030\243\010 \001(\010:3\n\013alpha_field\022\035.goo"
+  "gle.protobuf.FieldOptions\030\244\010 \001(\010:7\n\ralph"
+  "a_message\022\037.google.protobuf.MessageOptio"
+  "ns\030\244\010 \001(\010:5\n\014alpha_method\022\036.google.proto"
+  "buf.MethodOptions\030\244\010 \001(\010:7\n\ralpha_servic"
+  "e\022\037.google.protobuf.ServiceOptions\030\244\010 \001("
+  "\010B\005Z\003csib\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_csi_2eproto_deps[3] = {
   &::descriptor_table_google_2fprotobuf_2fdescriptor_2eproto,
@@ -2623,8 +2596,8 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_csi_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_csi_2eproto = {
-  false, false, 13095, descriptor_table_protodef_csi_2eproto, "csi.proto", 
-  &descriptor_table_csi_2eproto_once, descriptor_table_csi_2eproto_deps, 3, 102,
+  false, false, 12976, descriptor_table_protodef_csi_2eproto, "csi.proto", 
+  &descriptor_table_csi_2eproto_once, descriptor_table_csi_2eproto_deps, 3, 101,
   schemas, file_default_instances, TableStruct_csi_2eproto::offsets,
   file_level_metadata_csi_2eproto, file_level_enum_descriptors_csi_2eproto, file_level_service_descriptors_csi_2eproto,
 };
@@ -21329,23 +21302,6 @@ void NodeGetInfoResponse::InternalSwap(NodeGetInfoResponse* other) {
 
 // ===================================================================
 
-NodeExpandVolumeRequest_SecretsEntry_DoNotUse::NodeExpandVolumeRequest_SecretsEntry_DoNotUse() {}
-NodeExpandVolumeRequest_SecretsEntry_DoNotUse::NodeExpandVolumeRequest_SecretsEntry_DoNotUse(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-    : SuperType(arena) {}
-void NodeExpandVolumeRequest_SecretsEntry_DoNotUse::MergeFrom(const NodeExpandVolumeRequest_SecretsEntry_DoNotUse& other) {
-  MergeFromInternal(other);
-}
-::PROTOBUF_NAMESPACE_ID::Metadata NodeExpandVolumeRequest_SecretsEntry_DoNotUse::GetMetadata() const {
-  return GetMetadataStatic();
-}
-void NodeExpandVolumeRequest_SecretsEntry_DoNotUse::MergeFrom(
-    const ::PROTOBUF_NAMESPACE_ID::Message& other) {
-  ::PROTOBUF_NAMESPACE_ID::Message::MergeFrom(other);
-}
-
-
-// ===================================================================
-
 class NodeExpandVolumeRequest::_Internal {
  public:
   static const ::csi::v1::CapacityRange& capacity_range(const NodeExpandVolumeRequest* msg);
@@ -21361,8 +21317,7 @@ NodeExpandVolumeRequest::_Internal::volume_capability(const NodeExpandVolumeRequ
   return *msg->volume_capability_;
 }
 NodeExpandVolumeRequest::NodeExpandVolumeRequest(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
-  secrets_(arena) {
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:csi.v1.NodeExpandVolumeRequest)
@@ -21370,7 +21325,6 @@ NodeExpandVolumeRequest::NodeExpandVolumeRequest(::PROTOBUF_NAMESPACE_ID::Arena*
 NodeExpandVolumeRequest::NodeExpandVolumeRequest(const NodeExpandVolumeRequest& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  secrets_.MergeFrom(from.secrets_);
   volume_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (!from._internal_volume_id().empty()) {
     volume_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_volume_id(), 
@@ -21440,7 +21394,6 @@ void NodeExpandVolumeRequest::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
-  secrets_.Clear();
   volume_id_.ClearToEmpty();
   volume_path_.ClearToEmpty();
   staging_target_path_.ClearToEmpty();
@@ -21501,18 +21454,6 @@ const char* NodeExpandVolumeRequest::_InternalParse(const char* ptr, ::PROTOBUF_
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
           ptr = ctx->ParseMessage(_internal_mutable_volume_capability(), ptr);
           CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // map<string, string> secrets = 6 [(.csi.v1.csi_secret) = true, (.csi.v1.alpha_field) = true];
-      case 6:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
-          ptr -= 1;
-          do {
-            ptr += 1;
-            ptr = ctx->ParseMessage(&secrets_, ptr);
-            CHK_(ptr);
-            if (!ctx->DataAvailable(ptr)) break;
-          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
         } else goto handle_unusual;
         continue;
       default: {
@@ -21589,51 +21530,6 @@ failure:
         5, _Internal::volume_capability(this), target, stream);
   }
 
-  // map<string, string> secrets = 6 [(.csi.v1.csi_secret) = true, (.csi.v1.alpha_field) = true];
-  if (!this->_internal_secrets().empty()) {
-    typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_pointer
-        ConstPtr;
-    typedef ConstPtr SortItem;
-    typedef ::PROTOBUF_NAMESPACE_ID::internal::CompareByDerefFirst<SortItem> Less;
-    struct Utf8Check {
-      static void Check(ConstPtr p) {
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->first.data(), static_cast<int>(p->first.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "csi.v1.NodeExpandVolumeRequest.SecretsEntry.key");
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-          p->second.data(), static_cast<int>(p->second.length()),
-          ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-          "csi.v1.NodeExpandVolumeRequest.SecretsEntry.value");
-      }
-    };
-
-    if (stream->IsSerializationDeterministic() &&
-        this->_internal_secrets().size() > 1) {
-      ::std::unique_ptr<SortItem[]> items(
-          new SortItem[this->_internal_secrets().size()]);
-      typedef ::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::size_type size_type;
-      size_type n = 0;
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->_internal_secrets().begin();
-          it != this->_internal_secrets().end(); ++it, ++n) {
-        items[static_cast<ptrdiff_t>(n)] = SortItem(&*it);
-      }
-      ::std::sort(&items[0], &items[static_cast<ptrdiff_t>(n)], Less());
-      for (size_type i = 0; i < n; i++) {
-        target = NodeExpandVolumeRequest_SecretsEntry_DoNotUse::Funcs::InternalSerialize(6, items[static_cast<ptrdiff_t>(i)]->first, items[static_cast<ptrdiff_t>(i)]->second, target, stream);
-        Utf8Check::Check(&(*items[static_cast<ptrdiff_t>(i)]));
-      }
-    } else {
-      for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-          it = this->_internal_secrets().begin();
-          it != this->_internal_secrets().end(); ++it) {
-        target = NodeExpandVolumeRequest_SecretsEntry_DoNotUse::Funcs::InternalSerialize(6, it->first, it->second, target, stream);
-        Utf8Check::Check(&(*it));
-      }
-    }
-  }
-
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -21649,15 +21545,6 @@ size_t NodeExpandVolumeRequest::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
-
-  // map<string, string> secrets = 6 [(.csi.v1.csi_secret) = true, (.csi.v1.alpha_field) = true];
-  total_size += 1 *
-      ::PROTOBUF_NAMESPACE_ID::internal::FromIntSize(this->_internal_secrets_size());
-  for (::PROTOBUF_NAMESPACE_ID::Map< std::string, std::string >::const_iterator
-      it = this->_internal_secrets().begin();
-      it != this->_internal_secrets().end(); ++it) {
-    total_size += NodeExpandVolumeRequest_SecretsEntry_DoNotUse::Funcs::ByteSizeLong(it->first, it->second);
-  }
 
   // string volume_id = 1;
   if (this->volume_id().size() > 0) {
@@ -21725,7 +21612,6 @@ void NodeExpandVolumeRequest::MergeFrom(const NodeExpandVolumeRequest& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
-  secrets_.MergeFrom(from.secrets_);
   if (from.volume_id().size() > 0) {
     _internal_set_volume_id(from._internal_volume_id());
   }
@@ -21764,7 +21650,6 @@ bool NodeExpandVolumeRequest::IsInitialized() const {
 void NodeExpandVolumeRequest::InternalSwap(NodeExpandVolumeRequest* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  secrets_.Swap(&other->secrets_);
   volume_id_.Swap(&other->volume_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   volume_path_.Swap(&other->volume_path_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   staging_target_path_.Swap(&other->staging_target_path_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
@@ -22291,9 +22176,6 @@ template<> PROTOBUF_NOINLINE ::csi::v1::NodeGetInfoRequest* Arena::CreateMaybeMe
 }
 template<> PROTOBUF_NOINLINE ::csi::v1::NodeGetInfoResponse* Arena::CreateMaybeMessage< ::csi::v1::NodeGetInfoResponse >(Arena* arena) {
   return Arena::CreateMessageInternal< ::csi::v1::NodeGetInfoResponse >(arena);
-}
-template<> PROTOBUF_NOINLINE ::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse* Arena::CreateMaybeMessage< ::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::csi::v1::NodeExpandVolumeRequest_SecretsEntry_DoNotUse >(arena);
 }
 template<> PROTOBUF_NOINLINE ::csi::v1::NodeExpandVolumeRequest* Arena::CreateMaybeMessage< ::csi::v1::NodeExpandVolumeRequest >(Arena* arena) {
   return Arena::CreateMessageInternal< ::csi::v1::NodeExpandVolumeRequest >(arena);
