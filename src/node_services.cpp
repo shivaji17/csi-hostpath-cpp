@@ -75,7 +75,8 @@ Status NodeImpl::NodeExpandVolume(ServerContext *context,
                                   NodeExpandVolumeRequest const *req,
                                   NodeExpandVolumeResponse *rsp)
 {
-    return Status::OK;
+    LOG_F(ERROR, "Node expan volume is not supported");
+    return Status::CANCELLED;
 }
 
 ////////////////////////////////////////////////////////////////////////
