@@ -25,6 +25,7 @@ NodeImpl::NodeStageVolume(ServerContext *context,
                           NodeStageVolumeRequest const *req,
                           NodeStageVolumeResponse *rsp)
 {
+    LOG_F(ERROR, "Node stage volume is not supported");
     return Status::OK;
 }
 
@@ -35,6 +36,7 @@ Status NodeImpl::NodeUnstageVolume(ServerContext *context,
                                    NodeUnstageVolumeRequest const *req,
                                    NodeUnstageVolumeResponse *rsp)
 {
+    LOG_F(ERROR, "Node unstage volume is not supported");
     return Status::OK;
 }
 
@@ -45,6 +47,7 @@ Status NodeImpl::NodePublishVolume(ServerContext *context,
                                    NodePublishVolumeRequest const *req,
                                    NodePublishVolumeResponse *rsp)
 {
+    LOG_F(ERROR, "Node publish volume is not supported");
     return Status::OK;
 }
 
@@ -55,6 +58,7 @@ Status NodeImpl::NodeUnpublishVolume(ServerContext *context,
                                      NodeUnpublishVolumeRequest const *req,
                                      NodeUnpublishVolumeResponse *rsp)
 {
+    LOG_F(ERROR, "Node unpublish volume is not supported");
     return Status::OK;
 }
 
@@ -75,7 +79,7 @@ Status NodeImpl::NodeExpandVolume(ServerContext *context,
                                   NodeExpandVolumeRequest const *req,
                                   NodeExpandVolumeResponse *rsp)
 {
-    LOG_F(ERROR, "Node expan volume is not supported");
+    LOG_F(ERROR, "Node expand volume is not supported");
     return Status::CANCELLED;
 }
 
