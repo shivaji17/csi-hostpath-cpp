@@ -69,6 +69,36 @@ Status NodeImpl::NodeGetVolumeStats(ServerContext *context,
                                     NodeGetVolumeStatsRequest const *req,
                                     NodeGetVolumeStatsResponse *rsp)
 {
+    if (req->volume_id().empty())
+    {
+        LOG_F(ERROR, "Volume ID missing in request");
+        return Status::CANCELLED;
+    }
+
+    if (req->volume_path().empty())
+    {
+        LOG_F(ERROR, "Volume path missing in request");
+        return Status::CANCELLED;
+    }
+
+    lock_guard<mutex> lock(m_state.GetMutex());
+    HostPathVolume volume;
+
+    if (!m_state.GetVolumeByID(req->volume_id(), volume))
+    {
+        LOG_F(ERROR, "Volume with id '%s' does not exists", req->volume_id().c_str());
+        return Status::CANCELLED;
+    }
+
+    // FIXME
+    // We need a concrete to find the amount of data stored in given directory
+
+    auto *usage = rsp->mutable_usage()->Add();
+    usage->set_unit(VolumeUsage::Unit::VolumeUsage_Unit_BYTES);
+    usage->set_total(volume.vol_size());
+    usage->set_used(0);
+    usage->set_available(volume.vol_size());
+    
     return Status::OK;
 }
 
