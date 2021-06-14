@@ -90,6 +90,7 @@ Status NodeImpl::NodeGetCapabilities(ServerContext *context,
                                      NodeGetCapabilitiesRequest const *req,
                                      NodeGetCapabilitiesResponse *rsp)
 {
+    rsp->add_capabilities()->mutable_rpc()->set_type(NodeServiceCapability::RPC::Type::NodeServiceCapability_RPC_Type_GET_VOLUME_STATS);
     return Status::OK;
 }
 
