@@ -10,6 +10,8 @@ using namespace utils;
 using namespace hostpath;
 using namespace csi::services;
 
+static string const STATE_DIRECTORY = "/hostpath-cpp-csi-data-dir";
+
 void Usage(int retVal)
 {
     cout
@@ -17,9 +19,9 @@ void Usage(int retVal)
         << "\n"
         << "\t--help                 Print this help information and exit\n"
         << "\t--version              Print CSI HostPath version and exit\n"
-        << "\t--endpoint=ENDPOINT    CSI endpoint (default='unix://tmp/csi.sock')\n"
+        << "\t--endpoint=ENDPOINT    CSI endpoint (default='unix:///tmp/csi.sock')\n"
         << "\t--nodeid=NODENAME      node id\n"
-        << "\t--state-dir=DIRECTORY  directory for storing state information across driver restarts, volumes and snapshots (default=/csi-data-dir)"
+        << "\t--state-dir=DIRECTORY  directory for storing state information across driver restarts, volumes and snapshots (default=" + STATE_DIRECTORY + ")"
         << endl;
 
     exit(retVal);
@@ -119,7 +121,7 @@ bool ValidateConfig(Config &config)
     {
         config.set_state_directory("/csi-data-dir");
     }
-    
+
     if (!DirectoryExists(config.state_directory()) && !CreateDirectory(config.state_directory()))
     {
         LOG_F(ERROR, "Failed to create state directory '%s'", config.state_directory().c_str());

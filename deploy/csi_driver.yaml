@@ -1,0 +1,13 @@
+apiVersion: storage.k8s.io/v1
+kind: CSIDriver
+metadata:
+  name: hostpathcpp.csi.k8s.io
+  labels:
+    app.kubernetes.io/instance: hostpathcpp.csi.k8s.io
+    app.kubernetes.io/part-of: csi-driver-hostpathcpp
+    app.kubernetes.io/name: hostpathcpp.csi.k8s.io
+    app.kubernetes.io/component: csi-driver
+spec:
+  # Supports persistent volumes.
+  volumeLifecycleModes:
+    - Persistent
