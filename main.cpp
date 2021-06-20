@@ -11,6 +11,7 @@ using namespace hostpath;
 using namespace csi::services;
 
 static string const STATE_DIRECTORY = "/hostpath-cpp-csi-data-dir";
+static string const ENDPOINT = "unix:///tmp/csi.sock";
 
 void Usage(int retVal)
 {
@@ -19,7 +20,7 @@ void Usage(int retVal)
         << "\n"
         << "\t--help                 Print this help information and exit\n"
         << "\t--version              Print CSI HostPath version and exit\n"
-        << "\t--endpoint=ENDPOINT    CSI endpoint (default='unix:///tmp/csi.sock')\n"
+        << "\t--endpoint=ENDPOINT    CSI endpoint (default='" + ENDPOINT + "')\n"
         << "\t--nodeid=NODENAME      node id\n"
         << "\t--state-dir=DIRECTORY  directory for storing state information across driver restarts, volumes and snapshots (default=" + STATE_DIRECTORY + ")"
         << endl;
@@ -99,8 +100,8 @@ bool ValidateConfig(Config &config)
 
     if (config.endpoint().empty())
     {
-        LOG_F(INFO, "Endpoint not provided. Using endpoint 'unix://tmp/csi.sock'");
-        config.set_endpoint("unix://tmp/csi.sock");
+        LOG_F(INFO, "Endpoint not provided. Using endpoint '%s'", ENDPOINT.c_str());
+        config.set_endpoint(ENDPOINT);
     }
     else
     {

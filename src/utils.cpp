@@ -56,7 +56,7 @@ namespace utils
 
     bool IsUnixSocket(string const &address)
     {
-        return regex_match(address, regex("^unix://([a-zA-Z_])([/a-zA-Z0-9._-])*([a-zA-Z0-9._-])$"));
+        return regex_match(address, regex("^unix:///?([a-zA-Z_])([/a-zA-Z0-9._-])*([a-zA-Z0-9._-])$"));
     }
 
     bool IsValidIPaddress(string const &address)
