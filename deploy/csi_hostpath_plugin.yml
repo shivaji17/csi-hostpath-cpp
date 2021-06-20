@@ -220,8 +220,8 @@ spec:
         - name: hostpath
           image: ghcr.io/sawantshivaji1997/cpp-hostpath:v0.0.0
           args:
-            - "--endpoint $(CSI_ENDPOINT)"
-            - "--nodeid $(KUBE_NODE_NAME)"
+            - "--endpoint=$(CSI_ENDPOINT)"
+            - "--nodeid=$(KUBE_NODE_NAME)"
           env:
             - name: CSI_ENDPOINT
               value: unix:///csi/csi.sock
@@ -257,36 +257,6 @@ spec:
               name: hostpath-cpp-csi-data-dir
             - mountPath: /dev
               name: dev-dir
-
-        - name: csi-external-health-monitor-agent
-          image: k8s.gcr.io/sig-storage/csi-external-health-monitor-agent:v0.2.0
-          args:
-            - "--v=5"
-            - "--csi-address=$(ADDRESS)"
-          env:
-            - name: NODE_NAME
-              valueFrom:
-                fieldRef:
-                  fieldPath: spec.nodeName
-            - name: ADDRESS
-              value: /csi/csi.sock
-          imagePullPolicy: "IfNotPresent"
-          volumeMounts:
-            - name: socket-dir
-              mountPath: /csi
-        - name: csi-external-health-monitor-controller
-          image: k8s.gcr.io/sig-storage/csi-external-health-monitor-controller:v0.3.0
-          args:
-            - "--v=5"
-            - "--csi-address=$(ADDRESS)"
-            - "--leader-election"
-          env:
-            - name: ADDRESS
-              value: /csi/csi.sock
-          imagePullPolicy: "IfNotPresent"
-          volumeMounts:
-            - name: socket-dir
-              mountPath: /csi
 
         - name: node-driver-registrar
           image: k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.2.0
@@ -350,35 +320,7 @@ spec:
           volumeMounts:
             - mountPath: /csi
               name: socket-dir
-
-        - name: csi-resizer
-          image: k8s.gcr.io/sig-storage/csi-resizer:v1.2.0
-          args:
-            - -v=5
-            - -csi-address=/csi/csi.sock
-          securityContext:
-            # This is necessary only for systems with SELinux, where
-            # non-privileged sidecar containers cannot access unix domain socket
-            # created by privileged CSI driver container.
-            privileged: true
-          volumeMounts:
-            - mountPath: /csi
-              name: socket-dir
-
-        - name: csi-snapshotter
-          image: k8s.gcr.io/sig-storage/csi-snapshotter:v3.0.3
-          args:
-            - -v=5
-            - --csi-address=/csi/csi.sock
-          securityContext:
-            # This is necessary only for systems with SELinux, where
-            # non-privileged sidecar containers cannot access unix domain socket
-            # created by privileged CSI driver container.
-            privileged: true
-          volumeMounts:
-            - mountPath: /csi
-              name: socket-dir
-
+ 
       volumes:
         - hostPath:
             path: /var/lib/kubelet/plugins/csi-hostpath
